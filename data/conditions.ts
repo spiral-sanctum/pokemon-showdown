@@ -540,16 +540,16 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return 5;
 		},
 		onWeatherModifyDamage(damage, attacker, defender, move) {
-			if (move.id === 'hydrosteam' && !attacker.hasItem('utilityumbrella')) {
-				this.debug('Sunny Day Hydro Steam boost');
-				return this.chainModify(1.5);
-			}
 			if (defender.hasItem('utilityumbrella')) return;
 			if (move.type === 'Fire') {
 				this.debug('Sunny Day fire boost');
 				return this.chainModify(1.5);
 			}
-			if (move.type === 'Water') {
+			if (move.type === 'Water' && attacker.hasAbility('steampower')) {
+				this.debug('Sunny Day Steam Power water boost');
+				return this.chainModify(1.1);
+			}
+			if (move.type === 'Water' && !attacker.hasAbility('steampower')) {
 				this.debug('Sunny Day water suppress');
 				return this.chainModify(0.5);
 			}

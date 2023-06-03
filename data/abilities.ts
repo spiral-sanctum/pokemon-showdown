@@ -1300,37 +1300,51 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 218,
 	},
 	forecast: {
-		onStart(pokemon) {
-			this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
+			onUpdate(pokemon) {
+				if (pokemon.baseSpecies.baseSpecies !== 'Castform' || pokemon.transformed) return;
+				let forme = null;
+				switch (pokemon.effectiveWeather()) {
+				case 'sunnyday':
+				case 'desolateland':
+					if (pokemon.species.id !== 'castformsunny') forme = 'Castform-Sunny';
+					break;
+				case 'raindance':
+				case 'primordialsea':
+					if (pokemon.species.id !== 'castformrainy') forme = 'Castform-Rainy';
+					break;
+				case 'hail':
+					if (pokemon.species.id !== 'castformsnowy') forme = 'Castform-Snowy';
+					break;
+				case 'toxiccloud':
+				if (pokemon.species.id !== 'castformtoxic') forme = 'Castform-Toxic';
+					break;
+				case 'sandstorm':
+				if (pokemon.species.id !== 'castformsandy') forme = 'Castform-Sandy';
+					break;
+				default:
+					if (pokemon.species.id !== 'castform') forme = 'Castform';
+					break;
+				}
+				if (pokemon.isActive && forme) {
+					pokemon.formeChange(forme, this.effect, false, '[msg]');
+				}
+			},
+			onModifySpAPriority: 5,
+			onModifySpA(spa, pokemon) {
+				if (['sunnyday', 'desolateland', 'raindance', 'primordialsea', 'hail', 'toxiccloud', 'sandstorm'].includes(pokemon.effectiveWeather())) {
+					return this.chainModify(1.5);
+				}
+			},
+			onModifySpePriority: 5,
+			onModifySpe(spe, pokemon) {
+				if (['sunnyday', 'desolateland', 'raindance', 'primordialsea', 'hail', 'toxiccloud', 'sandstorm'].includes(pokemon.effectiveWeather())) {
+					return this.chainModify(1.5);
+				}
+			},
+			name: "Forecast",
+			rating: 2,
+			num: 59,
 		},
-		onWeatherChange(pokemon) {
-			if (pokemon.baseSpecies.baseSpecies !== 'Castform' || pokemon.transformed) return;
-			let forme = null;
-			switch (pokemon.effectiveWeather()) {
-			case 'sunnyday':
-			case 'desolateland':
-				if (pokemon.species.id !== 'castformsunny') forme = 'Castform-Sunny';
-				break;
-			case 'raindance':
-			case 'primordialsea':
-				if (pokemon.species.id !== 'castformrainy') forme = 'Castform-Rainy';
-				break;
-			case 'hail':
-			case 'snow':
-				if (pokemon.species.id !== 'castformsnowy') forme = 'Castform-Snowy';
-				break;
-			default:
-				if (pokemon.species.id !== 'castform') forme = 'Castform';
-				break;
-			}
-			if (pokemon.isActive && forme) {
-				pokemon.formeChange(forme, this.effect, false, '[msg]');
-			}
-		},
-		name: "Forecast",
-		rating: 2,
-		num: 59,
-	},
 	forewarn: {
 		onStart(pokemon) {
 			let warnMoves: (Move | Pokemon)[][] = [];
@@ -1667,15 +1681,30 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 85,
 	},
 	heavymetal: {
-		onModifyWeightPriority: 1,
-		onModifyWeight(weighthg) {
-			return weighthg * 2;
+			onModifyWeightPriority: 1,
+			onModifyWeight(weighthg) {
+				return weighthg * 2;
+			},
+			isBreakable: true,
+			onModifyDefPriority: 5,
+			onModifyDef(def, attacker, defender, move) {
+				this.debug('Heavy Metal boost');
+				return this.chainModify(1.25);
+			},
+			onModifySpDPriority: 5,
+			onModifySpD(spd, attacker, defender, move) {
+				this.debug('Heavy Metal boost');
+				return this.chainModify(1.25);
+			},
+			onModifySpePriority: 5,
+			onModifySpe(this, spe, pokemon) {
+				this.debug('Heavy Metal weaken');
+				return this.chainModify(0.5);
+			},
+			name: "Heavy Metal",
+			rating: 0,
+			num: 134,
 		},
-		isBreakable: true,
-		name: "Heavy Metal",
-		rating: 0,
-		num: 134,
-	},
 	honeygather: {
 		name: "Honey Gather",
 		rating: 0,
@@ -2102,14 +2131,29 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 236,
 	},
 	lightmetal: {
-		onModifyWeight(weighthg) {
-			return this.trunc(weighthg / 2);
+			onModifyWeight(weighthg) {
+				return this.trunc(weighthg / 2);
+			},
+			isBreakable: true,
+			onModifyDefPriority: 5,
+			onModifyDef(def, attacker, defender, move) {
+				this.debug('Light Metal weaken');
+				return this.chainModify(0.75);
+			},
+			onModifySpDPriority: 5,
+			onModifySpD(spd, attacker, defender, move) {
+				this.debug('Light Metal weaken');
+				return this.chainModify(0.75);
+			},
+			onModifySpePriority: 5,
+			onModifySpe(this, spe, pokemon) {
+				this.debug('Light Metal boost');
+				return this.chainModify(1.25);
+			},
+			name: "Light Metal",
+			rating: 1,
+			num: 135,
 		},
-		isBreakable: true,
-		name: "Light Metal",
-		rating: 1,
-		num: 135,
-	},
 	lightningrod: {
 		onTryHit(target, source, move) {
 			if (target !== source && move.type === 'Electric') {
@@ -3861,15 +3905,16 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 75,
 	},
 	shielddust: {
-		onModifySecondaries(secondaries) {
-			this.debug('Shield Dust prevent secondary');
-			return secondaries.filter(effect => !!(effect.self || effect.dustproof));
+			onCriticalHit: false,
+			onModifySecondaries(secondaries) {
+				this.debug('Shield Dust prevent secondary');
+				return secondaries.filter(effect => !!(effect.self || effect.dustproof));
+			},
+			isBreakable: true,
+			name: "Shield Dust",
+			rating: 2,
+			num: 19,
 		},
-		isBreakable: true,
-		name: "Shield Dust",
-		rating: 2,
-		num: 19,
-	},
 	shieldsdown: {
 		onStart(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Minior' || pokemon.transformed) return;
@@ -5373,4 +5418,49 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			rating: 3,
 			num: -12,
 	},
+	steampower: {
+		//implemented in conditions.ts
+		name: "Steam Power",
+		rating: 2.5,
+		num: -13,
+	},
+	envious: {
+		onStart(pokemon) {
+			for (const target of pokemon.side.foe.active) {
+				if (!target.boosts) return;
+				let isBoosted = false;
+				let i: BoostID;
+				for (i in target.boosts) {
+					if(target.boosts[i] > 0) isBoosted = true;
+				}
+				console.log("isBoosted: "+isBoosted);
+				if (isBoosted) this.boost({atk: 1}, pokemon);
+			}
+		},
+		name: "Envious",
+		rating: 4,
+		num: -14,
+	},
+		thorns: {
+			onDamagingHitOrder: 1,
+			onDamagingHit(damage, target, source, move) {
+				if (this.checkMoveMakesContact(move, source, target, true)) {
+					this.damage(source.baseMaxhp / 8, source, target);
+				}
+			},
+			name: "Thorns",
+			rating: 2.5,
+			num: -15,
+		},
+		bounceguard: {
+				onDamagingHitOrder: 1,
+				onDamagingHit(damage, target, source, move) {
+					if (!move.flags['contact'] && move.category !== 'Status') {
+						this.damage(source.baseMaxhp / 8, source, target);
+					}
+				},
+				name: "Bounce Guard",
+				rating: 2.5,
+				num: 24,
+			},
 };

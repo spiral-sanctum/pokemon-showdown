@@ -21595,4 +21595,68 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 		contestType: "Cool",
 	},
+	peelout: {
+		num: -1,
+		accuracy: 100,
+		basePower: 40,
+		category: "Physical",
+		name: "Peel Out",
+		pp: 30,
+		priority: 1,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Rubber",
+		contestType: "Cool",
+	},
+	plasticpoke: {
+		num: -2,
+		accuracy: true,
+		basePower: 40,
+		category: "Physical",
+		name: "Plastic Poke",
+		pp: 30,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Rubber",
+		contestType: "Cool",
+	},
+	rubberbullet: {
+		num: -3,
+		accuracy: 95,
+		basePower: 70,
+		basePowerCallback(pokemon, target, move) {
+			if (target.newlySwitched || this.queue.willMove(target)) {
+				this.debug('Payback NOT boosted');
+				return move.basePower;
+			}
+			this.debug('Payback damage boost');
+			return move.basePower * 1.5;
+		},
+		category: "Special",
+		name: "Rubber Bullet",
+		pp: 16,
+		priority: 0,
+		flags: {bullet: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Rubber",
+		contestType: "Tough",
+	},
+	elasticburst: {
+		num: -4,
+		accuracy: 10,
+		basePower: 110,
+		category: "Physical",
+		name: "Elastic Burst",
+		pp: 10,
+		priority: -6,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Rubber",
+		contestType: "Beautiful",
+	},
 };
