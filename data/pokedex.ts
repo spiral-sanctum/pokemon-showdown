@@ -19627,7 +19627,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Goliathens",
 		types: ["Dragon", "Ghost"],
 		baseStats: {hp: 97, atk: 117, def: 98, spa: 79, spd: 69, spe: 79},
-		abilities: {0: "Aftermath", 1: "Anger Point", H: "Marvel Scale"},
+		abilities: {0: "Aftermath", 1: "Anger Point", H: "Filter"},
 		heightm: 4.72,
 		weightkg: 300.2,
 		color: "Red",
