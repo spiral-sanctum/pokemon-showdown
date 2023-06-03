@@ -1830,8 +1830,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 246,
 	},
 	illuminate: {
+		onSourceModifyAccuracyPriority: 9,
+		onSourceModifyAccuracy(accuracy) {
+			if (typeof accuracy !== 'number') return;
+			this.debug('Illuminate - enhancing accuracy');
+			return this.chainModify([5325, 4096]);
+		},
 		name: "Illuminate",
-		rating: 0,
+		rating: 3,
 		num: 35,
 	},
 	illusion: {
@@ -5214,5 +5220,157 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		// implemented in the corresponding move
 		rating: 3,
 		num: -4,
+	},
+	breakneck: {
+	onModifyPriority(priority, pokemon, target, move) {
+		if (move?.basePower <= 60) return priority + 1;
+	},
+	name: "Breakneck",
+	rating: 3,
+	num: -4,
+	},
+	nullspace: {
+			name: "Null Space",
+			onAnyModifyBoost(boosts, pokemon) {
+				const unawareUser = this.effectState.target;
+				if (unawareUser === pokemon) return;
+				if (unawareUser === this.activePokemon && pokemon === this.activeTarget) {
+					boosts['def'] = 0;
+					boosts['spd'] = 0;
+				}
+			},
+			isBreakable: true,
+			rating: 4,
+			num: -5,
+	},
+	exoskeleton: {
+		onSourceModifyAtkPriority: 6,
+		onSourceModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Rock') {
+				this.debug('Carapace weaken');
+				return this.chainModify(0.5);
+			}
+			if (move.type === 'Fighting') {
+				this.debug('Carapace strengthen');
+				return this.chainModify(2);
+			}
+		},
+		onSourceModifySpAPriority: 5,
+		onSourceModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Rock') {
+				this.debug('Carapace weaken');
+				return this.chainModify(0.5);
+			}
+			if (move.type === 'Fighting') {
+				this.debug('Carapace strengthen');
+				return this.chainModify(2);
+			}
+		},
+		name: "Exoskeleton",
+		rating: 3,
+		num: -6,
+	},
+	chainstriker: {
+		onStart(pokemon) {
+			pokemon.addVolatile('chainstriker');
+		},
+		condition: {
+			onStart(pokemon) {
+				this.effectState.numConsecutive = 0;
+				this.effectState.lastMove = '';
+			},
+			onTryMovePriority: -2,
+			onTryMove(pokemon, target, move) {
+				if (!pokemon.hasAbility('chainstriker')) {
+					pokemon.removeVolatile('chainstriker');
+					return;
+				}
+				if (this.effectState.lastMove === move.id && pokemon.moveLastTurnResult) {
+					this.effectState.numConsecutive++;
+				} else {
+					this.effectState.numConsecutive = 0;
+				}
+				this.effectState.lastMove = move.id;
+			},
+			onModifyDamage(damage, source, target, move) {
+				const dmgMod = [0x1000, 0x1333, 0x1666, 0x1999, 0x1CCC, 0x2000];
+				const numConsecutive = this.effectState.numConsecutive > 5 ? 5 : this.effectState.numConsecutive;
+				return this.chainModify([dmgMod[numConsecutive], 0x1000]);
+			},
+		},
+		name: "Chain Striker",
+		rating: 3.5,
+		num: -7,
+	},
+	ignition: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Fire') {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Ignition');
+				}
+				return null;
+			}
+		},
+		name: "Ignition",
+		rating: 3.5,
+		num: -8,
+	},
+	turbogenerator: {
+		onFoeDamagingHit(damage, target, source, move) {
+			if (move.type === 'Electric') this.heal(source.baseMaxhp / 6, source);
+		},
+		name: "Turbogenerator",
+		rating: 3,
+		num: -9,
+	},
+	daunt: {
+        onStart(pokemon) {
+            let activated = false;
+            for (const target of pokemon.adjacentFoes()) {
+                if (!activated) {
+                    this.add('-ability', pokemon, 'Daunt', 'boost');
+                    activated = true;
+                }
+                if (target.volatiles['substitute']) {
+                    this.add('-immune', target);
+                } else {
+                    this.boost({spa: -1}, target, pokemon, null, true);
+                }
+            }
+        },
+        name: "Daunt",
+        rating: 3.5,
+        num: -10,
+    },
+		dynamo: {
+        // upokecenter says this is implemented as an added secondary effect
+        onModifyMove(move) {
+            if (!move || !move.flags['contact'] || move.target === 'self') return;
+            if (!move.secondaries) {
+                move.secondaries = [];
+            }
+            move.secondaries.push({
+                chance: 30,
+                status: 'par',
+                ability: this.dex.abilities.get('dynamo'),
+            });
+        },
+        name: "Dynamo",
+        rating: 3,
+        num: -11,
+    },
+		orbital: {
+			onStart(pokemon) {
+					this.field.addPseudoWeather('gravity', pokemon);
+			},
+			onSwitchOut(pokemon) {
+					this.field.removePseudoWeather('gravity');
+			},
+			onFaint(pokemon) {
+					this.field.removePseudoWeather('gravity');
+			},
+			name: "Orbital",
+			rating: 3,
+			num: -12,
 	},
 };
