@@ -21860,9 +21860,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {protect: 1, mirror: 1},
 		onEffectiveness(typeMod, target, type) {
 			if (type === 'Steel') return 1;
-			}
-		},
-		onEffectiveness(typeMod, target, type) {
 			if (type === 'Fire') return 0.5;
 		},
 		secondary: {
