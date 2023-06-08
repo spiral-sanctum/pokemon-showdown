@@ -21833,7 +21833,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	rubberwhip: {
-		num: 428,
+		num: -13,
 		accuracy: 90,
 		basePower: 80,
 		category: "Physical",
@@ -21850,7 +21850,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Cool",
 	},
 	liquifyingburst: {
-		num: -50,
+		num: -14,
 		accuracy: 95,
 		basePower: 80,
 		category: "Special",
