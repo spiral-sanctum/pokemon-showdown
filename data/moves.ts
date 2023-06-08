@@ -1368,7 +1368,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Bitter Blade",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1, heal: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
 		drain: [1, 2],
 		secondary: null,
 		target: "normal",
@@ -21657,26 +21657,6 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Rubber",
-		contestType: "Cool",
-	},
-	rajinslice: {
-		num: -5,
-		accuracy: 100,
-		basePower: 110,
-		category: "Physical",
-		overrideDefensiveStat: 'spd',
-		name: "Raijin Slice",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1},
-		secondary: {
-			chance: 10,
-			onHit(target, source) {
-				this.field.setWeather('raindance');
-			},
-		},
-		target: "normal",
-		type: "Electric",
 		contestType: "Beautiful",
 	},
 	cataclysmhorn: {
