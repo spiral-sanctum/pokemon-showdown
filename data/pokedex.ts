@@ -19756,7 +19756,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		prevo: "Punchick",
 		evoLevel: 31,
 		eggGroups: ["Flying"],
-	},
+	}, /**
 	alikat: {
 		num: -5054,
 		name: "Alikat",
@@ -20460,5 +20460,5 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		tags: ["Mythical"],
 		eggGroups: ["Undiscovered"],
-	},
+	}, */
 };
