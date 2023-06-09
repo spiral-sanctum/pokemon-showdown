@@ -5433,7 +5433,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				for (i in target.boosts) {
 					if(target.boosts[i] > 0) isBoosted = true;
 				}
-				console.log("isBoosted: "+isBoosted);
 				if (isBoosted) this.boost({atk: 1}, pokemon);
 			}
 		},
@@ -5441,26 +5440,37 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: -14,
 	},
-		thorns: {
-			onDamagingHitOrder: 1,
-			onDamagingHit(damage, target, source, move) {
-				if (this.checkMoveMakesContact(move, source, target, true)) {
-					this.damage(source.baseMaxhp / 8, source, target);
-				}
-			},
-			name: "Thorns",
-			rating: 2.5,
-			num: -15,
+	thorns: {
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (this.checkMoveMakesContact(move, source, target, true)) {
+				this.damage(source.baseMaxhp / 8, source, target);
+			}
 		},
-		bounceguard: {
-				onDamagingHitOrder: 1,
-				onDamagingHit(damage, target, source, move) {
-					if (!move.flags['contact'] && move.category !== 'Status') {
-						this.damage(source.baseMaxhp / 8, source, target);
-					}
-				},
-				name: "Bounce Guard",
-				rating: 2.5,
-				num: 24,
-			},
+		name: "Thorns",
+		rating: 2.5,
+		num: -15,
+	},
+	bounceguard: {
+		onDamagingHitOrder: 1,
+		onDamagingHit(damage, target, source, move) {
+			if (!move.flags['contact'] && move.category !== 'Status') {
+				this.damage(source.baseMaxhp / 8, source, target);
+			}
+		},
+		name: "Bounce Guard",
+		rating: 2.5,
+		num: 24,
+	},
+	adept: {
+		onModifyMove(move, pokemon, target) {
+			if (move.category === 'Physical') {
+				move.category = 'Special';
+				move.basePower = Math.floor(move.basePower * 1.2);
+			}
+		},
+		name: "Adept",
+		rating: 2,
+		num: -17,
+	},
 };
