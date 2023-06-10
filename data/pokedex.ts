@@ -19287,7 +19287,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	caraburst: {
 		num: -5017,
 		name: "Caraburst",
-		types: ["Fire", "Fire"],
+		types: ["Fire", "Bug"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 75, atk: 94, def: 100, spa: 116, spd: 80, spe: 65},
 		abilities: {0: "Blaze", H: "Artillery"},
@@ -19395,7 +19395,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: -5025,
 		name: "Acciprey",
 		types: ["Flying", "Dark"],
-		baseStats: {hp: 63, atk: 127, def: 33, spa: 70, spd: 15, spe: 101},
+		baseStats: {hp: 63, atk: 117, def: 43, spa: 60, spd: 25, spe: 101},
 		abilities: {0: "Big Pecks", 1: "Infiltrator", H: "Slush Rush"},
 		heightm: 0.55,
 		weightkg: 30,
@@ -19408,7 +19408,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: -5026,
 		name: "Pernifrost",
 		types: ["Dragon", "Ice"],
-		baseStats: {hp: 93, atk: 147, def: 83, spa: 147, spd: 20, spe: 110},
+		baseStats: {hp: 93, atk: 147, def: 73, spa: 127, spd: 50, spe: 110},
 		abilities: {0: "Adaptability"},
 		heightm: 6.7,
 		weightkg: 400.5,
@@ -19747,7 +19747,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	brawlabird: {
 		num: -5053,
 		name: "Brawlabird",
-		types: ["Fighting", "Fighting"],
+		types: ["Fighting", "Flying"],
 		baseStats: {hp: 60, atk: 119, def: 66, spa: 76, spd: 72, spe: 92},
 		abilities: {0: "Iron Fist", 1: "Early Bird", H: "Vital Spirit"},
 		heightm: 1.34,
@@ -19756,7 +19756,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		prevo: "Punchick",
 		evoLevel: 31,
 		eggGroups: ["Flying"],
-	}, /**
+	},
 	alikat: {
 		num: -5054,
 		name: "Alikat",
@@ -19796,18 +19796,18 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evoLevel: 41,
 		eggGroups: ["Field"],
 	},
-	draconaut: {
+	dragonaut: { //"dragonaut" and draconaut are not the same Pokemon
 		num: -5057,
-		name: "Draconaut",
+		name: "Dragonaut",
 		types: ["Dragon", "Electric"],
 		baseStats: {hp: 74, atk: 126, def: 70, spa: 60, spd: 80, spe: 85},
-		abilities: {0: "Propeller Tail", 1: "Motor Drive", H: "Daunt"},
+		abilities: {0: "Swift Swim", 1: "Motor Drive", H: "Daunt"},
 		heightm: 2.23,
 		weightkg: 173.1,
 		color: "Blue",
 		eggGroups: ["Dragon"],
 	},
-	porkano: {
+	porkano: { //I don't need the pre-evo, stop looking in my code.
 		num: -5058,
 		name: "Porkano",
 		types: ["Grass", "Fire"],
@@ -20252,7 +20252,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		heightm: 1.4,
 		weightkg: 93,
 		color: "Gray",
-		prevo: "Misdreavus",
+		prevo: "Gurdurr",
 		evoType: "levelFriendship",
 		eggGroups: ["Human-Like"],
 	}, //that should be all for now
@@ -20460,5 +20460,5 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Blue",
 		tags: ["Mythical"],
 		eggGroups: ["Undiscovered"],
-	}, */
+	},
 };
