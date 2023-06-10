@@ -20154,7 +20154,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	demolidos: {
 		num: -5086,
-		name: "Santovial",
+		name: "Demolidos",
 		types: ["Rock", "Fighting"],
 		baseStats: {hp: 112, atk: 170, def: 70, spa: 75, spd: 60, spe: 68},
 		abilities: {0: "Sheer Force"},
@@ -20318,7 +20318,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Lucéark"],
 		eggGroups: ["Monster"],
 	},
-	lucéark: {
+	luceark: {
 		num: -5097,
 		name: "Lucéark",
 		types: ["Spiral", "Void"],
