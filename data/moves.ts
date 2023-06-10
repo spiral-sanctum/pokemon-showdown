@@ -16234,7 +16234,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Secret Sword",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, slicing: 1},
 		secondary: null,
 		target: "normal",
 		type: "Fighting",
@@ -21676,7 +21676,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Raijin Slice",
 		pp: 5,
 		priority: 0,
-		flags: {protect: 1, mirror: 1},
+		flags: {protect: 1, mirror: 1, slicing: 1},
 		secondary: {
 			chance: 10,
 			onHit(target, source) {
