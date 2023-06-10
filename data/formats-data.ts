@@ -6393,4 +6393,172 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	brawlabird: {
 		tier: "UU",
 	},
+	alikat: {
+		tier: "LC",
+	},
+	alitric: {
+		tier: "NFE",
+	},
+	alivolt: {
+		tier: "UU",
+	},
+	dragonaut: {
+		tier: "NU",
+	},
+	porkano: {
+		tier: "OU",
+	},
+	malidol: {
+		tier: "PU",
+	},
+	prawatt: {
+		tier: "LC",
+	},
+	shrimpulse: {
+		tier: "RU",
+	},
+	kattacomb: {
+		tier: "NU",
+	},
+	gelatar: {
+		tier: "LC",
+	},
+	sticrawl: {
+		tier: "NFE",
+	},
+	taravage: {
+		tier: "RU",
+	},
+	skwirl: {
+		tier: "LC",
+	},
+	skoriel: {
+		tier: "PU",
+	},
+	skorielblackice: {
+		tier: "NU",
+	},
+	teramite: {
+		tier: "LC",
+	},
+	servereign: {
+		tier: "PU",
+	},
+	regalient: {
+		tier: "NU",
+	},
+	magnorillo: {
+		tier: "RU",
+	},
+	komonger: {
+		tier: "RU",
+	},
+	tundrago: {
+		tier: "NU",
+	},
+	genetox: {
+		tier: "LC",
+	},
+	servenom: {
+		tier: "Nu",
+	},
+	criktan: {
+		tier: "LC",
+	},
+	coleoterra: {
+		tier: "RU",
+	},
+	lizotta: {
+		tier: "LC",
+	},
+	pastrole: {
+		tier: "LC",
+	},
+	goocapon: {
+		tier: "NU",
+	},
+	mistereal: {
+		tier: "RU",
+	},
+	bronzomni: {
+		tier: "Uber",
+	},
+	calcix: {
+		tier: "PU",
+	},
+	santovial: {
+		tier: "NU",
+	},
+	demolidos: {
+		tier: "RU",
+	},
+	citadon: {
+		tier: "RU",
+	},
+	intricat: {
+		tier: "PU",
+	},
+	raizor: {
+		tier: "RU",
+	},
+	mistrivia: {
+		tier: "NU",
+	},
+	eelander: {
+		tier: "NU",
+	},
+	chienkin: {
+		tier: "RU",
+	},
+	pillurr: {
+		tier: "RU",
+	},
+	bobert: {
+		tier: "Illegal",
+	},
+	infinaught: {
+		tier: "Illegal",
+	},
+	ouromarin: {
+		tier: "Illegal",
+	},
+	equilin: {
+		tier: "Illegal",
+	},
+	imaginis: {
+		tier: "Illegal",
+	},
+	lucéark: {
+		tier: "Illegal",
+	},
+	lumiscura: {
+		tier: "Illegal",
+	},
+	sensibex: {
+		tier: "LC",
+	},
+	etherebex: {
+		tier: "NU",
+	},
+	procciolo: {
+		tier: "LC",
+	},
+	cordiano: {
+		tier: "RU",
+	},
+	dinimbus: {
+		tier: "Lc",
+	},
+	dinostream: {
+		tier: "UU",
+	},
+	cranean: {
+		tier: "LC",
+	},
+	ceresoul: {
+		tier: "PU",
+	},
+	oblyvern: {
+		tier: "Illegal",
+	},
 };
