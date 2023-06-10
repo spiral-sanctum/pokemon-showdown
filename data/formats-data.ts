@@ -2974,7 +2974,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	regigigas: {
 		isNonstandard: "Past",
-		tier: "Illegal",
+		tier: "Uber",
 		natDexTier: "RU",
 	},
 	giratina: {
