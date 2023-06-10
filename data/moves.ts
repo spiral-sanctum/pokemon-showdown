@@ -21659,4 +21659,215 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rubber",
 		contestType: "Beautiful",
 	},
+	rajinslice: {
+		num: -5,
+		accuracy: 100,
+		basePower: 110,
+		category: "Physical",
+		overrideDefensiveStat: 'spd',
+		name: "Raijin Slice",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			onHit(target, source) {
+				this.field.setWeather('raindance');
+			},
+		},
+		target: "normal",
+		type: "Electric",
+		contestType: "Beautiful",
+	},
+	cataclysmhorn: {
+		num: -6,
+		accuracy: 90,
+		basePower: 150,
+		category: "Physical",
+		name: "Cataclysm Horn",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, recharge: 1, protect: 1, mirror: 1},
+		self: {
+			volatileStatus: 'mustrecharge',
+		},
+		secondary: null,
+		target: "normal",
+		type: "Bug",
+		contestType: "Tough",
+	},
+	darkmelody: {
+		num: -7,
+		accuracy: 100,
+		basePower: 85,
+		category: "Special",
+		name: "Dark Melody",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
+		secondary: {
+			chance: 10,
+			status: 'slp',
+		},
+		target: "normal",
+		type: "Dark",
+		contestType: "Beautiful",
+	},
+	forestsvoice: {
+		num: -8,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Forest's Voice",
+		pp: 10,
+		priority: 0,
+		flags: {nonsky: 1, sound: 1, protect: 1, mirror: 1, bypasssub: 1, authentic: 1},
+		terrain: 'grassyterrain',
+		condition: {
+			duration: 5,
+			durationCallback(source, effect) {
+				if (source?.hasItem('terrainextender')) {
+					return 8;
+				}
+				return 5;
+			},
+			onBasePowerPriority: 6,
+			onBasePower(basePower, attacker, defender, move) {
+				const weakenedMoves = ['earthquake', 'bulldoze', 'magnitude'];
+				if (weakenedMoves.includes(move.id) && defender.isGrounded() && !defender.isSemiInvulnerable()) {
+					this.debug('move weakened by grassy terrain');
+					return this.chainModify(0.5);
+				}
+				if (move.type === 'Grass' && attacker.isGrounded()) {
+					this.debug('grassy terrain boost');
+					return this.chainModify([5325, 4096]);
+				}
+			},
+			onFieldStart(field, source, effect) {
+				if (effect?.effectType === 'Ability') {
+					this.add('-fieldstart', 'move: Grassy Terrain', '[from] ability: ' + effect, '[of] ' + source);
+				} else {
+					this.add('-fieldstart', 'move: Grassy Terrain');
+				}
+			},
+			onResidualOrder: 5,
+			onResidualSubOrder: 2,
+			onResidual(pokemon) {
+				if (pokemon.isGrounded() && !pokemon.isSemiInvulnerable()) {
+					this.heal(pokemon.baseMaxhp / 16, pokemon, pokemon);
+				} else {
+					this.debug(`Pokemon semi-invuln or not grounded; Grassy Terrain skipped`);
+				}
+			},
+			onFieldResidualOrder: 27,
+			onFieldResidualSubOrder: 7,
+			onFieldEnd() {
+				this.add('-fieldend', 'move: Grassy Terrain');
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		zMove: {boost: {def: 4}},
+		contestType: "Beautiful",
+	},
+	thinkfast: {
+		num: -9,
+		accuracy: 100,
+		basePower: 40,
+		category: "Special",
+		name: "Think Fast",
+		pp: 30,
+		priority: 1,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Psychic",
+		contestType: "Cool",
+	},
+	poisonhorn: {
+		num: -10,
+		accuracy: 85,
+		basePower: 120,
+		category: "Physical",
+		name: "Poison Horn",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			status: 'psn',
+		},
+		target: "normal",
+		type: "Poison",
+		contestType: "Cool",
+	},
+	glacier: {
+		num: -11,
+		accuracy: 100,
+		basePower: 100,
+		category: "Physical",
+		name: "Glacier",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, nonsky: 1},
+		secondary: null,
+		target: "allAdjacent",
+		type: "Ice",
+		contestType: "Tough",
+	},
+	polymerization: {
+		num: -12,
+		accuracy: 100,
+		basePower: 25,
+		category: "Physical",
+		name: "Polymerization",
+		pp: 30,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		zMove: {basePower: 140},
+		contestType: "Clever",
+	},
+	rubberwhip: {
+		num: 428,
+		accuracy: 90,
+		basePower: 80,
+		category: "Physical",
+		name: "Rubber Whip",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 20,
+			volatileStatus: 'flinch',
+		},
+		target: "normal",
+		type: "Rubber Whip",
+		contestType: "Cool",
+	},
+	liquifyingburst: {
+		num: -14,
+		accuracy: 95,
+		basePower: 80,
+		category: "Special",
+		name: "Liquifying Burst",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onEffectiveness(typeMod, target, type) {
+			if (type === 'Steel') return 1;
+			if (type === 'Fire') return 0.5;
+		},
+		secondary: {
+			chance: 10,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Steel",
+		contestType: "Beautiful",
+		},
 };
