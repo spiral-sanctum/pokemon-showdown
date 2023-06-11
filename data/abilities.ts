@@ -3857,7 +3857,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['slicing']) {
 				this.debug('Shapness boost');
-				return this.chainModify(1.5);
+				return this.chainModify(1.3);
 			}
 		},
 		name: "Sharpness",

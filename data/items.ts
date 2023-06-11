@@ -7531,4 +7531,166 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 8,
 		isNonstandard: "CAP",
 	},
+	fluffypillow: {
+			name: "Fluffy Pillow",
+			spritenum: 753,
+			fling: {
+					basePower: 10,
+			},
+			onResidual(pokemon) {
+					if (pokemon.status === 'slp' || pokemon.ability === 'comatose') {
+							this.heal(pokemon.baseMaxhp / 10);
+					}
+			},
+			num: -3,
+			gen: 9,
+	},
+	rubbermemory: {
+		name: "Rubber Memory",
+		spritenum: 754,
+		onMemory: 'Rubber',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Silvally-Rubber",
+		itemUser: ["Silvally-Rubber"],
+		num: -4,
+		gen: 9,
+		isNonstandard: "Past",
+	},
+	cleanmemory: {
+		name: "Clean Memory",
+		spritenum: 755,
+		onMemory: 'Clean',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Silvally-Clean",
+		itemUser: ["Silvally-Clean"],
+		num: -5,
+		gen: 9,
+		isNonstandard: "Past",
+	},
+	spiralmemory: {
+		name: "Spiral Memory",
+		spritenum: 756,
+		onMemory: 'Spiral',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Silvally-Spiral",
+		itemUser: ["Silvally-Spiral"],
+		num: -6,
+		gen: 9,
+		isNonstandard: "Past",
+	},
+	voidmemory: {
+		name: "Void Memory",
+		spritenum: 757,
+		onMemory: 'Void',
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === 773) || pokemon.baseSpecies.num === 773) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Silvally-Void",
+		itemUser: ["Silvally-Void"],
+		num: -7,
+		gen: 9,
+		isNonstandard: "Past",
+	},
+	stretchplate: {
+		name: "Stretch Plate",
+		spritenum: 758,
+		onPlate: 'Rubber',
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move && move.type === 'Rubber') {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Arceus-Rubber",
+		num: -8,
+		gen: 9,
+		isNonstandard: "Past",
+	},
+	sterileplate: {
+		name: "Sterile Plate",
+		spritenum: 759,
+		onPlate: 'Clean',
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move && move.type === 'Clean') {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Arceus-Clean",
+		num: -9,
+		gen: 9,
+		isNonstandard: "Past",
+	},
+	infinityplate: {
+		name: "Infinity Plate",
+		spritenum: 760,
+		onPlate: 'Spiral',
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move && move.type === 'Spiral') {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Arceus-Imperfect",
+		num: -10,
+		gen: 9,
+		isNonstandard: "Past",
+	},
+	nothingplate: {
+		name: "Nothing Plate",
+		spritenum: 761,
+		onPlate: "Void",
+		onBasePowerPriority: 15,
+		onBasePower(basePower, user, target, move) {
+			if (move && move.type === 'Void') {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		onTakeItem(item, pokemon, source) {
+			if ((source && source.baseSpecies.num === 493) || pokemon.baseSpecies.num === 493) {
+				return false;
+			}
+			return true;
+		},
+		forcedForme: "Arceus-Incomplete",
+		num: -11,
+		gen: 9,
+		isNonstandard: "Past",
+	},
 };

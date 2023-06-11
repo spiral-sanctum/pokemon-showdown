@@ -1170,6 +1170,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 5,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, failcopycat: 1, failmimic: 1},
+		overrideOffensiveStat: 'def',
 		secondary: null,
 		target: "normal",
 		type: "Steel",
@@ -3743,17 +3744,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		secondary: {
-			chance: 50,
-			onHit(target, source) {
-				const result = this.random(3);
-				if (result === 0) {
-					target.trySetStatus('psn', source);
-				} else if (result === 1) {
-					target.trySetStatus('par', source);
-				} else {
-					target.trySetStatus('slp', source);
-				}
-			},
+			chance: 100,
+			status: 'psn',
 		},
 		target: "normal",
 		type: "Poison",
@@ -21841,7 +21833,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Clever",
 	},
 	rubberwhip: {
-		num: 428,
+		num: -13,
 		accuracy: 90,
 		basePower: 80,
 		category: "Physical",
@@ -21877,5 +21869,137 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Steel",
 		contestType: "Beautiful",
+		},
+		shieldbeam: {
+			num: -15,
+			accuracy: 100,
+			basePower: 80,
+			category: "Special",
+			name: "Shield Beam",
+			pp: 10,
+			priority: 0,
+			flags: {protect: 1, mirror: 1},
+			overrideOffensiveStat: 'def',
+			secondary: null,
+			target: "normal",
+			type: "Steel",
+		},
+		adhesivewave: {
+			num: -16,
+			accuracy: 100,
+			basePower: 95,
+			category: "Special",
+			name: "Adhesive Wave",
+			pp: 15,
+			priority: 0,
+			flags: {protect: 1, mirror: 1},
+			secondary: {
+				chance: 10,
+				boosts: {
+					spe: -1,
+				},
+			},
+			target: "allAdjacentFoes",
+			type: "Rubbber",
+			contestType: "Beautiful",
+		},
+		rubbertongue: {
+			num: -17,
+			accuracy: 90,
+			basePower: 40,
+			category: "Physical",
+			isNonstandard: "Past",
+			name: "Rubber Tongue",
+			pp: 15,
+			priority: 0,
+			flags: {contact: 1, protect: 1, mirror: 1},
+			multihit: 2,
+			secondary: {
+				chance: 5,
+				status: 'par',
+			},
+			target: "normal",
+			type: "Rubber",
+			maxMove: {basePower: 130},
+			contestType: "Tough",
+		},
+		mischiefmagic: {
+			num: -18,
+			accuracy: true,
+			basePower: 0,
+			category: "Status",
+			name: "Mischief Magic",
+			pp: 20,
+			priority: 0,
+			flags: {snatch: 1},
+			boosts: {
+				spa: 1,
+				spe: 1,
+			},
+			secondary: null,
+			target: "self",
+			type: "Ghost",
+			zMove: {boost: {atk: 4}},
+			contestType: "Cool",
+		},
+		chemicalsplash: {
+			num: -19,
+			accuracy: 95,
+			basePower: 50,
+			category: "Special",
+			name: "Chemical Splash",
+			pp: 20,
+			priority: 0,
+			flags: {protect: 1, mirror: 1},
+			secondary: {
+				chance: 30,
+				status: 'brn',
+			},
+			target: "normal",
+			type: "Clean",
+			contestType: "Tough",
+		},
+		cauterize: {
+			num: 20,
+			accuracy: 90,
+			basePower: 20,
+			category: "Physical",
+			name: "Cauterize",
+			pp: 20,
+			priority: 0,
+			flags: {contact: 1, protect: 1, mirror: 1},
+			onHit(target, source) {
+				if (!target.cureStatus()) {
+					this.add('-fail', source);
+					this.attrLastMove('[still]');
+					return this.NOT_FAIL;
+				}
+			},
+			secondary: {
+				chance: 100,
+				status: 'brn',
+			},
+			target: "normal",
+			type: "Clean",
+			contestType: "Cool",
+		},
+		exfoliate: {
+			num: 347,
+			accuracy: true,
+			basePower: 0,
+			category: "Status",
+			name: "Exfoliate",
+			pp: 20,
+			priority: 0,
+			flags: {snatch: 1},
+			boosts: {
+				spa: 1,
+				spd: 1,
+			},
+			secondary: null,
+			target: "self",
+			type: "Clean",
+			zMove: {effect: 'clearnegativeboost'},
+			contestType: "Cute",
 		},
 };
