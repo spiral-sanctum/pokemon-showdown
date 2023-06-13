@@ -21828,7 +21828,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		multihit: [2, 5],
 		secondary: null,
 		target: "normal",
-		type: "Normal",
+		type: "Rubber",
 		zMove: {basePower: 140},
 		contestType: "Clever",
 	},
@@ -21846,7 +21846,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			volatileStatus: 'flinch',
 		},
 		target: "normal",
-		type: "Rubber Whip",
+		type: "Rubber",
 		contestType: "Cool",
 	},
 	liquifyingburst: {
@@ -21900,7 +21900,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 				},
 			},
 			target: "allAdjacentFoes",
-			type: "Rubbber",
+			type: "Rubber",
 			contestType: "Beautiful",
 		},
 		rubbertongue: {
