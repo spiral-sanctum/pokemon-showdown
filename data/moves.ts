@@ -21960,7 +21960,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			contestType: "Tough",
 		},
 		cauterize: {
-			num: 20,
+			num: -20,
 			accuracy: 90,
 			basePower: 20,
 			category: "Physical",
@@ -21984,7 +21984,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			contestType: "Cool",
 		},
 		exfoliate: {
-			num: 347,
+			num: -21,
 			accuracy: true,
 			basePower: 0,
 			category: "Status",
@@ -22001,5 +22001,215 @@ export const Moves: {[moveid: string]: MoveData} = {
 			type: "Clean",
 			zMove: {effect: 'clearnegativeboost'},
 			contestType: "Cute",
+		},
+		bleachshower: {
+			num: -22,
+			accuracy: 100,
+			basePower: 100,
+			category: "Special",
+			name: "Bleach Shower",
+			pp: 5,
+			priority: 0,
+			flags: {contact: 1, protect: 1, mirror: 1},
+			self: {
+				boosts: {
+					def: -1,
+					spd: -1,
+				},
+			},
+			secondary: null,
+			target: "normal",
+			type: "Clean",
+			contestType: "Cool",
+		},
+		fatalsyringe: {
+			num: -23,
+			accuracy: 85,
+			basePower: 120,
+			category: "Physical",
+			name: "Fatal Syringe",
+			pp: 10,
+			priority: 0,
+			flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+			secondary: null,
+			target: "normal",
+			type: "Clean",
+			contestType: "Tough",
+		},
+		puritypulse: {
+			num: -24,
+			accuracy: 100,
+			basePower: 90,
+			category: "Special",
+			name: "Purity Pulse",
+			pp: 20,
+			priority: 0,
+			flags: {contact: 1, protect: 1, mirror: 1},
+			onHit(target, source) {
+				if (!target.cureStatus()) {
+					this.add('-fail', source);
+					this.attrLastMove('[still]');
+					return this.NOT_FAIL;
+				}
+			},
+			secondary: null,
+			target: "normal",
+			type: "Clean",
+			contestType: "Cool",
+		},
+		featherdust: {
+			num: -25,
+			accuracy: 100,
+			basePower: 25,
+			category: "Physical",
+			name: "Feather Dust",
+			pp: 10,
+			priority: 0,
+			flags: {contact: 1, protect: 1, mirror: 1},
+			multihit: [2, 5],
+			secondary: null,
+			target: "normal",
+			type: "Clean",
+			zMove: {basePower: 140},
+			maxMove: {basePower: 130},
+			contestType: "Cute",
+		},
+		spincycle: {
+			num: -26,
+			accuracy: 95,
+			basePower: 80,
+			category: "Physical",
+			name: "Spin Cycle",
+			pp: 16,
+			priority: 0,
+			flags: {protect: 1, mirror: 1},
+			secondary: {
+				chance: 30,
+				volatileStatus: 'confusion',
+			},
+			target: "any",
+			type: "Clean",
+			contestType: "Beautiful",
+		},
+		jab: {
+			num: -27,
+			accuracy: 100,
+			basePower: 60,
+			category: "Physical",
+			name: "Jab",
+			pp: 20,
+			priority: 2,
+			flags: {contact: 1, protect: 1, mirror: 1},
+			onModifyPriority(priority, source, target, move) {
+        if (source.activeMoveActions > 1) {
+                return priority - 1;
+        }
+			},
+			target: "normal",
+			type: "Fighting",
+			contestType: "Tough",
+		},
+		ultrapurge: { //Might break shit. Check dex.conditions
+			num: -28,
+			accuracy: 95,
+			basePower: 140,
+			category: "Special",
+			name: "Ultrapurge",
+			pp: 5,
+			priority: 0,
+			flags: {protect: 1, mirror: 1},
+			mindBlownRecoil: true,
+			onAfterMove(pokemon, target, move) {
+				if (move.mindBlownRecoil && !move.multihit) {
+					const hpBeforeRecoil = pokemon.hp;
+					this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.conditions.get('Ultrapurge'), true);
+					if (pokemon.hp <= pokemon.maxhp / 2 && hpBeforeRecoil > pokemon.maxhp / 2) {
+						this.runEvent('EmergencyExit', pokemon, pokemon);
+					}
+				}
+			},
+			secondary: null,
+			target: "normal",
+			type: "Clean",
+		},
+		wipe: {
+			num: -29,
+			accuracy: true,
+			basePower: 0,
+			category: "Status",
+			name: "Wipe",
+			pp: 40,
+			priority: 0,
+			flags: {contact: 1, protect: 1, mirror: 1},
+			onAfterHit(target, pokemon) {
+				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+					}
+				}
+				if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+					pokemon.removeVolatile('partiallytrapped');
+				}
+			},
+			onAfterSubDamage(damage, target, pokemon) {
+				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+				for (const condition of sideConditions) {
+					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+					}
+				}
+				if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+					pokemon.removeVolatile('partiallytrapped');
+				}
+			},
+			secondary: null,
+			target: "normal",
+			type: "Clean",
+			contestType: "Cool",
+		},
+		blotout: {
+			num: -30,
+			accuracy: 100,
+			basePower: 85,
+			category: "Physical",
+			name: "Blot Out",
+			pp: 10,
+			priority: 0,
+			flags: {contact: 1, protect: 1, mirror: 1},
+			secondary: {
+				chance: 10,
+				boosts: {
+					accuracy: -1,
+				},
+			},
+			target: "normal",
+			type: "Dark",
+			contestType: "Cool",
+		},
+		grassyglide: {
+			num: 803,
+			accuracy: 100,
+			basePower: 70,
+			category: "Physical",
+			name: "Grassy Glide",
+			pp: 20,
+			priority: 0,
+			flags: {contact: 1, protect: 1, mirror: 1},
+			onModifyPriority(priority, source, target, move) {
+				if (this.field.isWeather('raindance') && source.isGrounded()) {
+					return priority + 1;
+				}
+			},
+			secondary: null,
+			target: "normal",
+			type: "Clean",
+			contestType: "Cool",
 		},
 };
