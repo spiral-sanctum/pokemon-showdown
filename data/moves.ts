@@ -22193,12 +22193,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 			type: "Dark",
 			contestType: "Cool",
 		},
-		grassyglide: {
-			num: 803,
+		soapyslide: {
+			num: -31,
 			accuracy: 100,
 			basePower: 70,
 			category: "Physical",
-			name: "Grassy Glide",
+			name: "Soapy Slide",
 			pp: 20,
 			priority: 0,
 			flags: {contact: 1, protect: 1, mirror: 1},
