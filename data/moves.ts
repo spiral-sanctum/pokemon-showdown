@@ -21704,7 +21704,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Dark Melody",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, mirror: 1, sound: 1, authentic: 1},
+		flags: {protect: 1, mirror: 1, sound: 1},
 		secondary: {
 			chance: 10,
 			status: 'slp',
@@ -21721,7 +21721,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Forest's Voice",
 		pp: 10,
 		priority: 0,
-		flags: {nonsky: 1, sound: 1, protect: 1, mirror: 1, bypasssub: 1, authentic: 1},
+		flags: {nonsky: 1, sound: 1, protect: 1, mirror: 1, bypasssub: 1},
 		terrain: 'grassyterrain',
 		condition: {
 			duration: 5,
@@ -21869,347 +21869,476 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Steel",
 		contestType: "Beautiful",
-		},
-		shieldbeam: {
-			num: -15,
-			accuracy: 100,
-			basePower: 80,
-			category: "Special",
-			name: "Shield Beam",
-			pp: 10,
-			priority: 0,
-			flags: {protect: 1, mirror: 1},
-			overrideOffensiveStat: 'def',
-			secondary: null,
-			target: "normal",
-			type: "Steel",
-		},
-		adhesivewave: {
-			num: -16,
-			accuracy: 100,
-			basePower: 95,
-			category: "Special",
-			name: "Adhesive Wave",
-			pp: 15,
-			priority: 0,
-			flags: {protect: 1, mirror: 1},
-			secondary: {
-				chance: 10,
-				boosts: {
-					spe: -1,
-				},
-			},
-			target: "allAdjacentFoes",
-			type: "Rubber",
-			contestType: "Beautiful",
-		},
-		rubbertongue: {
-			num: -17,
-			accuracy: 90,
-			basePower: 40,
-			category: "Physical",
-			isNonstandard: "Past",
-			name: "Rubber Tongue",
-			pp: 15,
-			priority: 0,
-			flags: {contact: 1, protect: 1, mirror: 1},
-			multihit: 2,
-			secondary: {
-				chance: 5,
-				status: 'par',
-			},
-			target: "normal",
-			type: "Rubber",
-			maxMove: {basePower: 130},
-			contestType: "Tough",
-		},
-		mischiefmagic: {
-			num: -18,
-			accuracy: true,
-			basePower: 0,
-			category: "Status",
-			name: "Mischief Magic",
-			pp: 20,
-			priority: 0,
-			flags: {snatch: 1},
+	},
+	shieldbeam: {
+		num: -15,
+		accuracy: 100,
+		basePower: 80,
+		category: "Special",
+		name: "Shield Beam",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		overrideOffensiveStat: 'def',
+		secondary: null,
+		target: "normal",
+		type: "Steel",
+	},
+	adhesivewave: {
+		num: -16,
+		accuracy: 100,
+		basePower: 95,
+		category: "Special",
+		name: "Adhesive Wave",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
 			boosts: {
-				spa: 1,
-				spe: 1,
+				spe: -1,
 			},
-			secondary: null,
-			target: "self",
-			type: "Ghost",
-			zMove: {boost: {atk: 4}},
-			contestType: "Cool",
 		},
-		chemicalsplash: {
-			num: -19,
-			accuracy: 95,
-			basePower: 50,
-			category: "Special",
-			name: "Chemical Splash",
-			pp: 20,
-			priority: 0,
-			flags: {protect: 1, mirror: 1},
-			secondary: {
-				chance: 30,
-				status: 'brn',
-			},
-			target: "normal",
-			type: "Clean",
-			contestType: "Tough",
+		target: "allAdjacentFoes",
+		type: "Rubber",
+		contestType: "Beautiful",
+	},
+	rubbertongue: {
+		num: -17,
+		accuracy: 90,
+		basePower: 40,
+		category: "Physical",
+		isNonstandard: "Past",
+		name: "Rubber Tongue",
+		pp: 15,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: 2,
+		secondary: {
+			chance: 5,
+			status: 'par',
 		},
-		cauterize: {
-			num: -20,
-			accuracy: 90,
-			basePower: 20,
-			category: "Physical",
-			name: "Cauterize",
-			pp: 20,
-			priority: 0,
-			flags: {contact: 1, protect: 1, mirror: 1},
-			onHit(target, source) {
-				if (!target.cureStatus()) {
-					this.add('-fail', source);
-					this.attrLastMove('[still]');
-					return this.NOT_FAIL;
-				}
-			},
-			secondary: {
-				chance: 100,
-				status: 'brn',
-			},
-			target: "normal",
-			type: "Clean",
-			contestType: "Cool",
+		target: "normal",
+		type: "Rubber",
+		maxMove: {basePower: 130},
+		contestType: "Tough",
+	},
+	mischiefmagic: {
+		num: -18,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Mischief Magic",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+			spe: 1,
 		},
-		exfoliate: {
-			num: -21,
-			accuracy: true,
-			basePower: 0,
-			category: "Status",
-			name: "Exfoliate",
-			pp: 20,
-			priority: 0,
-			flags: {snatch: 1},
+		secondary: null,
+		target: "self",
+		type: "Ghost",
+		zMove: {boost: {atk: 4}},
+		contestType: "Cool",
+	},
+	chemicalsplash: {
+		num: -19,
+		accuracy: 95,
+		basePower: 50,
+		category: "Special",
+		name: "Chemical Splash",
+		pp: 20,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Clean",
+		contestType: "Tough",
+	},
+	cauterize: {
+		num: -20,
+		accuracy: 90,
+		basePower: 20,
+		category: "Physical",
+		name: "Cauterize",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target, source) {
+			if (!target.cureStatus()) {
+				this.add('-fail', source);
+				this.attrLastMove('[still]');
+				return this.NOT_FAIL;
+			}
+		},
+		secondary: {
+			chance: 100,
+			status: 'brn',
+		},
+		target: "normal",
+		type: "Clean",
+		contestType: "Cool",
+	},
+	exfoliate: {
+		num: -21,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Exfoliate",
+		pp: 20,
+		priority: 0,
+		flags: {snatch: 1},
+		boosts: {
+			spa: 1,
+			spd: 1,
+		},
+		secondary: null,
+		target: "self",
+		type: "Clean",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Cute",
+	},
+	bleachshower: {
+		num: -22,
+		accuracy: 100,
+		basePower: 100,
+		category: "Special",
+		name: "Bleach Shower",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		self: {
 			boosts: {
-				spa: 1,
-				spd: 1,
+				def: -1,
+				spd: -1,
 			},
-			secondary: null,
-			target: "self",
-			type: "Clean",
-			zMove: {effect: 'clearnegativeboost'},
-			contestType: "Cute",
 		},
-		bleachshower: {
-			num: -22,
-			accuracy: 100,
-			basePower: 100,
-			category: "Special",
-			name: "Bleach Shower",
-			pp: 5,
-			priority: 0,
-			flags: {contact: 1, protect: 1, mirror: 1},
-			self: {
-				boosts: {
-					def: -1,
-					spd: -1,
-				},
-			},
-			secondary: null,
-			target: "normal",
-			type: "Clean",
-			contestType: "Cool",
+		secondary: null,
+		target: "normal",
+		type: "Clean",
+		contestType: "Cool",
+	},
+	fatalsyringe: {
+		num: -23,
+		accuracy: 85,
+		basePower: 120,
+		category: "Physical",
+		name: "Fatal Syringe",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
+		secondary: null,
+		target: "normal",
+		type: "Clean",
+		contestType: "Tough",
+	},
+	puritypulse: {
+		num: -24,
+		accuracy: 100,
+		basePower: 90,
+		category: "Special",
+		name: "Purity Pulse",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(target, source) {
+			if (!target.cureStatus()) {
+				this.add('-fail', source);
+				this.attrLastMove('[still]');
+				return this.NOT_FAIL;
+			}
 		},
-		fatalsyringe: {
-			num: -23,
-			accuracy: 85,
-			basePower: 120,
-			category: "Physical",
-			name: "Fatal Syringe",
-			pp: 10,
-			priority: 0,
-			flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
-			secondary: null,
-			target: "normal",
-			type: "Clean",
-			contestType: "Tough",
+		secondary: null,
+		target: "normal",
+		type: "Clean",
+		contestType: "Cool",
+	},
+	featherdust: {
+		num: -25,
+		accuracy: 100,
+		basePower: 25,
+		category: "Physical",
+		name: "Feather Dust",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		multihit: [2, 5],
+		secondary: null,
+		target: "normal",
+		type: "Clean",
+		zMove: {basePower: 140},
+		maxMove: {basePower: 130},
+		contestType: "Cute",
+	},
+	spincycle: {
+		num: -26,
+		accuracy: 95,
+		basePower: 80,
+		category: "Physical",
+		name: "Spin Cycle",
+		pp: 16,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			volatileStatus: 'confusion',
 		},
-		puritypulse: {
-			num: -24,
-			accuracy: 100,
-			basePower: 90,
-			category: "Special",
-			name: "Purity Pulse",
-			pp: 20,
-			priority: 0,
-			flags: {contact: 1, protect: 1, mirror: 1},
-			onHit(target, source) {
-				if (!target.cureStatus()) {
-					this.add('-fail', source);
-					this.attrLastMove('[still]');
-					return this.NOT_FAIL;
+		target: "any",
+		type: "Clean",
+		contestType: "Beautiful",
+	},
+	jab: {
+		num: -27,
+		accuracy: 100,
+		basePower: 60,
+		category: "Physical",
+		name: "Jab",
+		pp: 20,
+		priority: 2,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyPriority(priority, source, target, move) {
+    if (source.activeMoveActions > 1) {
+            return priority - 1;
+    }
+		},
+		target: "normal",
+		type: "Fighting",
+		contestType: "Tough",
+	},
+	ultrapurge: { //Might break shit. Check dex.conditions
+		num: -28,
+		accuracy: 95,
+		basePower: 140,
+		category: "Special",
+		name: "Ultrapurge",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		mindBlownRecoil: true,
+		onAfterMove(pokemon, target, move) {
+			if (move.mindBlownRecoil && !move.multihit) {
+				const hpBeforeRecoil = pokemon.hp;
+				this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.conditions.get('Ultrapurge'), true);
+				if (pokemon.hp <= pokemon.maxhp / 2 && hpBeforeRecoil > pokemon.maxhp / 2) {
+					this.runEvent('EmergencyExit', pokemon, pokemon);
 				}
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Clean",
+	},
+	wipe: {
+		num: -29,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Wipe",
+		pp: 40,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		onAfterSubDamage(damage, target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Clean",
+		contestType: "Cool",
+	},
+	blotout: {
+		num: -30,
+		accuracy: 100,
+		basePower: 85,
+		category: "Physical",
+		name: "Blot Out",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			boosts: {
+				accuracy: -1,
 			},
-			secondary: null,
-			target: "normal",
-			type: "Clean",
-			contestType: "Cool",
 		},
-		featherdust: {
-			num: -25,
-			accuracy: 100,
-			basePower: 25,
-			category: "Physical",
-			name: "Feather Dust",
-			pp: 10,
-			priority: 0,
-			flags: {contact: 1, protect: 1, mirror: 1},
-			multihit: [2, 5],
-			secondary: null,
-			target: "normal",
-			type: "Clean",
-			zMove: {basePower: 140},
-			maxMove: {basePower: 130},
-			contestType: "Cute",
+		target: "normal",
+		type: "Dark",
+		contestType: "Cool",
+	},
+	soapyslide: {
+		num: -31,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Soapy Slide",
+		pp: 20,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onModifyPriority(priority, source, target, move) {
+			if (this.field.isWeather('raindance') && source.isGrounded()) {
+				return priority + 1;
+			}
 		},
-		spincycle: {
-			num: -26,
-			accuracy: 95,
-			basePower: 80,
-			category: "Physical",
-			name: "Spin Cycle",
-			pp: 16,
-			priority: 0,
-			flags: {protect: 1, mirror: 1},
-			secondary: {
-				chance: 30,
-				volatileStatus: 'confusion',
-			},
-			target: "any",
-			type: "Clean",
-			contestType: "Beautiful",
+		secondary: null,
+		target: "normal",
+		type: "Clean",
+		contestType: "Cool",
+	},
+	lockonshock: {
+		num: -32,
+		accuracy: 100,
+		basePower: 65,
+		basePowerCallback(pokemon, target, move) {
+			// You can't get here unless the lock-on shock succeeds
+			if (target.beingCalledBack || target.switchFlag) {
+				this.debug('Lock-On Shock damage boost');
+				return Math.floor(move.basePower * 1.5);
+			}
+			return move.basePower;
 		},
-		jab: {
-			num: -27,
-			accuracy: 100,
-			basePower: 60,
-			category: "Physical",
-			name: "Jab",
-			pp: 20,
-			priority: 2,
-			flags: {contact: 1, protect: 1, mirror: 1},
-			onModifyPriority(priority, source, target, move) {
-        if (source.activeMoveActions > 1) {
-                return priority - 1;
-        }
-			},
-			target: "normal",
-			type: "Fighting",
-			contestType: "Tough",
+		category: "Physical",
+		name: "Lock-On Shock",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		beforeTurnCallback(pokemon) {
+			for (const side of this.sides) {
+				if (side.hasAlly(pokemon)) continue;
+				side.addSideCondition('lock-on shock', pokemon);
+				const data = side.getSideConditionData('lock-on shock');
+				if (!data.sources) {
+					data.sources = [];
+				}
+				data.sources.push(pokemon);
+			}
 		},
-		ultrapurge: { //Might break shit. Check dex.conditions
-			num: -28,
-			accuracy: 95,
-			basePower: 140,
-			category: "Special",
-			name: "Ultrapurge",
-			pp: 5,
-			priority: 0,
-			flags: {protect: 1, mirror: 1},
-			mindBlownRecoil: true,
-			onAfterMove(pokemon, target, move) {
-				if (move.mindBlownRecoil && !move.multihit) {
-					const hpBeforeRecoil = pokemon.hp;
-					this.damage(Math.round(pokemon.maxhp / 2), pokemon, pokemon, this.dex.conditions.get('Ultrapurge'), true);
-					if (pokemon.hp <= pokemon.maxhp / 2 && hpBeforeRecoil > pokemon.maxhp / 2) {
-						this.runEvent('EmergencyExit', pokemon, pokemon);
+		onModifyMove(move, source, target) {
+			move.infiltrates = true;
+			if (target?.beingCalledBack || target?.switchFlag) move.accuracy = true;
+		},
+		onTryHit(target, pokemon) {
+			target.side.removeSideCondition('lock-on shock');
+		},
+		condition: {
+			duration: 1,
+			onBeforeSwitchOut(pokemon) {
+				this.debug('Lock-On Shock start');
+				let alreadyAdded = false;
+				pokemon.removeVolatile('destinybond');
+				for (const source of this.effectState.sources) {
+					if (!source.isAdjacent(pokemon) || !this.queue.cancelMove(source) || !source.hp) continue;
+					if (!alreadyAdded) {
+						this.add('-activate', pokemon, 'move: Lock-On Shock');
+						alreadyAdded = true;
 					}
-				}
-			},
-			secondary: null,
-			target: "normal",
-			type: "Clean",
-		},
-		wipe: {
-			num: -29,
-			accuracy: true,
-			basePower: 0,
-			category: "Status",
-			name: "Wipe",
-			pp: 40,
-			priority: 0,
-			flags: {contact: 1, protect: 1, mirror: 1},
-			onAfterHit(target, pokemon) {
-				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
-					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
-				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
-				for (const condition of sideConditions) {
-					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
-						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
+					// Run through each action in queue to check if the Lock-On Shock user is supposed to Mega Evolve this turn.
+					// If it is, then Mega Evolve before moving.
+					if (source.canMegaEvo || source.canUltraBurst) {
+						for (const [actionIndex, action] of this.queue.entries()) {
+							if (action.pokemon === source && action.choice === 'megaEvo') {
+								this.actions.runMegaEvo(source);
+								this.queue.list.splice(actionIndex, 1);
+								break;
+							}
+						}
 					}
-				}
-				if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
-					pokemon.removeVolatile('partiallytrapped');
+					this.actions.runMove('lock-on shock', source, source.getLocOf(pokemon));
 				}
 			},
-			onAfterSubDamage(damage, target, pokemon) {
-				if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
-					this.add('-end', pokemon, 'Leech Seed', '[from] move: Rapid Spin', '[of] ' + pokemon);
-				}
-				const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
-				for (const condition of sideConditions) {
-					if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
-						this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Rapid Spin', '[of] ' + pokemon);
-					}
-				}
-				if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
-					pokemon.removeVolatile('partiallytrapped');
-				}
-			},
-			secondary: null,
-			target: "normal",
-			type: "Clean",
-			contestType: "Cool",
 		},
-		blotout: {
-			num: -30,
-			accuracy: 100,
-			basePower: 85,
-			category: "Physical",
-			name: "Blot Out",
-			pp: 10,
-			priority: 0,
-			flags: {contact: 1, protect: 1, mirror: 1},
-			secondary: {
-				chance: 10,
-				boosts: {
-					accuracy: -1,
-				},
-			},
-			target: "normal",
-			type: "Dark",
-			contestType: "Cool",
-		},
-		soapyslide: {
-			num: -31,
-			accuracy: 100,
-			basePower: 70,
-			category: "Physical",
-			name: "Soapy Slide",
-			pp: 20,
-			priority: 0,
-			flags: {contact: 1, protect: 1, mirror: 1},
-			onModifyPriority(priority, source, target, move) {
-				if (this.field.isWeather('raindance') && source.isGrounded()) {
-					return priority + 1;
+		secondary: null,
+		target: "normal",
+		type: "Electric",
+		contestType: "Cool",
+	},
+	tailsweep: {
+		num: -33,
+		accuracy: 90,
+		basePower: 60,
+		category: "Physical",
+		name: "Tail Sweep",
+		pp: 30,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Tail Sweep', '[from] move: Tail Sweep', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Tail Sweep', '[of] ' + pokemon);
 				}
-			},
-			secondary: null,
-			target: "normal",
-			type: "Clean",
-			contestType: "Cool",
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
 		},
+		onAfterSubDamage(damage, target, pokemon) {
+			if (pokemon.hp && pokemon.removeVolatile('leechseed')) {
+				this.add('-end', pokemon, 'Tail Sweep', '[from] move: Tail Sweep', '[of] ' + pokemon);
+			}
+			const sideConditions = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge'];
+			for (const condition of sideConditions) {
+				if (pokemon.hp && pokemon.side.removeSideCondition(condition)) {
+					this.add('-sideend', pokemon.side, this.dex.conditions.get(condition).name, '[from] move: Tail Sweep', '[of] ' + pokemon);
+				}
+			}
+			if (pokemon.hp && pokemon.volatiles['partiallytrapped']) {
+				pokemon.removeVolatile('partiallytrapped');
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Clean",
+		contestType: "Cute",
+	},
+	toxinwithdrawal: {
+		num: -34,
+		accuracy: 100,
+		basePower: 65,
+		category: "Physical",
+		name: "Toxin Withdrawal",
+		pp: 30,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterHit(source, target, move) {
+			if (target.status) source.trySetStatus(target.status, source);
+		},
+		onBasePower(basePower, pokemon, target) {
+			if (target.status) return this.chainModify(2);
+		},
+		secondary: null,
+		target: "normal",
+		type: "Clean",
+		contestType: "Tough",
+	},
 };
