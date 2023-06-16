@@ -5473,21 +5473,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		num: -17,
 	},
-		conditioning: {
-	onSourceModifyDamage(damage, source, target, move) {
-		if (move.category !== 'Status') {
-			let lastMoveUsedOn = target.lastMoveUsedOn;
-			let timesUsed = lastMoveUsedOn[Object.keys(lastMoveUsedOn)[0]]; // ++ because the value is incremented after damage is calculated
-			timesUsed++;
-			if (timesUsed > 1) {
-				this.debug('Conditioning weaken');
-				let damageFraction = 1;
-				for (let i = 1; i < timesUsed; i++) {
-					damageFraction *= 0.75;
+	conditioning: {
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.category !== 'Status') {
+				let lastMoveUsedOn = target.lastMoveUsedOn;
+				let timesUsed = lastMoveUsedOn[Object.keys(lastMoveUsedOn)[0]]; // ++ because the value is incremented after damage is calculated
+				timesUsed++;
+				if (timesUsed > 1) {
+					this.debug('Conditioning weaken');
+					let damageFraction = 1;
+					for (let i = 1; i < timesUsed; i++) {
+						damageFraction *= 0.75;
+					}
+					return this.chainModify(damageFraction);
 				}
-				return this.chainModify(damageFraction);
 			}
-		}
 	},
 	name: "Conditioning",
 	gen: 8,
