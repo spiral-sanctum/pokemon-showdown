@@ -22350,10 +22350,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 30,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		onHit(pokemon) {
+		onHit(pokemon, source) {
 			let success = false;
 			const removeList = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',];// list of removable side conditions
-			const side = pokemon.side;
+			const side = source.side;
 			var hazards = [];
 			for (const sideCondition of removeList) {
 				if (side.getSideConditionData(sideCondition)) {	//Checks that this side condition is active
@@ -22390,15 +22390,13 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onStart(pokemon) {
 				this.add('-start', pokemon, 'Spatial Mass');
 				pokemon.addVolatile("boostTurn"); 
-				const shouldBoost = pokemon.volatiles["boostTurn"];
-				shouldBoost.turns = 6; 
+				this.effectState.turns = 6
 			},
 			duration: 6,
 			onResidualOrder: 28,
 			onResidualSubOrder: 2,
 			onResidual(pokemon){
-			const shouldBoost = pokemon.volatiles["boostTurn"];
-				if(shouldBoost?.turns%2 ==0){
+				if(this.effectState.turns%2 ==0){
 					let stats: BoostID[] = [];
 					const boost: SparseBoostsTable = {};
 					let statPlus: BoostID;
@@ -22412,7 +22410,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 					if (randomStat) boost[randomStat] = 1;
 					this.boost(boost, pokemon, pokemon);
 					}
-					shouldBoost.turns --;
+					this.effectState.turns --;
+			},
+			onEnd(pokemon){
+				this.add('-end', pokemon, 'Spatial Mass');
 			}
 			
 		},

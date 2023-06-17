@@ -94167,6 +94167,11 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			waterpulse: ["9M"],
 		},
 	},
+	cosmist: {
+		learnset: {
+			spatialmass: ["9M"],
+		}
+	},
 	pokestarsmeargle: {
 		eventData: [
 			{generation: 5, level: 60, gender: "M", abilities: ["owntempo"], moves: ["mindreader", "guillotine", "tailwhip", "gastroacid"]},
