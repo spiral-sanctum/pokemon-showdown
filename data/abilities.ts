@@ -5494,4 +5494,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	rating: 3.5,
 	num: -17,
 	},
+	polaris: {
+		onStart(source) {
+			this.field.setTerrain('grassyterrain');
+		},
+		name: "Polaris",
+		rating: 4,
+		num: -18,
+	},
 };
