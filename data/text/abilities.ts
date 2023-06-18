@@ -2163,4 +2163,14 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		activate: "  [POKEMON] extends [MOVE] by 2 turns!",
 	},
+	polaris: {
+		name: "Polaris",
+		desc: "If snow/hail is active, aurora veil is activated upon switch in.",
+		shortDesc: "If snow/hail is active, aurora veil is activated upon switch in.",
+	},
+	mischieffield: {
+		name: "Mischief Feild",
+		desc: "Upon switch in, activates Trick Room.",
+		shortDesc: "Upon switch in, activates Trick Room.",
+	},
 };

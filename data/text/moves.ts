@@ -6591,7 +6591,7 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Tail Sweep",
 		desc: "Removes a random stage hazard on the user's side.",
 		shortDesc:"Removes a random stage hazard on the user's side.",
-	}
+	},
 	tailwhip: {
 		name: "Tail Whip",
 		desc: "Lowers the target's Defense by 1 stage.",

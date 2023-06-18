@@ -5495,11 +5495,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	num: -17,
 	},
 	polaris: {
-		onStart(source) {
-			this.field.setTerrain('grassyterrain');
+		onStart(pokemon) {
+			for (const sideCondition of ['auroraveil']) {
+				for (const side of [pokemon.side]) {
+					if(this.field.getWeather().id=="snow" || this.field.getWeather().id=='snow'){
+						this.add('-activate', pokemon, 'ability: Polaris');
+						side.addSideCondition(sideCondition);
+					}
+				}
+			}
 		},
 		name: "Polaris",
 		rating: 4,
 		num: -18,
 	},
+	mischieffield: {
+		onStart(pokemon) {
+			this.field.addPseudoWeather('trickroom', pokemon);
+		},
+		name: "Mischief Field",
+		rating: 4,
+		num: -19,
+	}
 };
