@@ -1771,7 +1771,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		baseSpecies: "Golem",
 		forme: "Alola",
 		types: ["Rock", "Electric"],
-		baseStats: {hp: 80, atk: 120, def: 130, spa: 55, spd: 65, spe: 45},
+		baseStats: {hp: 80, atk: 55, def: 120, spa: 130, spd: 65, spe: 45},
 		abilities: {0: "Magnet Pull", 1: "Sturdy", H: "Galvanize"},
 		heightm: 1.7,
 		weightkg: 316,
