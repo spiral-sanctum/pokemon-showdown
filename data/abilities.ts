@@ -5544,4 +5544,41 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: -21,
 	},
+	relentless: {
+		// This Pokemon's recharge moves do not require recharge if they hit and KO the opponent.
+		onAnyFaint(target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				source.removeVolatile('mustrecharge');
+				//still shows "Must Recharge" volatile, though it does not lock into recharge 
+			}
+		},
+		name: "Relentless",
+		rating: 4,
+		num: -22,
+	},
+	contraction: {
+		// Boosts the damage of physical attacks by 1.5x if the user moves first.
+		onBasePower(relayVar, source, target, move) {
+			if(move.category ==='Physical'){
+				if (target.newlySwitched || this.queue.willMove(target)) {
+					return move.basePower * 1.5;
+				}
+			}
+			return move.basePower;
+		},
+		name: "Contraction",
+		rating: 4,
+		num: -23,
+	},
+	bubblearmor: {
+		onDamagingHit(damage, target, source, move) {
+			if (target !== source && move.type === 'Water') {
+				this.add('-ability', target, ' Bubble Armor');
+					this.boost({def: 1, spd: 1}, target, target);
+			}
+		},
+		name: "Bubble Armor",
+		rating: 4,
+		num: -24,
+	},
 };
