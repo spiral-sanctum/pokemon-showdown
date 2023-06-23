@@ -5527,38 +5527,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: -20,
 	},
-	/*specialist: {
-			//needs to be in the same priority bracket
-			//needs to move before opponent in that bracket
+	specialist: {
 		onModifyCritRatio(critRatio, source, target, move) {
-			target.moveThisTurn
-			if(typeof target.moveThisTurn=='string'){
-				var tarMove = source.battle.dex.moves.get("wideguard")//temp name tester, prio will be +4 if unchanged
-				if(typeof source.battle.activeTarget?.moveThisTurn !='boolean' )tarMove = target.battle.dex.moves.get(source.battle.activeTarget?.moveThisTurn)
-						//movethisturn only triggers if opponent went first
-				else return move.critRatio? + 2  : 2 //what triggers movethisturn to be boolean, and should that cause crit ratio to be improved?
-				this.add('-ability', source, move.priority); //proper tracking
-				this.add('-ability', target, tarMove); //improper tracking
-				if(move.priority == tarMove.priority){
+			var lastMove = target.moveThisTurn;
+			if(typeof lastMove =="string" && lastMove.length==0){
+				if(move.priority == 0){
 					if(source.getActionSpeed() > target.getActionSpeed()){
-						// getactionspeed because it includes trickroom
-						this.add('-ability', source, 'Moving first inside priority bracket');
+						this.add('-ability', source, 'Specialist');
 						critRatio = move.critRatio? + 2  : 2
-	
-						critRatio = 5 //guaranteed to crit, to make testing easier. remove once working
 					}
 				}
 			}
-			else {
-				// Never reached here before. impossible?
-				critRatio = move.critRatio? + 2  : 2
-				//increase crit ratio by 2, or set crit ratio to 2
-				this.add('-ability', source, 'No Opponent Move'); //tester notice, remove once working
-			}  
 			return critRatio
 		},
 		name: "Specialist",
 		rating: 4,
 		num: -21,
-	},*/
+	},
 };
