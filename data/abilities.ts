@@ -5582,23 +5582,17 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -24,
 	},
 	elastic: {
-		onAfterMove(target,source){ //for some reason, it doesn't regen pp if revival blessing fails, but will if it succeeds
-			this.add('-ability', target, target.ability);
-			if(target.ability === "noability" || target.ability ==='') {
-				return
-			}
-			if (target.moveSlots.some(move => move.pp === 0)) { //based on leppa berry
+		onAfterMove(target,source){
+			if(this.effectState.elastic) return
+			if (target.moveSlots.some(move => move.pp === 0)) {
 				const moveSlot = target.moveSlots.find(move => move.pp === 0) ||
 				target.moveSlots.find(move => move.pp < move.maxpp);
 				if (!moveSlot) return;
 				moveSlot.pp += 10;
 				if (moveSlot.pp > moveSlot.maxpp) moveSlot.pp = moveSlot.maxpp;
-				// target.clearAbility();
-				target.setAbility('noability');
-				source.setAbility('noability');
-				//this.add('-ability', target, ' Elastic');
+				this.add('-ability', target, target.ability);
+				this.effectState.elastic = true;
 			}
-			// this.add('-ability', target, target.ability);
 		},
 		name: "Elastic",
 		rating: 4,
