@@ -5598,4 +5598,57 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: -25,
 	},
+	remedialincense: {
+		onResidual(target) {
+			this.effectState.incenseCounter++
+			if(this.effectState.incenseCounter ==3){
+				this.effectState.incenseCounter = 0;
+				target.cureStatus()
+				if(target.side.hasAlly(target)){
+					const targets = target.side.allies().filter(ally => (
+						ally.cureStatus()
+					));
+				}
+				const targets = target.side.foes().filter(foe => (
+					foe.cureStatus()
+				))
+			}
+			this.add('-ability', target, this.effectState.incenseCounter);
+		},
+		onSwitchIn(pokemon){
+			this.effectState.incenseCounter = 0;
+		},
+		name: "Remedial Incense",
+		rating: 2,
+		num: -26,
+	},
+	boundlessjoy: {
+		onAfterBoost(boost, target, source, effect) {
+			let statsLowered = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost[i]! < 0) {
+					statsLowered = true;
+				}
+			}
+			if (statsLowered) {
+				this.heal(Math.floor(target.maxhp / 3), target, target);
+			}
+		},
+		onAllyAfterBoost(boost, target, source, effect) {
+			let statsLowered = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost[i]! < 0) {
+					statsLowered = true;
+				}
+			}
+			if (statsLowered) {
+				this.heal(Math.floor(target.maxhp / 3), target, target);
+			}
+		},
+			name: "Boundless Joy",
+			rating: 2,
+			num: -27,
+		},
 };
