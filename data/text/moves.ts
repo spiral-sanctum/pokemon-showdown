@@ -6016,6 +6016,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Every Pokemon in the user's party is cured of its non-volatile status condition.",
 		shortDesc: "Cures the user's party of all status conditions.",
 	},
+	spatialmass: {
+		name: "Spatial Mass",
+		desc: "If Misty Terrain is active, the user will recieve a random stat boost every 2 turns for 6 turns.",
+		shortDesc:"If Misty Terrain is active, the user will recieve a random stat boost every 2 turns for 6 turns.",
+	},
 	spectralthief: {
 		name: "Spectral Thief",
 		desc: "The target's stat stages greater than 0 are stolen from it and applied to the user before dealing damage.",
@@ -6581,6 +6586,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Tail Slap",
 		desc: "Hits two to five times. Has a 35% chance to hit two or three times and a 15% chance to hit four or five times. If one of the hits breaks the target's substitute, it will take damage for the remaining hits. If the user has the Skill Link Ability, this move will always hit five times.",
 		shortDesc: "Hits 2-5 times in one turn.",
+	},
+	tailsweep: {
+		name: "Tail Sweep",
+		desc: "Removes a random stage hazard on the user's side.",
+		shortDesc:"Removes a random stage hazard on the user's side.",
 	},
 	tailwhip: {
 		name: "Tail Whip",

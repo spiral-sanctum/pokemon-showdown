@@ -22299,4 +22299,85 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Clean",
 		contestType: "Tough",
 	},
+	tailsweep: {
+		num: -35,
+		basePower: 60,
+		accuracy: 90,
+		category: "Physical",
+		name: "Tail Sweep",
+		pp: 30,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onHit(pokemon, source) {
+			let success = false;
+			const removeList = ['spikes', 'toxicspikes', 'stealthrock', 'stickyweb', 'gmaxsteelsurge',];// list of removable side conditions
+			const side = source.side;
+			var hazards = [];
+			for (const sideCondition of removeList) {
+				if (side.getSideConditionData(sideCondition)) {	//Checks that this side condition is active
+					hazards.push(sideCondition) //adds to list of removable side conditions
+				}
+			}
+			if(hazards.length>0){
+				const hazNum = this.random(hazards.length)//rolls random side condition to remove
+				this.add('-sideend', side, this.dex.conditions.get(hazards[hazNum]).name);//removes condition
+						success = true;
+			}
+			if (success) this.add('-activate', pokemon, 'move: Tail Sweep');
+			return success;
+		},
+		secondary: null,
+		target: "normal",
+		type: "Clean",
+		contestType: "Cute"
+	},
+	spatialmass: {
+		num: -36,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Spatial Mass",
+		pp: 10,
+		priority: 0,
+		flags: {mirror: 1},
+		onTry() {
+			return this.field.isTerrain('mistyterrain');
+		},
+		volatileStatus: 'spatial mass',
+		condition: {
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'Spatial Mass');
+				pokemon.addVolatile("boostTurn"); 
+				this.effectState.turns = 6
+			},
+			duration: 6,
+			onResidualOrder: 28,
+			onResidualSubOrder: 2,
+			onResidual(pokemon){
+				if(this.effectState.turns%2 ==0){
+					let stats: BoostID[] = [];
+					const boost: SparseBoostsTable = {};
+					let statPlus: BoostID;
+					for (statPlus in pokemon.boosts) {
+						if (statPlus === 'accuracy' || statPlus === 'evasion') continue;
+						if (pokemon.boosts[statPlus] < 6) {
+							stats.push(statPlus);
+						}
+					}
+					let randomStat: BoostID | undefined = stats.length ? this.sample(stats) : undefined;
+					if (randomStat) boost[randomStat] = 1;
+					this.boost(boost, pokemon, pokemon);
+					}
+					this.effectState.turns --;
+			},
+			onEnd(pokemon){
+				this.add('-end', pokemon, 'Spatial Mass');
+			}
+			
+		},
+		secondary: null,
+		target: "self",
+		type: "Water",
+	},
+
 };

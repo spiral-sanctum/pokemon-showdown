@@ -5494,4 +5494,161 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	rating: 3.5,
 	num: -17,
 	},
+	polaris: {
+		onStart(pokemon) {
+			for (const sideCondition of ['auroraveil']) {
+				for (const side of [pokemon.side]) {
+					if(this.field.getWeather().id=="snow" || this.field.getWeather().id=='snow'){
+						this.add('-activate', pokemon, 'ability: Polaris');
+						side.addSideCondition(sideCondition);
+					}
+				}
+			}
+		},
+		name: "Polaris",
+		rating: 4,
+		num: -18,
+	},
+	mischieffield: {
+		onStart(pokemon) {
+			this.field.addPseudoWeather('trickroom', pokemon);
+		},
+		name: "Mischief Field",
+		rating: 4,
+		num: -19,
+	},
+	dreamswirl: {
+		onFoeAfterMove(foe,target,move){
+			if(foe.lastMoveUsed == move){
+				foe.addVolatile('confusion')
+			}
+		},
+		name: "Dream Swirl",
+		rating: 4,
+		num: -20,
+	},
+	specialist: {
+		onModifyCritRatio(critRatio, source, target, move) {
+			var lastMove = target.moveThisTurn;
+			if(typeof lastMove =="string" && lastMove.length==0){
+				if(move.priority == 0){
+					if(source.getActionSpeed() > target.getActionSpeed()){
+						this.add('-ability', source, 'Specialist');
+						critRatio = move.critRatio? + 2  : 2
+					}
+				}
+			}
+			return critRatio
+		},
+		name: "Specialist",
+		rating: 4,
+		num: -21,
+	},
+	relentless: {
+		// This Pokemon's recharge moves do not require recharge if they hit and KO the opponent.
+		onAnyFaint(target, source, effect) {
+			if (effect && effect.effectType === 'Move') {
+				source.removeVolatile('mustrecharge');
+				//still shows "Must Recharge" volatile, though it does not lock into recharge 
+			}
+		},
+		name: "Relentless",
+		rating: 4,
+		num: -22,
+	},
+	contraction: {
+		// Boosts the damage of physical attacks by 1.5x if the user moves first.
+		onBasePower(relayVar, source, target, move) {
+			if(move.category ==='Physical'){
+				if (target.newlySwitched || this.queue.willMove(target)) {
+					return move.basePower * 1.5;
+				}
+			}
+			return move.basePower;
+		},
+		name: "Contraction",
+		rating: 4,
+		num: -23,
+	},
+	bubblearmor: {
+		onDamagingHit(damage, target, source, move) {
+			if (target !== source && move.type === 'Water') {
+				this.add('-ability', target, ' Bubble Armor');
+					this.boost({def: 1, spd: 1}, target, target);
+			}
+		},
+		name: "Bubble Armor",
+		rating: 4,
+		num: -24,
+	},
+	elastic: {
+		onAfterMove(target,source){
+			if(this.effectState.elastic) return
+			if (target.moveSlots.some(move => move.pp === 0)) {
+				const moveSlot = target.moveSlots.find(move => move.pp === 0) ||
+				target.moveSlots.find(move => move.pp < move.maxpp);
+				if (!moveSlot) return;
+				moveSlot.pp += 10;
+				if (moveSlot.pp > moveSlot.maxpp) moveSlot.pp = moveSlot.maxpp;
+				this.add('-ability', target, target.ability);
+				this.effectState.elastic = true;
+			}
+		},
+		name: "Elastic",
+		rating: 4,
+		num: -25,
+	},
+	remedialincense: {
+		onResidual(target) {
+			this.effectState.incenseCounter++
+			if(this.effectState.incenseCounter ==3){
+				this.effectState.incenseCounter = 0;
+				target.cureStatus()
+				if(target.side.hasAlly(target)){
+					const targets = target.side.allies().filter(ally => (
+						ally.cureStatus()
+					));
+				}
+				const targets = target.side.foes().filter(foe => (
+					foe.cureStatus()
+				))
+			}
+			this.add('-ability', target, this.effectState.incenseCounter);
+		},
+		onSwitchIn(pokemon){
+			this.effectState.incenseCounter = 0;
+		},
+		name: "Remedial Incense",
+		rating: 2,
+		num: -26,
+	},
+	boundlessjoy: {
+		onAfterBoost(boost, target, source, effect) {
+			let statsLowered = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost[i]! < 0) {
+					statsLowered = true;
+				}
+			}
+			if (statsLowered) {
+				this.heal(Math.floor(target.maxhp / 3), target, target);
+			}
+		},
+		onAllyAfterBoost(boost, target, source, effect) {
+			let statsLowered = false;
+			let i: BoostID;
+			for (i in boost) {
+				if (boost[i]! < 0) {
+					statsLowered = true;
+				}
+			}
+			if (statsLowered) {
+				this.heal(Math.floor(target.maxhp / 3), target, target);
+			}
+		},
+			name: "Boundless Joy",
+			rating: 2,
+			num: -27,
+		},
 };
