@@ -7573,4 +7573,49 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "They have tried to breyeak you-wuh.",
 		shortDesc: "50% chance to disable target's last used move.",
 	},
+	rubbertongue: {
+		name: "Rubber Tongue",
+		desc: "SQUID GAMES",
+		shortDesc: "Hits twice. 10% chance to paralyze.",
+	},
+	adhesivewave: {
+		name: "Adhesive Wave",
+		desc: "SQUID GAMES",
+		shortDesc: "10% chance to lower target's speed by 1.",
+	},
+	elasticburst: {
+		name: "Elastic Burst",
+		desc: "SQUID GAMES",
+		shortDesc: "This move always goes last.",
+	},
+	bounceback: {
+		name: "Bounce Back",
+		desc: "SQUID GAMES",
+		shortDesc: "Power doubled if user is under 50% HP.",
+	},
+	peelout: {
+		name: "Peel Out",
+		desc: "SQUID GAMES",
+		shortDesc: "Usually goes first.",
+	},
+	plasticpoke: {
+		name: "Plastic Poke",
+		desc: "SQUID GAMES",
+		shortDesc: "Does not check accuracy.",
+	},
+	elasticwhip: {
+		name: "Elastic Whip",
+		desc: "SQUID GAMES",
+		shortDesc: "20% chance to flinch.",
+	},
+	rubberbullet: {
+		name: "Rubber Bullet",
+		desc: "SQUID GAMES",
+		shortDesc: "Damage is 1.5x if user moves after the target.",
+	},
+	polymerization: {
+		name: "Polymerization",
+		desc: "SQUID GAMES",
+		shortDesc: "Hits 2 - 5 times.",
+	},
 };

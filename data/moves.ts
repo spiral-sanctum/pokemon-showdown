@@ -22347,7 +22347,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		condition: {
 			onStart(pokemon) {
 				this.add('-start', pokemon, 'Spatial Mass');
-				pokemon.addVolatile("boostTurn"); 
+				pokemon.addVolatile("boostTurn");
 				this.effectState.turns = 6
 			},
 			duration: 6,
@@ -22373,11 +22373,27 @@ export const Moves: {[moveid: string]: MoveData} = {
 			onEnd(pokemon){
 				this.add('-end', pokemon, 'Spatial Mass');
 			}
-			
+
 		},
 		secondary: null,
 		target: "self",
 		type: "Water",
 	},
-
+	cleansingblast: { //probably doesn't work
+		num: -37,
+		accuracy: true,
+		basePower: 80,
+		category: "Special",
+		name: "Cleansing Blast",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: {
+			chance: 10,
+			status: 'clearBoosts',
+		},
+		target: "normal",
+		type: "Clean",
+		contestType: "Beautiful",
+	},
 };
