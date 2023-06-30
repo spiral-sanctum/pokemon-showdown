@@ -22389,9 +22389,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {protect: 1, mirror: 1},
 		secondary: {
-			chance: 10,
-			status: 'clearBoosts',
-		},
+		            chance: 10,
+		            onHit(target) {
+		                target.clearBoosts();
+		                this.add('-clearboost', target);
+		            },
+		        },
 		target: "normal",
 		type: "Clean",
 		contestType: "Beautiful",
