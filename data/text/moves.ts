@@ -7453,4 +7453,124 @@ export const MovesText: {[k: string]: MoveText} = {
 			shortDesc: "Nearly always goes first. Always crits.",
 		},
 	},
+	bleachshower: {
+		name: "Bleach Shower",
+		desc: "Lowers user's Def, SpDef by 1 stage.",
+		shortDesc: "Lowers user's Def, SpDef by 1 stage.",
+	},
+	chemicalsplash: {
+		name: "Bleach Shower",
+		desc: "30% chance to burn the target.",
+		shortDesc: "30% chance to burn the target.",
+	},
+	cauterize: {
+		name: "Cauterize",
+		desc: "Has a 100% chance to burn the target.",
+		shortDesc: "Has a 100% chance to burn the target.",
+	},
+	exfoliate: {
+		name: "Exfoliate",
+		desc: "Raises user's SpA, SpDef by 1 stage.",
+		shortDesc: "Raises user's SpA, SpDef by 1 stage.",
+	},
+	fatalsyringe: {
+		name: "Fatal Syringe",
+		desc: "No additional effect.",
+		shortDesc: "No additional effect.",
+	},
+	puritypulse: {
+		name: "Purity Pulse",
+		desc: "Cures target of their non-volatile status condition.",
+		shortDesc: "Cures target of their non-volatile status condition.",
+	},
+	featherdust: {
+		name: "Feather Dust",
+		desc: "Hits 2 - 5 times.",
+		shortDesc: "Hits 2-5 times in one turn.",
+	},
+	spincycle: {
+		name: "Spin Cycle",
+		desc: "30% chance to confuse target.",
+		shortDesc: "30% chance to confuse target.",
+	},
+	tailsweep: {
+		name: "Tail Sweep",
+		desc: "Removes a random stage hazard.",
+		shortDesc: "Removes a random stage hazard.",
+	},
+	toxinwithrawl: {
+		name: "Toxin Withdrawl",
+		desc: "Anyone reading this? Hello!",
+		shortDesc: "Copies targets status ailments to the user; Double damage against statused targets.",
+	},
+	ultrapurge: {
+		name: "Ultrapurge",
+		desc: "I need good song suggestions, I've been listening to the same shit for years. - Mnemic",
+		shortDesc: "Hits both foes. User loses 1/2 max HP.",
+	},
+	wipe: {
+		name: "Wipe",
+		desc: "Can you believe the 2000's were 20 years ago? I'm struggling to accept it. I think about it every day. I can't move on.",
+		shortDesc: "Clears all hazards on the users side of the field (including screens and leech seed)",
+	},
+	blotout: {
+		name: "Blot Out",
+		desc: "I wonder if anyone can read these on the actual showdown? Normally it just shows the short description.",
+		shortDesc: "10% chance to lower target's accuracy",
+	},
+	cleansingblast: {
+		name: "Blot Out",
+		desc: "I also wonder how long this server will last before it ends up like New Meta? 3 years was a long time. Let's shoot for 4! 2027... That's so close.",
+		shortDesc: "10% chance to reset target's stat changes.",
+	},
+	soapyslide: {
+		name: "Soapy Slide",
+		desc: "They refer to me as 'the sandwich'.",
+		shortDesc: "In rain; +1 priority",
+	},
+	clearlight: {
+		name: "Clear Light",
+		desc: "I'mma be real, this being a clean type move is a total stretch in my opinion.",
+		shortDesc: "Cures user's status; raises acc by 1 stage.",
+	},
+	bouncyshield: {
+		name: "Bouncy Shield",
+		desc: "All these years they've tried to break you to your knees.",
+		shortDesc: "Protects from damaging attacks. Returns 1/4th of potential damage to attacker.",
+	},
+	plasticfang: {
+		name: "Plastic Fang",
+		desc: "Anger scours right through your veins.",
+		shortDesc: "20% chance to flinch.",
+	},
+	gumspray: {
+		name: "Gum Spray",
+		desc: "Now's time to put an end to all the lies.",
+		shortDesc: "Traps target. Lowers speed by 1 each turn.",
+	},
+	reboundlaser: {
+		name: "Rebound Laser",
+		desc: "Now's time to take control of your life.",
+		shortDesc: "+30 power for each of the users stat drops; Resets users stats before attacking.",
+	},
+	bellyflop: {
+		name: "Belly Flop",
+		desc: "They have tried to break you.",
+		shortDesc: "More power the heavier the user than the target.",
+	},
+	ricochetshot: {
+		name: "Ricochet Shot",
+		desc: "They have tried to bre-yeak you.",
+		shortDesc: "Cannot miss. Ignores foes ability.",
+	},
+	doubledribble: {
+		name: "Double Dribble",
+		desc: "They have tried to break you.",
+		shortDesc: "More power the faster the user than the target.",
+	},
+	eraserswipe: {
+		name: "Eraser Swipe",
+		desc: "They have tried to breyeak you-wuh.",
+		shortDesc: "50% chance to disable target's last used move.",
+	},
 };
