@@ -7493,11 +7493,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "30% chance to confuse target.",
 		shortDesc: "30% chance to confuse target.",
 	},
-	tailsweep: {
-		name: "Tail Sweep",
-		desc: "Removes a random stage hazard.",
-		shortDesc: "Removes a random stage hazard.",
-	},
 	toxinwithrawl: {
 		name: "Toxin Withdrawl",
 		desc: "Anyone reading this? Hello!",

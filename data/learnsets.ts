@@ -46863,7 +46863,6 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			hex: ["9M", "8M"],
 			hiddenpower: ["7M", "6M", "5M", "4M"],
 			honeclaws: ["6M", "5M"],
-			hurricane: ["9M"],
 			hyperbeam: ["9M", "8M", "7M", "6M", "5M", "4M"],
 			infestation: ["7M", "6M"],
 			laserfocus: ["7T"],
@@ -62380,7 +62379,6 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			zenheadbutt: ["8M", "7T", "6T", "5T"],
 			headlongrush: ["9M"],
 			headsmash: ["9M"],
-			closecombat: ["9M"],
 		},
 		eventData: [
 			{generation: 6, level: 50, nature: "Adamant", ivs: {hp: 31, atk: 31}, isHidden: true, moves: ["headcharge", "facade", "earthquake", "rockslide"], pokeball: "cherishball"},
