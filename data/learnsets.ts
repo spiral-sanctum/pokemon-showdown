@@ -49616,7 +49616,6 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			venoshock: ["9M", "9L20", "8M", "8L20", "7M", "7L36", "6M", "6L36", "5M", "5L36"],
 			workup: ["8M", "7M", "5M"],
 			xscissor: ["9M", "8M", "7M", "6M", "5M", "4M"],
-			closecombat: ["9M"],
 			machpunch: ["9M"],
 		},
 		encounters: [
