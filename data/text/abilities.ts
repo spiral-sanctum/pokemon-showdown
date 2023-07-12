@@ -2163,14 +2163,119 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		activate: "  [POKEMON] extends [MOVE] by 2 turns!",
 	},
-	polaris: {
-		name: "Polaris",
-		desc: "If snow/hail is active, aurora veil is activated upon switch in.",
-		shortDesc: "If snow/hail is active, aurora veil is activated upon switch in.",
-	},
 	mischieffield: {
 		name: "Mischief Feild",
 		desc: "Upon switch in, activates Trick Room.",
 		shortDesc: "Upon switch in, activates Trick Room.",
+	},
+	breakneck: {
+		name: "Breakneck",
+		desc: "In the chum bucket, eating raw liver.",
+		shortDesc: "This Pokemon's moves of 60 power or less have +1 priority, including Struggle.",
+	},
+	nullspace: {
+		name: "Null Space",
+		desc: "I harvested his liver, and his kids, they call me Quan.",
+		shortDesc: "This Pokemon ignores other Pokemon's stat stages when taking or doing damage.",
+	},
+	exoskeleton: {
+		name: "Exoskeleton",
+		desc: "I kill a fish and then harvest it's liver.",
+		shortDesc: "User takes 0.5x from Rock type attacks; Stealth Rocks.",
+	},
+	chainstriker: {
+		name: "Chain Striker",
+		desc: "Nearly identical to metronome item. However, the increase scales differently. 1.10x, 1.20x, 1.3x, 1.5x, 2x", //it might be a different multiplier
+		shortDesc: "Damage of moves used on consecutive turns is increased. Max 2x after 5 turns.",
+	},
+	ignition: {
+		name: "Ignition",
+		desc: "Listen to Sins Of A Divine Mother on Soundcloud or Youtube.",
+		shortDesc: "This Pokemon heals 1/4 of its max HP when hit by Fire moves; Fire immunity.",
+	},
+	turbogenerator: {
+		name: "Turbogenerator",
+		desc: "Named this after the Shadow Domain song. Ironically, sounds way stronger than the ability Zekrom has. I think this ability is practically useless, though.",
+		shortDesc: "User heals 1/6th of their max HP when using Electric moves.",
+	},
+	daunt: {
+		name: "Daunt",
+		desc: "Daunt is identical to Gen 7 Intimidate, but for special attack.",
+		shortDesc: "On switch-in, this Pokemon lowers the Special Attack of opposing Pokemon by 1 stage. Pokemon behind a substitute are immune.",
+	},
+	dynamo: {
+		name: "Dynamo",
+		desc: "Surprised this isn't a real ability, it's so free.",
+		shortDesc: "User has a 30% chance to paralyze target on contact.",
+	},
+	orbital: {
+		name: "Orbital",
+		desc: "Palkia signature ability as of right now",
+		shortDesc: "While this Pokemon is active, the field is affected by Gravity.",
+	},
+	steampower: {
+		name: "Steam Power",
+		desc: "Hydrothermal is a better name, but in the effort not to break things I don't understand, I'll keep this name.",
+		shortDesc: "This Pokemon's Water-type attacks are booosted by 1.2x in the sun instead of being weakened.",
+	},
+	envious: {
+		name: "Envious",
+		desc: "Shadow The Hedgehog was a good game.",
+		shortDesc: "This Pokemon's Attack is boosted by 1 if it switches into a Pokemon with stat boosts.",
+	},
+	thorns: {
+		name: "Thorns",
+		desc: "Spiral ability, created as a more broad ability compared to rough skin or iron barbs.",
+		shortDesc: "<see iron barbs, if players see this, i got lazy and forgot to fix the description>",
+	},
+	bounceguard: {
+		name: "Bounce Guard",
+		desc: "This ability has the potential to be actually nasty. Special iron barbs.",
+		shortDesc: "If user is hit by a special move, attacker loses 1/8th their max HP.",
+	},
+	adept: {
+		name: "Adept",
+		desc: "You're over it, over it, over it, over it...",
+		shortDesc: "Physical contact moves become special and are 1.2x BP.",
+	},
+	conditioning: {
+		name: "Conditioning",
+		desc: "Even I don't understand how this ability works.",
+		shortDesc: "Moves used consecutively against this Pokemon have their base power decreased by 25% each turn.",
+	},
+	polaris: {
+		name: "Polaris",
+		desc: "Rust in peace.",
+		shortDesc: "In hail; on switch-in, sets Aurora Veil.",
+	},
+	specialist: {
+		name: "Specialist",
+		desc: "As of right now, this is Alivolt's signature ability. I'm open to change this.",
+		shortDesc: "The user gains +2 critical hit ratio if they move first (not counting priority).",
+	},
+	relentless: {
+		name: "Relentless",
+		desc: "Listen to Sins Of A Divine Mother on Soundcloud or Youtube.",
+		shortDesc: "If this Pokemon hits and KOs a target with a recharge move, move does not need to recharge.",
+	},
+	contraction: {
+		name: "Contraction",
+		desc: "Listen to Sins Of A Divine Mother on Soundcloud or Youtube.",
+		shortDesc: "If this Pokemon moves first, Attack is boosted by 1.5x.",
+	},
+	bubblearmor: {
+		name: "Bubble Armor",
+		desc: "To be, DISASSEMBLED!!!.",
+		shortDesc: "This Pokemon's Def, SpDef are raised by 1 stage if hit by Water moves.",
+	},
+	elastic: {
+		name: "Elastic",
+		desc: "This is near identical to Leppa Berry.",
+		shortDesc: "When this Pokemon runs out of PP on a move, it is restored to full. Single use.",
+	},
+	boundlessjoy: {
+		name: "Boundless Joy",
+		desc: "I'm so happy, I could eat a horse!",
+		shortDesc: "If this Pokemon is active, itself and it's allies restore 1/3 HP if affected by a stat drop.",
 	},
 };

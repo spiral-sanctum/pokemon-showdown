@@ -20373,7 +20373,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	pillurr: {
 		num: -5091,
-		name: "Mistrivia",
+		name: "Pillurr",
 		types: ["Fighting", "Ground"],
 		baseStats: {hp: 115, atk: 145, def: 105, spa: 40, spd: 50, spe: 50},
 		abilities: {0: "Solid Rock"},
@@ -20499,7 +20499,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	procciolo: {
 		num: -5102,
-		name: "Sensibex",
+		name: "Procciolo",
 		types: ["Fighting", "Fairy"],
 		baseStats: {hp: 37, atk: 58, def: 37, spa: 27, spd: 37, spe: 53},
 		abilities: {0: "Justified", 1: "Friend Guard"},

@@ -18573,7 +18573,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		secondary: null,
 		target: "normal",
-		type: "Strength",
+		type: "Fighting",
 		contestType: "Tough",
 	},
 	strengthsap: {
@@ -21647,7 +21647,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	},
 	elasticburst: {
 		num: -4,
-		accuracy: 10,
+		accuracy: 100,
 		basePower: 110,
 		category: "Physical",
 		name: "Elastic Burst",
@@ -22190,7 +22190,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 			},
 		},
 		target: "normal",
-		type: "Dark",
+		type: "Clean",
 		contestType: "Cool",
 	},
 	soapyslide: {
