@@ -5549,7 +5549,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onAnyFaint(target, source, effect) {
 			if (effect && effect.effectType === 'Move') {
 				source.removeVolatile('mustrecharge');
-				//still shows "Must Recharge" volatile, though it does not lock into recharge 
+				//still shows "Must Recharge" volatile, though it does not lock into recharge
 			}
 		},
 		name: "Relentless",
@@ -5651,4 +5651,26 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			rating: 2,
 			num: -27,
 		},
+		gritandgrind: {
+			onDamagingHit(damage, target, source, move) {
+				if (this.checkMoveMakesContact(move, source, target)) {
+					if (this.randomChance(10, 10)) {
+						source.addVolatile('rage', this.effectState.target);
+					}
+				}
+			},
+			name: "Grit and Grind",
+			rating: 2,
+			num: -28,
+		},
+		stonegaze: {
+	onDamagingHit(damage, target, source, move) {
+			if (this.randomChance(2, 10)) {
+				source.trySetStatus('brn', target);
+			}
+	},
+		name: "Stone Gaze",
+		rating: 2,
+		num: -28,
+	},
 };
