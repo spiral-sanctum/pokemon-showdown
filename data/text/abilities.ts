@@ -2278,4 +2278,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "I'm so happy, I could eat a horse!",
 		shortDesc: "If this Pokemon is active, itself and it's allies restore 1/3 HP if affected by a stat drop.",
 	},
+	snowpacking: {
+		name: "Snow Packing",
+		desc: "I'm so happy, I could eat a horse!",
+		shortDesc: "The user's attack is boosted by 1.5x in hail.",
+	},
 };
