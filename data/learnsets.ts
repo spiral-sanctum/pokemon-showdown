@@ -95356,7 +95356,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
        takedown: ["9M", "8M", "7M"],
        thrash: ["9M", "8M", "7M"],
        zenheadbutt: ["9M", "8M", "7M"],
-     terablast: ["9M"]
+     terablast: ["9M"],
     },
  	},
 	magnorillo: {
@@ -95707,7 +95707,7 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			 uturn: ["9M", "8M", "7M"],
 		},
 	 },
-	 swanna: {
+	 majeswann: {
  		learnset: {
  			aerialace: ["7M", "7L15", "6M", "6L15", "5M", "5L15"],
  			airslash: ["7L27", "6L27", "5L27"],
