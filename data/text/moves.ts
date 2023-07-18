@@ -7613,4 +7613,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "SQUID GAMES",
 		shortDesc: "Hits 2 - 5 times.",
 	},
+	bonesplinter: {
+		name: "Bonesplinter",
+		desc: "THE",
+		shortDesc: "20% chance to lower target's Def by 1.",
+	},
+	jadeblade: {
+		name: "Jade Blade",
+		desc: "THE",
+		shortDesc: "No additional effect.",
+	},
 };
