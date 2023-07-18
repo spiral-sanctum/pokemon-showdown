@@ -22652,7 +22652,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Wind Blast",
 		pp: 10,
 		priority: 0,
-		flags: {protect: 1, pulse: 1, mirror: 1, distance: 1, pulse: 1},
+		flags: {protect: 1, pulse: 1, mirror: 1, distance: 1},
 		secondary: null,
 		target: "any",
 		type: "Flying",
