@@ -7623,4 +7623,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "THE",
 		shortDesc: "No additional effect.",
 	},
+	elasticwhip: {
+		name: "Elastic Whip",
+		desc: "THE",
+		shortDesc: "20% chance to flinch.",
+	},
 };

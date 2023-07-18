@@ -20448,7 +20448,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	luceark: {
 		num: -5097,
-		name: "Luc\u0301ark",
+		name: "Luce\u0301ark",
 		types: ["Spiral", "Void"],
 		baseStats: {hp: 120, atk: 90, def: 90, spa: 90, spd: 90, spe: 120},
 		abilities: {0: "Magic Guard"},
@@ -20606,7 +20606,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Crokunta",
 		types: ["Rock", "Ghost"],
 		baseStats: {hp: 90, atk: 145, def: 72, spa: 90, spd: 72, spe: 64},
-		abilities: {0: "Sharpness", H: "Hyper Cutter"},
+		abilities: {0: "Rock Head", 1: "Strong Jaw", H: "Technician"},
 		heightm: 1.3,
 		weightkg: 50,
 		color: "Black",
@@ -20614,7 +20614,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	viruvial: {
 		num: -10002,
-		name: "viruvial",
+		name: "Viruvial",
 		types: ["Poison", "Clean"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 70, atk: 125, def: 59, spa: 60, spd: 71, spe: 110},
@@ -20641,7 +20641,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		types: ["Ground", "Fighting"],
 		genderRatio: {M: 0.875, F: 0.125},
 		baseStats: {hp: 100, atk: 136, def: 95, spa: 50, spd: 73, spe: 71},
-		abilities: {0: "Sharpness", H: "Hyper Cutter"},
+		abilities: {0: "Sand Force", 1: "Sap Sipper", H: "Iron Fist"},
 		heightm: 2.5,
 		weightkg: 149,
 		color: "Brown",
@@ -20695,7 +20695,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	incineratoad: {
 		num: -10009,
-		name: "incineratoad",
+		name: "Incineratoad",
 		types: ["Fire", "Clean"],
 		baseStats: {hp: 104, atk: 72, def: 111, spa: 121, spd: 77, spe: 45},
 		abilities: {0: "Flash Fire", H: "Dry Skin"},
@@ -20716,7 +20716,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		evos: ["Telefauxn"],
 		eggGroups: ["Dragon", "Mineral"],
 	},
-	telefaunx: {
+	telefauxn: {
 		num: -10011,
 		name: "Telefauxn",
 		types: ["Electric", "Rubber"],

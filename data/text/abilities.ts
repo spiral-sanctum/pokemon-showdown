@@ -2236,7 +2236,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	adept: {
 		name: "Adept",
 		desc: "You're over it, over it, over it, over it...",
-		shortDesc: "Physical contact moves become special and are 1.2x BP.",
+		shortDesc: "Physical contact moves become Special; are boosted by 1.2x",
 	},
 	conditioning: {
 		name: "Conditioning",
@@ -2282,5 +2282,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Snow Packing",
 		desc: "I'm so happy, I could eat a horse!",
 		shortDesc: "The user's attack is boosted by 1.5x in hail.",
+	},
+	gritandgrind	: {
+		name: "Grit And Grind",
+		desc: "I'm so happy, I could eat a horse!",
+		shortDesc: "User builds Rage after successfully making contact.",
 	},
 };

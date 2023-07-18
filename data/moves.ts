@@ -21832,12 +21832,12 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {basePower: 140},
 		contestType: "Clever",
 	},
-	rubberwhip: {
+	elasticwhip: {
 		num: -13,
 		accuracy: 90,
 		basePower: 80,
 		category: "Physical",
-		name: "Rubber Whip",
+		name: "Elastic Whip",
 		pp: 15,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},

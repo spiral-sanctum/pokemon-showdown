@@ -6561,4 +6561,67 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	oblyvern: {
 		tier: "Illegal",
 	},
+	serrazor: {
+		tier: "NU",
+	},
+	crokunta: {
+		tier: "UU",
+	},
+	fissurilla: {
+		tier: "UU",
+	},
+	cardival: {
+		tier: "NU",
+	},
+	somedeus: {
+		tier: "Uber",
+	},
+	petripent: {
+		tier: "OU",
+	},
+	viruvial: {
+		tier: "OU",
+	},
+	coblgobl: {
+		tier: "PU",
+	},
+	majeswann: {
+		tier: "UU",
+	},
+	riotread: {
+		tier: "RU",
+	},
+	incineratoad: {
+		tier: "UU",
+	},
+	fauxnline: {
+		tier: "LC",
+	},
+	telefauxn: {
+		tier: "UU",
+	},
+	sawcodil: {
+		tier: "RU",
+	},
+	flaimi: {
+		tier: "LC",
+	},
+	flastia: {
+		tier: "OU",
+	},
+	leachle: {
+		tier: "LC",
+	},
+	vaccasite: {
+		tier: "RU",
+	},
+	toxasite: {
+		tier: "RU",
+	},
+	littlestar: {
+		tier: "UU",
+	},
+	vinislosh: {
+		tier: "RU",
+	},
 };
