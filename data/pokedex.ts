@@ -20720,7 +20720,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: -10011,
 		name: "Telefauxn",
 		types: ["Electric", "Rubber"],
-		baseStats: {hp: 55, atk: 81, def: 60, spa: 70, spd: 80, spe: 121},
+		baseStats: {hp: 75, atk: 90, def: 85, spa: 110, spd: 85, spe: 80},
 		abilities: {0: "Static", 1: "Analytic", H: "Electric Surge"},
 		heightm: 3.4,
 		weightkg: 400,
