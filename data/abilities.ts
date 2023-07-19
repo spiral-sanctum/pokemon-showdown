@@ -5689,7 +5689,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         name: "Snow Packing",
         rating: 2,
         num: -29,
-    },
+    },/*
 		thunderblade: {
 			onBasePowerPriority: 19,
 			onBasePower(basePower, attacker, defender, move) {
@@ -5712,5 +5712,5 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			name: "Thunderblade",
 			rating: 3.5,
 			num: -30,
-		},
+		},*/
 };
