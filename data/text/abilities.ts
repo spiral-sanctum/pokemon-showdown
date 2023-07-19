@@ -1544,7 +1544,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	sharpness: {
 		name: "Sharpness",
-		shortDesc: "This Pokemon's slicing moves have their power multiplied by 1.5.",
+		shortDesc: "This Pokemon's slicing moves have their power multiplied by 1.3.",
 	},
 	shedskin: {
 		name: "Shed Skin",

@@ -5689,5 +5689,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         name: "Snow Packing",
         rating: 2,
         num: -29,
-    },
+    },/*
+		thunderblade: {
+			onBasePowerPriority: 19,
+			onBasePower(basePower, attacker, defender, move) {
+				if (move.flags['slicing']) {
+					this.debug('Shapness boost');
+					return this.chainModify(1.25);
+				},
+			move.secondaries.push({
+                chance: 10,
+                status: 'par',
+                ability: this.dex.abilities.get('thunderblade'),
+            });
+        },
+			name: "Thunderblade",
+			rating: 3.5,
+			num: -30,
+		},*/
 };

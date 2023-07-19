@@ -22547,6 +22547,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		},
 		priority: 0,
 		secondary: null,
+		ignoreImmunity: {'Ghost': true},
 		target: "any",
 		type: "Fairy",
 		zMove: {basePower: 170},
@@ -22720,6 +22721,46 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Electric",
+		contestType: "Cool",
+	},
+	reboundlaser: {
+		num: -56,
+		accuracy: 100,
+		basePower: 20,
+		basePowerCallback(pokemon, target, move) {
+			const bp = move.basePower + 20 * pokemon.negativeBoosts();
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		onHit(target) {
+			target.clearBoosts();
+			this.add('-clearboost', target);
+		},
+		category: "Special",
+		name: "Rebound Laser",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Rubber",
+		zMove: {basePower: 250},
+		maxMove: {basePower: 130},
+		contestType: "Clever",
+	},
+	ricochetshot: {
+		num: -57,
+		accuracy: true,
+		basePower: 80,
+		category: "Special",
+		name: "Ricochet Shot",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, bullet: 1},
+		ignoreAbility: true,
+		secondary: null,
+		target: "normal",
+		type: "Rubber",
 		contestType: "Cool",
 	},
 };

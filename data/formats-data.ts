@@ -6472,7 +6472,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	pastrole: {
-		tier: "LC",
+		tier: "UU",
 	},
 	goocapon: {
 		tier: "NU",

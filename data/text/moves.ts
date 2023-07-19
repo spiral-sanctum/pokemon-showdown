@@ -7628,4 +7628,19 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "THE",
 		shortDesc: "20% chance to flinch.",
 	},
+	blindingshadow: {
+		name: "Blinding Shadow",
+		desc: "THE",
+		shortDesc: "Combines Ghost in its type effectiveness. Ignores Immunities.",
+	},
+	ricochetshot: {
+		name: "Ricochet Shot",
+		desc: "THE",
+		shortDesc: "This move does not check accuracy. Ignores Abilities.",
+	},
+	reboundlaser: {
+		name: "Rebound Laser",
+		desc: "THE",
+		shortDesc: "+ 20 power for each of the user's stat changes. Resets upon usage.",
+	},
 };
