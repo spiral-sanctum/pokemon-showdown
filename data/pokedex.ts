@@ -20660,7 +20660,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	somedeus: {
 		num: -10006,
-		name: "Serrazor",
+		name: "Somedeus",
 		types: ["Fairy", "Fire"],
 		baseStats: {hp: 90, atk: 139, def: 97, spa: 139, spd: 97, spe: 118},
 		abilities: {0: "Boundless Joy"},
@@ -20816,9 +20816,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		tags: ["Paradox"],
 		eggGroups: ["Undiscovered"],
 	},
-	vinaslosh: {
+	vinislosh: {
 		num: -10019,
-		name: "Vinaslosh",
+		name: "Vinislosh",
 		types: ["Grass", "Water"],
 		baseStats: {hp: 103, atk: 101, def: 61, spa: 92, spd: 75, spe: 78},
 		abilities: {0: "Ripen", 1: "Suction Cups", H: "Poison Heal"},
