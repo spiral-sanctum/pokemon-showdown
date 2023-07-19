@@ -5713,4 +5713,21 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			rating: 3.5,
 			num: -30,
 		},
+		dualinjection: { //does not cure status yet, this is added prematurely so viruvial is at least usable
+			// upokecenter says this is implemented as an added secondary effect
+			onModifyMove(move) {
+				if (!move?.flags['contact'] || move.target === 'self') return;
+				if (!move.secondaries) {
+					move.secondaries = [];
+				}
+				move.secondaries.push({
+					chance: 50,
+					status: 'tox',
+					ability: this.dex.abilities.get('dualinjection'),
+				});
+			},
+			name: "Dual Injection",
+			rating: 2,
+			num: -31,
+		},
 };

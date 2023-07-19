@@ -7653,4 +7653,49 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "THE",
 		shortDesc: "Has 1/4 recoil.",
 	},
+	piercingeyes: {
+		name: "Piercing Eyes",
+		desc: "THE",
+		shortDesc: "50% chance to paralyze.",
+	},
+	electrotail: {
+		name: "Electro Tail",
+		desc: "THE",
+		shortDesc: "10% chance to paralyze.",
+	},
+	mysticforce: {
+		name: "Mystic Force",
+		desc: "THE",
+		shortDesc: "30% chance to raise user’s Special Attack by 1 stage.",
+	},
+	feralswipe: {
+		name: "Feral Swipe",
+		desc: "THE",
+		shortDesc: "User recovers 33% of the damage dealt. Ignores Immunities.",
+	},
+	suddenshock: {
+		name: "Sudden Shock",
+		desc: "Designated for Pikaclones",
+		shortDesc: "Usually goes first.",
+	},
+	cataclysmhorn: {
+		name: "Cataclysm Horn",
+		desc: "Signature Move for Cladratura",
+		shortDesc: "User must recharge.",
+	},
+	kistorm: {
+		name: "Ki Storm",
+		desc: "THE",
+		shortDesc: "User recovers 33% of the damage dealt. Ignores Immunities.",
+	},
+	windblast: {
+		name: "Wind Blast",
+		desc: "THE",
+		shortDesc: "No additional effect.",
+	},
+	windscythe: {
+		name: "Wind Scythe",
+		desc: "THE",
+		shortDesc: "20% chance to flinch.",
+	},
 };
