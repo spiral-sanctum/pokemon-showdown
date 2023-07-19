@@ -19813,7 +19813,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Scarmata",
 		types: ["Dark", "Fairy"],
 		baseStats: {hp: 80, atk: 95, def: 74, spa: 125, spd: 100, spe: 65},
-		abilities: {0: "Technician", 1: "Oblivious", H: "Pixelate"},
+		abilities: {0: "Technician", 1: "Oblivious", H: "Pixilate"},
 		heightm: 1.98,
 		weightkg: 62.2,
 		color: "White",
