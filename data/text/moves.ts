@@ -7543,6 +7543,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Now's time to put an end to all the lies.",
 		shortDesc: "Traps target. Lowers speed by 1 each turn.",
 	},
+	reboundlaser: {
+		name: "Rebound Laser",
+		desc: "Now's time to take control of your life.",
+		shortDesc: "+30 power for each of the users stat drops; Resets users stats before attacking.",
+	},
 	bellyflop: {
 		name: "Belly Flop",
 		desc: "They have tried to break you.",
@@ -7618,6 +7623,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "THE",
 		shortDesc: "No additional effect.",
 	},
+	elasticwhip: {
+		name: "Elastic Whip",
+		desc: "THE",
+		shortDesc: "20% chance to flinch.",
+	},
 	blindingshadow: {
 		name: "Blinding Shadow",
 		desc: "THE",
@@ -7632,30 +7642,5 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Rebound Laser",
 		desc: "THE",
 		shortDesc: "+ 20 power for each of the user's stat changes. Resets upon usage.",
-	},
-	diffractingbeam: {
-		name: "diffracting Beam",
-		desc: "THE",
-		shortDesc: "Ignores Substitute. (DOES NOT AVOID SCREENS YET)",
-	},
-	confettirain: {
-		name: "Confetti Rain",
-		desc: "THE",
-		shortDesc: "10% chance to raise all stats by 1 (not acc/eva).",
-	},
-	rapturenova: {
-		name: "Rapture Nova",
-		desc: "THE",
-		shortDesc: "Lowers the user's Defense by 1 stage.",
-	},
-	jab: {
-		name: "Jab",
-		desc: "THE",
-		shortDesc: "First turn out: +1 Priority. Usable consecutively.",
-	},
-	beastrampage: {
-		name: "Beast Rampage",
-		desc: "THE",
-		shortDesc: "Has 1/4 recoil.",
 	},
 };

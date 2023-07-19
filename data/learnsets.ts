@@ -52194,7 +52194,6 @@ export const Learnsets: {[speciesid: string]: LearnsetData} = {
 			willowisp: ["7M", "6M", "5M"],
 			workup: ["7M", "5M"],
 			zenheadbutt: ["7T", "6T"],
-			beastrampage: ["9M", "8M", "7M"],
 		},
 		eventData: [
 			{generation: 5, level: 100, gender: "M", moves: ["flareblitz", "hammerarm", "wildcharge", "headsmash"], pokeball: "cherishball"},

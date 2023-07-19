@@ -2288,9 +2288,4 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "I'm so happy, I could eat a horse!",
 		shortDesc: "User builds Rage after successfully making contact.",
 	},
-	thunderblade: {
-		name: "Thunderblade",
-		desc: "I'm so happy, I could eat a horse!",
-		shortDesc: "Slicing moves are boosted by 1.25x; gain 10% chance to paralyze.",
-	},
 };
