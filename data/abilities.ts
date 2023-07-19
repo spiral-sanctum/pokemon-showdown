@@ -5696,7 +5696,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				if (move.flags['slicing']) {
 					this.debug('Shapness boost');
 					return this.chainModify(1.25);
-				},
+				}
 				onModifyMove(move)
 	        {
 	        if(!(move.flag === 'slicing') return;

@@ -7548,11 +7548,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "They have tried to break you.",
 		shortDesc: "More power the heavier the user than the target.",
 	},
-	ricochetshot: {
-		name: "Ricochet Shot",
-		desc: "They have tried to bre-yeak you.",
-		shortDesc: "Cannot miss. Ignores foes ability.",
-	},
 	doubledribble: {
 		name: "Double Dribble",
 		desc: "They have tried to break you.",
