@@ -5689,7 +5689,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         name: "Snow Packing",
         rating: 2,
         num: -29,
-    },/*
+    },
 		thunderblade: {
 			onBasePowerPriority: 19,
 			onBasePower(basePower, attacker, defender, move) {
@@ -5697,9 +5697,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					this.debug('Shapness boost');
 					return this.chainModify(1.25);
 				}
-				onModifyMove(move)
-	        {
-	        if(!(move.flag === 'slicing') return;
+			},
+			onModifyMove(move) {
+	        if(!(move.flags['slicing'])) return;
 	        if(!move.secondaries){
 	            move.secondaries = [];
 	        }
@@ -5712,5 +5712,5 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			name: "Thunderblade",
 			rating: 3.5,
 			num: -30,
-		},*/
+		},
 };

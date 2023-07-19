@@ -22708,7 +22708,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Rubber",
 		contestType: "Tough",
-	},/*
+	},
 	reboundlaser: {
 		num: -56,
 		accuracy: 100,
@@ -22733,7 +22733,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {basePower: 250},
 		maxMove: {basePower: 130},
 		contestType: "Clever",
-	},*/
+	},
 	ricochetshot: {
 		num: -57,
 		accuracy: true,
