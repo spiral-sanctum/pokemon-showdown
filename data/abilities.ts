@@ -5664,7 +5664,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		stonegaze: {
 	onDamagingHit(damage, target, source, move) {
 			if (this.randomChance(2, 10)) {
-				source.trySetStatus('brn', target);
+				source.trySetStatus('frz', target);
 			}
 	},
 		name: "Stone Gaze",
@@ -5731,6 +5731,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			name: "Dual Injection",
 			rating: 2,
 			num: -31,
+		},
+		pureintellect: {
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk) {
+				return this.chainModify(2);
+			},
+			name: "Pure Intellect",
+			rating: 5,
+			num: -32,
 		},
 		vicarious: {
 			onModifyMove(move) {

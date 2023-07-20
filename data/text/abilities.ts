@@ -2293,4 +2293,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "I'm so happy, I could eat a horse!",
 		shortDesc: "Slicing moves are boosted by 1.25x; gain 10% chance to paralyze.",
 	},
+	stonegaze: {
+		name: "Stone Gaze",
+		desc: "I'm so happy, I could eat a horse!",
+		shortDesc: "This Pokemon's moves gain a 20% chance to freeze.",
+	},
 };
