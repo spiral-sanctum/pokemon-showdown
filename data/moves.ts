@@ -22590,7 +22590,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Fighting",
 		contestType: "Tough",
-	}, 
+	},
 	ashestoashes: {
 		num: -50,
 		accuracy: 100,
@@ -22767,7 +22767,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 90,
 		category: "Physical",
-		name: "countershock",
+		name: "Countershock",
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
