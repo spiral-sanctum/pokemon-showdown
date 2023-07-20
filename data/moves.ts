@@ -22377,7 +22377,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "self",
 		type: "Water",
 	},
-	cleansingblast: { //probably doesn't work
+	cleansingblast: { //does work
 		num: -37,
 		accuracy: true,
 		basePower: 80,

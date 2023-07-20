@@ -5654,9 +5654,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		gritandgrind: {
 			onDamagingHit(damage, target, source, move) {
 				if (this.checkMoveMakesContact(move, source, target)) {
-					if (this.randomChance(10, 10)) {
-						source.addVolatile('rage', this.effectState.target);
-					}
+					target.addVolatile('rage', this.effectState.target);
 				}
 			},
 			name: "Grit and Grind",
@@ -5715,16 +5713,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		},
 		dualinjection: { //does not cure status yet, this is added prematurely so viruvial is at least usable
 			// upokecenter says this is implemented as an added secondary effect
-			onModifyMove(move) {
+			onModifyMove(move, user, target) {
 				if (!move?.flags['contact'] || move.target === 'self') return;
 				if (!move.secondaries) {
 					move.secondaries = [];
 				}
-				move.secondaries.push({
-					chance: 50,
-					status: 'tox',
-					ability: this.dex.abilities.get('dualinjection'),
-				});
+				if(this.randomChance(1, 2)){
+					if(target)target.clearStatus();
+				}
+				else{
+					move.secondaries.push({
+						status: 'tox',
+						ability: this.dex.abilities.get('dualinjection'),
+					});
+				}
 			},
 			name: "Dual Injection",
 			rating: 2,
