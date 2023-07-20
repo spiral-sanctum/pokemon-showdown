@@ -21658,20 +21658,20 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Rubber",
 		contestType: "Beautiful",
 	},
-	rajinslice: {
+	raijinslice: {
 		num: -5,
 		accuracy: 100,
 		basePower: 110,
-		category: "Physical",
+		category: "Special",
 		overrideDefensiveStat: 'spd',
 		name: "Raijin Slice",
 		pp: 5,
 		priority: 0,
 		flags: {protect: 1, mirror: 1, slicing: 1},
 		secondary: {
-			chance: 10,
-			onHit(target, source) {
-				this.field.setWeather('raindance');
+		chance: 20,
+		onHit(target, source) {
+			this.field.setWeather('raindance');
 			},
 		},
 		target: "normal",
@@ -22377,7 +22377,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "self",
 		type: "Water",
 	},
-	cleansingblast: { //probably doesn't work
+	cleansingblast: { //does work
 		num: -37,
 		accuracy: true,
 		basePower: 80,
@@ -22484,26 +22484,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Electric",
 		contestType: "Beautiful",
 	},
-	raijinslice: {
-		num: -43,
-		accuracy: 100,
-		basePower: 110,
-		category: "Special",
-		overrideDefensiveStat: 'spd',
-		name: "Raijin Slice",
-		pp: 5,
-		priority: 0,
-		flags: {protect: 1, mirror: 1, slicing: 1},
-		secondary: {
-		chance: 20,
-		onHit(target, source) {
-			this.field.setWeather('raindance');
-			},
-		},
-		target: "normal",
-		type: "Electric",
-		contestType: "Beautiful",
-	},
+	//move -43 was a dupe. Removed
 	diffractingbeam: {
 		num: -44,
 		accuracy: 95,
@@ -22609,7 +22590,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Fighting",
 		contestType: "Tough",
-	}, /* currently broken I suspect
+	}, 
 	ashestoashes: {
 		num: -50,
 		accuracy: 100,
@@ -22626,23 +22607,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 			} else {
 				this.add('-fail', target, 'move: Ashes To Ashes');
 			}
-			onDisableMove(pokemon) {
-				if (pokemon.lastMove?.id === 'ashestoashes') pokemon.disableMove('ashestoashes');
-			},
-			beforeMoveCallback(pokemon) {
-				if (pokemon.lastMove?.id === 'ashestoashes') pokemon.addVolatile('ashestoashes');
-			},
-			onAfterMove(pokemon) {
-				if (pokemon.removeVolatile('ashestoashes')) {
-					this.add('-hint', "Some effects can force a Pokemon to use Ashes To Ashes again in a row.");
-				}
+		},
+		onDisableMove(pokemon) {
+			if (pokemon.lastMove?.id === 'ashestoashes') pokemon.disableMove('ashestoashes');
+		},
+		beforeMoveCallback(pokemon) {
+			if (pokemon.lastMove?.id === 'ashestoashes') pokemon.addVolatile('ashestoashes');
+		},
+		onAfterMove(pokemon) {
+			if (pokemon.removeVolatile('ashestoashes')) {
+				this.add('-hint', "Some effects can force a Pokemon to use Ashes To Ashes again in a row.");
 			}
 		},
 		secondary: null,
 		target: "allAdjacent",
 		type: "Fire",
 		contestType: "Beautiful",
-	}, */
+	},
 	windblast: {
 		num: -51,
 		accuracy: 100,
@@ -22780,5 +22761,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Flying",
 		contestType: "Tough",
+	},
+	countershock: {
+		num: 609,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "countershock",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterMove(this,source,target,move){
+			if(source.volatiles['charge'] && this.randomChance(1, 2)){
+				target.setStatus('par', source,move)
+			}
+		},
+		target: "normal",
+		type: "Electric",
+		contestType: "Cute",
 	},
 };
