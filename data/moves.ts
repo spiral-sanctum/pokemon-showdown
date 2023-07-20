@@ -22762,4 +22762,22 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Flying",
 		contestType: "Tough",
 	},
+	countershock: {
+		num: 609,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "countershock",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		onAfterMove(this,source,target,move){
+			if(source.volatiles['charge'] && this.randomChance(1, 2)){
+				target.setStatus('par', source,move)
+			}
+		},
+		target: "normal",
+		type: "Electric",
+		contestType: "Cute",
+	},
 };
