@@ -7685,8 +7685,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	kistorm: {
 		name: "Ki Storm",
-		desc: "THE",
-		shortDesc: "User recovers 33% of the damage dealt. Ignores Immunities.",
+		desc: "Can be used consecutively, regardless of if weather is up.",
+		shortDesc: "Clears weather.",
 	},
 	windblast: {
 		name: "Wind Blast",
@@ -7697,5 +7697,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Wind Scythe",
 		desc: "THE",
 		shortDesc: "20% chance to flinch.",
+	},
+	forestsvoice: {
+		name: "Forest's Voice",
+		desc: "THE",
+		shortDesc: "Sets Grassy Terrain.",
 	},
 };

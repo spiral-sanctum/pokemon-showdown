@@ -2298,4 +2298,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "I'm so happy, I could eat a horse!",
 		shortDesc: "This Pokemon's moves gain a 20% chance to freeze.",
 	},
+	dualinjection: {
+		name: "Dual Injection",
+		desc: "I'm so hungry! HOW HUNGRY.",
+		shortDesc: "This Pokemon's contact moves have a 50% chance to badly poison, or cure target's status.",
+	},
 };
