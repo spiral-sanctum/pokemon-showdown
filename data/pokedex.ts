@@ -19150,6 +19150,18 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		eggGroups: ["Field"],
 		gen: 8,
 	},
+	hemogoblin: {
+		num: -71,
+		name: "Hemogoblin",
+		types: ["Fairy", "Fire"],
+		baseStats: {hp: 90, atk: 96, def: 87, spa: 99, spd: 89, spe: 55},
+		abilities: {0: "Pixilate", 1: "Intimidate"},
+		heightm: 1.4,
+		weightkg: 85,
+		color: "Pink",
+		eggGroups: ["Undiscovered"],
+		gen: 9,
+	},
 	// NOTE: PokeStar "formes" are not actually formes and thus do not have a formeOrder
 	pokestarsmeargle: {
 		num: -5000,

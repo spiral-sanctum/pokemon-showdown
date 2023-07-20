@@ -7703,4 +7703,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "THE",
 		shortDesc: "Sets Grassy Terrain.",
 	},
+	raijinblade: {
+		name: "Raijin Blade",
+		desc: "THE",
+		shortDesc: "Hits target's SpDef. 20% chance to summon rain.",
+	},
 };
