@@ -2008,8 +2008,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	shedinja: {
 		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "AG",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	whismur: {
 		isNonstandard: "Past",
@@ -4949,8 +4949,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	melmetal: {
 		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "Uber",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	melmetalgmax: {
 		isNonstandard: "Past",
@@ -5424,8 +5424,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	regieleki: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
-		natDexTier: "Uber",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	regidrago: {
 		isNonstandard: "Unobtainable",
@@ -5800,7 +5800,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	roaringmoon: {
 		tier: "OU",
 		doublesTier: "DOU",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	irontreads: {
 		tier: "OU",
@@ -5912,9 +5912,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		natDexTier: "OU",
 	},
 	annihilape: {
-		tier: "Uber",
+		tier: "OU",
 		doublesTier: "DUber",
-		natDexTier: "Uber",
+		natDexTier: "OU",
 	},
 	walkingwake: {
 		tier: "OU",
