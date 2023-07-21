@@ -478,7 +478,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	growlithehisui: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "LC",
 	},
 	arcanine: {
 		tier: "RU",
@@ -487,7 +487,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	arcaninehisui: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
 	},
 	poliwag: {
 		isNonstandard: "Past",
@@ -794,7 +794,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	voltorbhisui: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "LC",
 	},
 	electrode: {
 		tier: "(PU)",
@@ -803,7 +803,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	electrodehisui: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
 	},
 	exeggcute: {
 		isNonstandard: "Past",
@@ -1305,7 +1305,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	typhlosionhisui: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
 	},
 	totodile: {
 		isNonstandard: "Past",
@@ -1567,11 +1567,11 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	qwilfishhisui: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "NFE",
 	},
 	overqwil: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
 	},
 	shuckle: {
 		isNonstandard: "Past",
@@ -1593,7 +1593,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	sneaselhisui: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "NU",
 	},
 	weavile: {
 		tier: "RU",
@@ -1602,7 +1602,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	sneasler: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
 	},
 	teddiursa: {
 		tier: "LC",
@@ -3121,7 +3121,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	samurotthisui: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
 	},
 	patrat: {
 		isNonstandard: "Past",
@@ -3358,7 +3358,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	lilliganthisui: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
 	},
 	basculin: {
 		tier: "PU",
@@ -3789,7 +3789,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	braviaryhisui: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
 	},
 	vullaby: {
 		isNonstandard: "Past",
@@ -4219,7 +4219,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	sliggoohisui: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "NFE",
 	},
 	goodra: {
 		tier: "NUBL",
@@ -4228,7 +4228,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	goodrahisui: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
 	},
 	klefki: {
 		tier: "RU",
@@ -4283,7 +4283,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	avalugghisui: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
 	},
 	noibat: {
 		tier: "LC",
@@ -4362,7 +4362,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	decidueyehisui: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
 	},
 	litten: {
 		isNonstandard: "Past",
