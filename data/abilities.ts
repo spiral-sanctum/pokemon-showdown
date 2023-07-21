@@ -5652,9 +5652,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			num: -27,
 		},
 		gritandgrind: {
-			onDamagingHit(damage, target, source, move) {
+			onAfterMove(this, source, target, move) {
 				if (this.checkMoveMakesContact(move, source, target)) {
-					target.addVolatile('rage', this.effectState.target);
+					source.addVolatile('rage', this.effectState.target);
 				}
 			},
 			name: "Grit and Grind",
