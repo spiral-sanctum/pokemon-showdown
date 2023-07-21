@@ -5220,14 +5220,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				return null;
 			}
 		},
-		isNonstandard: "CAP",
 		isBreakable: true,
 		name: "Mountaineer",
 		rating: 3,
 		num: -2,
 	},
 	rebound: {
-		isNonstandard: "CAP",
 		name: "Rebound",
 		onTryHitPriority: 1,
 		onTryHit(target, source, move) {
@@ -5260,7 +5258,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: -3,
 	},
 	persistent: {
-		isNonstandard: "CAP",
 		name: "Persistent",
 		// implemented in the corresponding move
 		rating: 3,

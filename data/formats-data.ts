@@ -1005,7 +1005,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	kleavor: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	smoochum: {
 		isNonstandard: "Past",
@@ -1614,7 +1615,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	ursaluna: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	slugma: {
 		isNonstandard: "Past",
@@ -1714,7 +1716,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	wyrdeer: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	smeargle: {
 		isNonstandard: "Past",
@@ -3372,15 +3375,18 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	basculinwhitestriped: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "PU",
+		natDexTier: "NFE",
 	},
 	basculegion: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	basculegionf: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	sandile: {
 		tier: "LC",
@@ -5453,11 +5459,13 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	enamorus: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	enamorustherian: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "OU",
+		natDexTier: "OU",
 	},
 	sprigatito: {
 		tier: "LC",
@@ -5751,7 +5759,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	gimmighoulroaming: {
 		isNonstandard: "Unobtainable",
-		tier: "Unreleased",
+		tier: "LC",
+		natDexTier: "LC",
 	},
 	gholdengo: {
 		tier: "OU",

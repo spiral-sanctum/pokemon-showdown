@@ -2303,4 +2303,24 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "I'm so hungry! HOW HUNGRY.",
 		shortDesc: "This Pokemon's contact moves have a 50% chance to badly poison, or cure target's status.",
 	},
+	pureintellect: {
+		name: "Pure Intellect",
+		desc: "I'm so hungry! HOW HUNGRY.",
+		shortDesc: "This Pokemon's Special Attack is doubled.",
+	},
+	remedialincense: {
+		name: "Remedial Incense",
+		desc: "I'm so hungry! HOW HUNGRY.",
+		shortDesc: "All active Pokemon will have their non-volatile status condition cured every three turns they are on the field. ",
+	},
+	akimbp: {
+		name: "Akimbo",
+		desc: "I'm so hungry! HOW HUNGRY.",
+		shortDesc: "Contact: Hits twice; adverse contact effects negated.",
+	},
+	vicarious: {
+		name: "Vicarious",
+		desc: "I'm so hungry! HOW HUNGRY.",
+		shortDesc: "User does not take recoil/crash damage, or make contact.",
+	},
 };
