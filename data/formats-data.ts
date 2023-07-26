@@ -3568,8 +3568,8 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	swanna: {
 		isNonstandard: "Past",
-		tier: "Illegal",
-		natDexTier: "RU",
+		tier: "NFE",
+		natDexTier: "NFE",
 	},
 	vanillite: {
 		isNonstandard: "Past",
@@ -6325,88 +6325,88 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	detonect: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	bomburn: {
-		tier: "NFE",
+		tier: "Illegal",
 	},
 	caraburst: {
-		tier: "RU",
+		tier: "Illegal",
 	},
 	possecary: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	aromapass: {
-		tier: "NFE",
+		tier: "Illegal",
 	},
 	opposiod: {
-		tier: "NU",
+		tier: "Illegal",
 	},
 	phoenae: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	spacia: {
-		tier: "NFE",
+		tier: "Illegal",
 	},
 	cosmist: {
-		tier: "RU",
+		tier: "Illegal",
 	},
 	accipern: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	acciprey: {
-		tier: "NU",
+		tier: "Illegal",
 	},
 	pernifrost: {
-		tier: "OU",
+		tier: "Illegal",
 	},
 	globlano: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	jalamander: {
-		tier: "NFE",
+		tier: "Illegal",
 	},
 	flacaicin: {
-		tier: "RU",
+		tier: "Illegal",
 	},
 	gyozito: {
 		tier: "PU",
 	},
 	dynarie: {
-		tier: "LC Uber",
+		tier: "Illegal",
 	},
 	mystilash: {
-		tier: "RU",
+		tier: "Illegal",
 	},
 	cerescherr: {
-		tier: "OU",
+		tier: "IllegalU",
 	},
 	niscion: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	armurai: {
-		tier: "NU",
+		tier: "Illegal",
 	},
 	venatris: {
-		tier: "UU",
+		tier: "Illegal",
 	},
 	aurocan: {
-		tier: "RU",
+		tier: "Illegal",
 	},
 	fishii: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	fantasii: {
-		tier: "UU",
+		tier: "Illegal",
 	},
 	larbot: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	gabbibug: {
-		tier: "NFE",
+		tier: "Illegal",
 	},
 	cladratura: {
-		tier: "PU",
+		tier: "Illegal",
 	},
 	giathens: {
 		tier: "LC",
@@ -6427,19 +6427,19 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "RU",
 	},
 	marball: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	marbog: {
-		tier: "NFE",
+		tier: "Illegal",
 	},
 	marboulder: {
-		tier: "PU",
+		tier: "Illegal",
 	},
 	punchick: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	brawlabird: {
-		tier: "UU",
+		tier: "Illegal",
 	},
 	alikat: {
 		tier: "LC",
@@ -6451,13 +6451,13 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "UU",
 	},
 	dragonaut: {
-		tier: "NU",
+		tier: "Illegal",
 	},
 	porkano: {
 		tier: "OU",
 	},
 	malidol: {
-		tier: "PU",
+		tier: "Illegal",
 	},
 	prawatt: {
 		tier: "LC",
@@ -6466,16 +6466,16 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "RU",
 	},
 	kattacomb: {
-		tier: "NU",
+		tier: "Illegal",
 	},
 	gelatar: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	sticrawl: {
-		tier: "NFE",
+		tier: "Illegal",
 	},
 	taravage: {
-		tier: "RU",
+		tier: "Illegal",
 	},
 	skwirl: {
 		tier: "LC",
@@ -6505,10 +6505,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NU",
 	},
 	genetox: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	servenom: {
-		tier: "Nu",
+		tier: "Illegal",
 	},
 	criktan: {
 		tier: "LC",
@@ -6523,43 +6523,43 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "UU",
 	},
 	goocapon: {
-		tier: "NU",
+		tier: "Illegal",
 	},
 	mistereal: {
-		tier: "RU",
+		tier: "Illegal",
 	},
 	bronzomni: {
-		tier: "Uber",
+		tier: "Illegal",
 	},
 	calcix: {
-		tier: "PU",
+		tier: "Illegal",
 	},
 	santovial: {
-		tier: "NU",
+		tier: "Illegal",
 	},
 	demolidos: {
-		tier: "RU",
+		tier: "v",
 	},
 	citadon: {
-		tier: "RU",
+		tier: "Illegal",
 	},
 	intricat: {
 		tier: "PU",
 	},
 	raizor: {
-		tier: "RU",
+		tier: "Illegal",
 	},
 	mistrivia: {
-		tier: "NU",
+		tier: "Illegal",
 	},
 	eelander: {
-		tier: "NU",
+		tier: "Illegal",
 	},
 	chienkin: {
-		tier: "RU",
+		tier: "Illegal",
 	},
 	pillurr: {
-		tier: "RU",
+		tier: "Illegal",
 	},
 	bobert: {
 		tier: "Illegal",
@@ -6583,31 +6583,31 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	sensibex: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	etherebex: {
-		tier: "NU",
+		tier: "Illegal",
 	},
 	procciolo: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	cordiano: {
-		tier: "RU",
+		tier: "Illegal",
 	},
 	dinimbus: {
-		tier: "Lc",
+		tier: "Illegal",
 	},
 	dinostream: {
-		tier: "UU",
+		tier: "Illegal",
 	},
 	cranean: {
-		tier: "LC",
+		tier: "Illegal",
 	},
 	ceresoul: {
-		tier: "PU",
+		tier: "Illegal",
 	},
 	oblyvern: {
-		tier: "Illegal",
+		tier: "UU",
 	},
 	serrazor: {
 		tier: "NU",

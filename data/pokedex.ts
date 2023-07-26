@@ -20592,7 +20592,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	oblyvern: {
 		num: -5109,
 		name: "Oblyvern",
-		types: ["Void"],
+		types: ["Dark"],
 		gender: "N",
 		baseStats: {hp: 94, atk: 129, def: 95, spa: 129, spd: 70, spe: 83},
 		abilities: {0: "Null Space"},
