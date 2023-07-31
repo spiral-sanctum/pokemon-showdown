@@ -22733,7 +22733,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		contestType: "Tough",
 	},
 	countershock: {
-		num: 609,
+		num: -60,
 		accuracy: 100,
 		basePower: 90,
 		category: "Physical",
@@ -22749,5 +22749,44 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "normal",
 		type: "Electric",
 		contestType: "Cute",
+	},
+	manastrike: {
+		num: -61,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		overrideDefensiveStat: 'spd',
+		name: "Mana Strike",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Fairy",
+		contestType: "Cool",
+	},
+	mysticfang: {
+		num: -62,
+		accuracy: true,
+		basePower: 70,
+		category: "Physical",
+		name: "Mystic Fang",
+		pp: 15,
+		priority: 0,
+		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
+		secondaries: [
+			{
+				chance: 5,
+				boosts: {
+					spd: -1,
+			}, {
+				chance: 5,
+				boosts: {
+					def: -1,
+			},
+		],
+		target: "normal",
+		type: "Fairy",
+		contestType: "Cool",
 	},
 };
