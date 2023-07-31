@@ -22777,8 +22777,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: {
 			chance: 10,
 			volatileStatus: 'flinch',
+			},
 		target: "normal",
 		type: "Fairy",
 		contestType: "Cool",
-	},
-};
+		},
+	};
