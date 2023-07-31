@@ -22774,17 +22774,9 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 15,
 		priority: 0,
 		flags: {bite: 1, contact: 1, protect: 1, mirror: 1},
-		secondaries: [
-			{
-				chance: 5,
-				boosts: {
-					spd: -1,
-			}, {
-				chance: 5,
-				boosts: {
-					def: -1,
-			},
-		],
+		secondary: {
+			chance: 10,
+			volatileStatus: 'flinch',
 		target: "normal",
 		type: "Fairy",
 		contestType: "Cool",

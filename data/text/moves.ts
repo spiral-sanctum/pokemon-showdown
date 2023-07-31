@@ -7708,4 +7708,14 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "THE",
 		shortDesc: "Hits target's SpDef. 20% chance to summon rain.",
 	},
+	manastrike: {
+		name: "Mana Strike",
+		desc: "THE",
+		shortDesc: "Hits target's SpDef.",
+	},
+	mysticfang: {
+		name: "Mystic Fang",
+		desc: "THE",
+		shortDesc: "10% chance to flinch. (Temporary)",
+	},
 };
