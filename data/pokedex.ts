@@ -20429,7 +20429,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Ouromarin",
 		types: ["Spiral", "Water"],
 		baseStats: {hp: 100, atk: 90, def: 95, spa: 95, spd: 90, spe: 90},
-		abilities: {0: "Adaptability"},
+		abilities: {0: "Conditioning"},
 		heightm: 3.39,
 		weightkg: 400.2,
 		color: "Gray",
