@@ -22912,4 +22912,23 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Poison",
 		contestType: "Clever",
 	},
+	burningrubber: {
+		num: -70,
+		accuracy: 95,
+		basePower: 75,
+		category: "Physical",
+		name: "Burning Rubber",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 40,
+			onHit(target, source, move) {
+				if (!this.queue.willMove(target)) target.trySetStatus('brn', source, move);
+			},
+		},
+		target: "normal",
+		type: "Rubber",
+		contestType: "Cool",
+	}
 };

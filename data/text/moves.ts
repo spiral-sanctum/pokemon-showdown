@@ -7718,4 +7718,8 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "THE",
 		shortDesc: "10% chance to flinch. (Temporary)",
 	},
+	burningrubber: {
+		name: "Burning Rubber",
+		shortDesc: "If target moves first, 40% chance to burn."
+	},
 };
