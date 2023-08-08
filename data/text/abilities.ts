@@ -2238,11 +2238,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "You're over it, over it, over it, over it...",
 		shortDesc: "Physical contact moves become Special; are boosted by 1.2x",
 	},
-	conditioning: {
-		name: "Conditioning",
-		desc: "Even I don't understand how this ability works.",
-		shortDesc: "Moves used consecutively against this Pokemon have their base power decreased by 25% each turn.",
-	},
 	polaris: {
 		name: "Polaris",
 		desc: "Rust in peace.",
