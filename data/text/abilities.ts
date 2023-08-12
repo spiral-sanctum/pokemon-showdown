@@ -2313,7 +2313,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "I'm so hungry! HOW HUNGRY.",
 		shortDesc: "All active Pokemon will have their non-volatile status condition cured every three turns they are on the field. ",
 	},
-	akimbp: {
+	akimbo: {
 		name: "Akimbo",
 		desc: "I'm so hungry! HOW HUNGRY.",
 		shortDesc: "Contact: Hits twice; adverse contact effects negated.",
