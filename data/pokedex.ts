@@ -20989,7 +20989,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Ferarite",
 		types: ["Rock", "Normal"],
 		baseStats: {hp: 73, atk: 130, def: 70, spa: 65, spd: 60, spe: 102},
-		abilities: {0: "Sand Rush", H: "Opening Gambit"},
+		abilities: {0: "Sand Rush", H: "Initial Fury"},
 		heightm: 1.3,
 		weightkg: 58,
 		color: "Gray",

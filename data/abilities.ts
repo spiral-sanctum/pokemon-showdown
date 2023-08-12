@@ -5760,4 +5760,42 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			rating: 2.5,
 			num: -33,
 		},
+		germaphobe: {
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, attacker, defender, move) {
+				if (move.type === 'Clean') {
+					this.debug('Cleans\'s Germaphobe boost');
+					return this.chainModify(1.5);
+				}
+			},
+			onModifySpAPriority: 5,
+			onModifySpA(atk, attacker, defender, move) {
+				if (move.type === 'Clean') {
+					this.debug('Clean\'s Germaphobe boost');
+					return this.chainModify(1.5);
+				}
+			},
+			name: "Germaphobe",
+			rating: 3.5,
+			num: -34,
+		},
+		initialfury: {
+			onModifyAtkPriority: 5,
+			onModifyAtk(atk, attacker, defender, move) {
+				if (attacker.activeMoveActions <= 1) {
+					this.debug('InitialFury boost');
+					return this.chainModify(1.5);
+			}
+		},
+			onModifySpAPriority: 5,
+			onModifySpA(atk, attacker, defender, move) {
+				if (attacker.activeMoveActions <= 1) {
+					this.debug('InitialFury boost');
+					return this.chainModify(1.5);
+				}
+			},
+			name: "Initial Fury",
+			rating: 3.5,
+			num: -35,
+		},
 };

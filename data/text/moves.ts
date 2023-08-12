@@ -7722,4 +7722,33 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Burning Rubber",
 		shortDesc: "If target moves first, 40% chance to burn."
 	},
+	kunaibarrage: {
+		name: "Kunai Barrage",
+		shortDesc: "100% chance to poison."
+	},
+	aquaimpact: {
+		name: "Aqua Impact",
+		shortDesc: "Hits first. First turn out only. 100% flinch; x2 power on poisoned targets."
+	},
+	sharpeye: {
+		name: "Sharp Eye",
+		shortDesc: "30% chance to lower target's defense by 1."
+	},
+	fugalfury: {
+		name: "Fugal Fury",
+		desc: "This move is actually supposed to work like Gen 1 Hyper Beam, but this is beyond my knowledge. It works as normal for now.",
+		shortDesc: "User must recharge. (IN PROGRESS)"
+	},
+	lancesessence: {
+		name: "Lance's Essence",
+		shortDesc: "100% chance to lower target's SpAtk by 1 stage."
+	},
+	searingslash: {
+		name: "Searing Slash",
+		shortDesc: "Has 33% recoil."
+	},
+	psychocrash: {
+		name: "Psycho Crash",
+		shortDesc: "Has 33% recoil."
+	},
 };

@@ -6706,4 +6706,46 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	cabiapod: {
 		tier: "OU",
 	},
+	gazaves: {
+		tier: "OU",
+	},
+	refractyl: {
+		tier: "OU",
+	},
+	caprabex: {
+		tier: "OU",
+	},
+	caprabuck: {
+		tier: "NFE",
+	},
+	quarrelamb: {
+		tier: "LC",
+	},
+	ferarite: {
+		tier: "OU",
+	},
+	infernapesanctified: {
+		tier: "OU",
+	},
+	venusaursanctified: {
+		tier: "OU",
+	},
+	greninjasanctified: {
+		tier: "OU",
+	},
+	staticuum: {
+		tier: "OU",
+	},
+	ironunity: {
+		tier: "OU",
+	},
+	abomascorch: {
+		tier: "Illegal",
+	},
+	ratscal: {
+		tier: "Illegal",
+	},
+	ratscallion: {
+		tier: "Illegal",
+	},
 };

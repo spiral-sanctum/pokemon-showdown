@@ -2323,4 +2323,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "I'm so hungry! HOW HUNGRY.",
 		shortDesc: "User does not take recoil/crash damage, or make contact.",
 	},
+	germaphobe: {
+		name: "Germaphobe",
+		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 while using a Clean-type attack.",
+	},
+	initialfury: {
+		name: "Initial Fury",
+		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 on it's first turn out.",
+	},
 };
