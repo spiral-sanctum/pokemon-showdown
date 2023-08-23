@@ -10632,6 +10632,11 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			featherdust: ["9M"],
 			spincycle: ["9M"],
 			bleachshower: ["9M"],
+<<<<<<< Updated upstream
+=======
+			aromaticmist: ["9M", "8M", "7M"],
+			blotout: ["9M", "8M", "7M"],
+>>>>>>> Stashed changes
 		},
 		eventData: [
 			{ generation: 8, level: 15, isHidden: true, moves: ["tackle", "growl", "confusion", "fairywind"], pokeball: "cherishball" },
@@ -10790,6 +10795,11 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			ultrapurge: ["9M"],
 			wipe: ["9M"],
 			bleachshower: ["9M"],
+<<<<<<< Updated upstream
+=======
+			aromaticmist: ["9M", "8M", "7M"],
+			blotout: ["9M", "8M", "7M"],
+>>>>>>> Stashed changes
 		},
 	},
 	slowpoke: {
@@ -15278,6 +15288,10 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			puritypulse: ["9M"],
 			wipe: ["9M"],
 			bleachshower: ["9M"],
+<<<<<<< Updated upstream
+=======
+			soapyslide: ["9M", "8M", "7M"],
+>>>>>>> Stashed changes
 		},
 		eventData: [
 			{ generation: 3, level: 5, shiny: 1, moves: ["healbell", "wish"], pokeball: "pokeball" },
@@ -15395,6 +15409,10 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			wipe: ["9M"],
 			blotout: ["9M"],
 			bleachshower: ["9M"],
+<<<<<<< Updated upstream
+=======
+			soapyslide: ["9M", "8M", "7M"],
+>>>>>>> Stashed changes
 		},
 	},
 	koffing: {
@@ -15620,6 +15638,15 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			venoshock: ["8M"],
 			willowisp: ["8M"],
 			wonderroom: ["8M"],
+			chemicalsplash: ["8M"],
+			exfoliate: ["8M"],
+			bleachshower: ["8M"],
+			blotout: ["8M"],
+			cleansingblast: ["8M"],
+			purify: ["8M"],
+			puritypulse: ["8M"],
+			healpulse: ["8M"],
+
 		},
 	},
 	rhyhorn: {
@@ -16372,6 +16399,10 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			ultrapurge: ["9M"],
 			wipe: ["9M"],
 			bleachshower: ["9M"],
+<<<<<<< Updated upstream
+=======
+			cauterize: ["9M", "8M", "7M"],
+>>>>>>> Stashed changes
 		},
 		eventData: [
 			{ generation: 5, level: 10, isHidden: true, moves: ["pound", "growl", "tailwhip", "refresh"] },
@@ -59957,6 +59988,11 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			blotout: ["9M"],
 			bleachshower: ["9M"],
 			cleansingblast: ["9M"],
+<<<<<<< Updated upstream
+=======
+			cauterize: ["9M", "8M", "7M"],
+			soapyslide: ["9M", "8M", "7M"],
+>>>>>>> Stashed changes
 		},
 	},
 	joltik: {
@@ -69699,6 +69735,10 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			blotout: ["9M"],
 			bleachshower: ["9M"],
 			electrotail: ["9M"],
+<<<<<<< Updated upstream
+=======
+			soapyslide: ["9M", "8M", "7M"],
+>>>>>>> Stashed changes
 		},
 	},
 	goodrahisui: {
@@ -69762,6 +69802,10 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			watergun: ["9L1"],
 			waterpulse: ["9M", "9L25"],
 			electrotail: ["9M"],
+<<<<<<< Updated upstream
+=======
+			soapyslide: ["9M", "8M", "7M"],
+>>>>>>> Stashed changes
 		},
 	},
 	klefki: {
@@ -96335,6 +96379,10 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			exfoliate: ["9M", "8M", "7M"],
 			puritypulse: ["9M", "8M", "7M"],
 			spincycle: ["9M", "8M", "7M"],
+<<<<<<< Updated upstream
+=======
+			wipe: ["9M", "8M", "7M"],
+>>>>>>> Stashed changes
 		},
 	},
 	fauxnline: {
@@ -96515,6 +96563,15 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			flamethrower: ["9M", "8M", "7M"],
 			slackoff: ["9M", "8M", "7M"],
 			terablast: ["9M"],
+<<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+			gritandgrind: ["9M"],
+=======
+			rockslide: ["9M", "8M", "7M"],
+			heatcrash: ["9M", "8M", "7M"],
+>>>>>>> Stashed changes
+>>>>>>> d7fd2f6cf (Update learnsets.ts)
 		},
 	},
 	flaimi: {
@@ -96810,6 +96867,10 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			ultrapurge: ["9M", "8M", "7M"],
 			uturn: ["9M", "8M", "7M"],
 			wipe: ["9M", "8M", "7M"],
+<<<<<<< Updated upstream
+=======
+			soapyslide: ["9M", "8M", "7M"],
+>>>>>>> Stashed changes
 		},
 	},
 	littlestar: {
@@ -97619,7 +97680,10 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			attract: ["9M", "8M", "7M"],
 			autotomize: ["9M", "8M", "7M"],
 			batonpass: ["9M", "8M", "7M"],
+<<<<<<< Updated upstream
 			blindingflash: ["9M", "8M", "7M"],
+=======
+>>>>>>> Stashed changes
 			bugbite: ["9M", "8M", "7M"],
 			bugbuzz: ["9M", "8M", "7M"],
 			charge: ["9M", "8M", "7M"],
@@ -97643,7 +97707,10 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			facade: ["9M", "8M", "7M"],
 			flamecharge: ["9M", "8M", "7M"],
 			flash: ["9M", "8M", "7M"],
+<<<<<<< Updated upstream
 			flashbeam: ["9M", "8M", "7M"],
+=======
+>>>>>>> Stashed changes
 			flashcannon: ["9M", "8M", "7M"],
 			focusenergy: ["9M", "8M", "7M"],
 			furycutter: ["9M", "8M", "7M"],
@@ -97673,7 +97740,10 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			round: ["9M", "8M", "7M"],
 			risingvoltage: ["9M", "8M", "7M"],
 			rollout: ["9M", "8M", "7M"],
+<<<<<<< Updated upstream
 			scorchingsands: ["9M", "8M", "7M"],
+=======
+>>>>>>> Stashed changes
 			screech: ["9M", "8M", "7M"],
 			shockwave: ["9M", "8M", "7M"],
 			signalbeam: ["9M", "8M", "7M"],
@@ -97681,7 +97751,10 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			skittersmack: ["9M", "8M", "7M"],
 			sleeptalk: ["9M", "8M", "7M"],
 			spark: ["9M", "8M", "7M"],
+<<<<<<< Updated upstream
 			speedstrike: ["9M", "8M", "7M"],
+=======
+>>>>>>> Stashed changes
 			steelroller: ["9M", "8M", "7M"],
 			strugglebug: ["9M", "8M", "7M"],
 			substitute: ["9M", "8M", "7M"],
