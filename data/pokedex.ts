@@ -20969,7 +20969,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 	},
 	venusaursanctified: {
 		num: 3,
-		name: "Venasaur-Sanctified",
+		name: "Venusaur-Sanctified",
 		baseSpecies: "Venusaur",
 		forme: "Sanctified",
 		types: ["Grass", "Psychic"],
