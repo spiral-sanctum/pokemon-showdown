@@ -336,18 +336,24 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	battlebond: {
 		onSourceAfterFaint(length, target, source, effect) {
-			if (effect?.effectType !== 'Move') return;
-			if (source.abilityState.battleBondTriggered) return;
+			if (effect?.effectType !== 'Move') {
+				return;
+			}
 			if (source.species.id === 'greninja' && source.hp && !source.transformed && source.side.foePokemonLeft()) {
 				this.add('-activate', source, 'ability: Battle Bond');
-				this.boost({atk: 1, spa: 1, spe: 1}, source, source, this.effect);
-				source.abilityState.battleBondTriggered = true;
+				source.formeChange('Greninja-Ash', this.effect, true);
 			}
 		},
-		isNonstandard: "Unobtainable",
+		onModifyMovePriority: -1,
+		onModifyMove(move, attacker) {
+			if (move.id === 'watershuriken' && attacker.species.name === 'Greninja-Ash' &&
+				!attacker.transformed) {
+				move.multihit = 3;
+			}
+		},
 		isPermanent: true,
 		name: "Battle Bond",
-		rating: 3.5,
+		rating: 4,
 		num: 210,
 	},
 	beadsofruin: {
