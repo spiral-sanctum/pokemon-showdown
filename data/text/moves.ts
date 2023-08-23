@@ -1350,8 +1350,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	direclaw: {
 		name: "Dire Claw",
-		desc: "Has a 50% chance to cause the target to either fall asleep, become poisoned, or become paralyzed.",
-		shortDesc: "50% chance to sleep, poison, or paralyze target.",
+		desc: "Has a 100% chance to poison.",
+		shortDesc: "Has a 100% chance to poison.",
 	},
 	disable: {
 		name: "Disable",
@@ -5432,11 +5432,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	scald: {
 		name: "Scald",
-		desc: "Has a 30% chance to burn the target. The target thaws out if it is frozen.",
-		shortDesc: "30% chance to burn the target. Thaws target.",
+		desc: "Has a 20% chance to burn the target. The target thaws out if it is frozen.",
+		shortDesc: "20% chance to burn the target. Thaws target.",
 		gen5: {
-			desc: "Has a 30% chance to burn the target.",
-			shortDesc: "30% chance to burn the target.",
+			desc: "Has a 20% chance to burn the target.",
+			shortDesc: "20% chance to burn the target.",
 		},
 	},
 	scaleshot: {
@@ -7706,7 +7706,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	raijinblade: {
 		name: "Raijin Blade",
 		desc: "THE",
-		shortDesc: "Hits target's SpDef. 20% chance to summon rain.",
+		shortDesc: "Hits target's Sp. Def. 20% chance to summon rain.",
 	},
 	manastrike: {
 		name: "Mana Strike",
@@ -7732,7 +7732,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	sharpeye: {
 		name: "Sharp Eye",
-		shortDesc: "30% chance to lower target's defense by 1."
+		shortDesc: "30% chance to lower target's Def by 1."
 	},
 	fugalfury: {
 		name: "Fugal Fury",
@@ -7741,7 +7741,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	lancesessence: {
 		name: "Lance's Essence",
-		shortDesc: "100% chance to lower target's SpAtk by 1 stage."
+		shortDesc: "100% chance to lower target's Sp. Atk by 1 stage."
 	},
 	searingslash: {
 		name: "Searing Slash",
@@ -7750,5 +7750,37 @@ export const MovesText: {[k: string]: MoveText} = {
 	psychocrash: {
 		name: "Psycho Crash",
 		shortDesc: "Has 33% recoil."
+	},
+	ashestoashes: {
+		name: "Ashes To Ashes",
+		shortDesc: "Destroys target's item. Cannot be used consecutively."
+	},
+	countershock: {
+		name: "Countershock",
+		shortDesc: "If charged, 50% chance to paralyze."
+	},
+	darkmelody: {
+		name: "Dark Melody",
+		shortDesc: "10% chance to sleep foe(s)."
+	},
+	glacier: {
+		name: "Glacier",
+		shortDesc: "Hits adjacent Pokemon."
+	},
+	liquifyingburst: {
+		name: "Liquifying Burst",
+		shortDesc: "10% chance to burn. 2x damage to Steel, 1/2 damage to Fire."
+	},
+	poisonhorn: {
+		name: "Poison Horn",
+		shortDesc: "No additional effect."
+	},
+	shieldbeam: {
+		name: "Shield Beam",
+		shortDesc: "Uses user's Sp. Def in damage calculation."
+	},
+	mischiefmagic: {
+		name: "Mischief Magic",
+		shortDesc: "Raises the user's Sp. Atk and Spe by 1."
 	},
 };
