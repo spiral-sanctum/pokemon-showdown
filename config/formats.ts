@@ -834,6 +834,13 @@ export const Formats: FormatList = [
 		],
 	},
 	{
+		name: "[Gen 9] Crazy 8",
+		desc: `8 Pok&eacute;mons can be used with 8 moves each.`,
+
+		mod: 'gen9',
+		ruleset: ['Max Team Size = 8', 'Max Move Count = 8', 'Standard', 'Sleep Moves Clause', 'Terastal Clause'],
+	},
+	{
 		name: "[Gen 9] Cross Evolution",
 		desc: `Give a Pok&eacute;mon a Pok&eacute;mon name of the next evolution stage as a nickname to inherit stat changes, typing, abilities, and moves from the next stage Pok&eacute;mon.`,
 		threads: [
