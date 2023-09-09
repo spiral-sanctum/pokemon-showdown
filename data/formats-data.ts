@@ -6401,7 +6401,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	cerescherr: {
-		tier: "IllegalU",
+		tier: "Illegal",
 	},
 	niscion: {
 		tier: "Illegal",
@@ -6560,7 +6560,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	demolidos: {
-		tier: "v",
+		tier: "Illegal",
 	},
 	citadon: {
 		tier: "Illegal",
