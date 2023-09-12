@@ -33,6 +33,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		team: 'random',
 		ruleset: ['PotD', 'Obtainable', 'Species Clause', 'HP Percentage Mod', 'Cancel Mod', 'Sleep Clause Mod'],
 	},
@@ -40,6 +41,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] Unrated Random Battle",
 
 		mod: 'gen9',
+		searchShow: false,
 		team: 'random',
 		challengeShow: false,
 		rated: false,
@@ -49,6 +51,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] Random Battle (Blitz)",
 
 		mod: 'gen9',
+		searchShow: false,
 		team: 'random',
 		ruleset: ['[Gen 9] Random Battle', 'Blitz'],
 	},
@@ -61,6 +64,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['Standard'],
 		banlist: ['Uber', 'AG', 'Arena Trap', 'Moody', 'Sand Veil', 'Shadow Tag', 'Snow Cloak', 'King\'s Rock', 'Baton Pass', 'Shed Tail'],
 	},
@@ -72,6 +76,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['Standard'],
 		banlist: ['AG', 'Moody', 'King\'s Rock', 'Baton Pass'],
 	},
@@ -83,6 +88,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['[Gen 9] OU'],
 		banlist: ['OU', 'UUBL'],
 	},
@@ -94,6 +100,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['[Gen 9] UU'],
 		banlist: ['UU', 'RUBL', 'Light Clay'],
 	},
@@ -105,6 +112,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['[Gen 9] RU'],
 		banlist: ['RU', 'NUBL'],
 	},
@@ -112,6 +120,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] PU",
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['[Gen 9] NU'],
 		banlist: ['NU', 'PUBL'],
 	},
@@ -124,6 +133,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['Little Cup', 'Standard'],
 		banlist: ['Dunsparce', 'Flittle', 'Gastly', 'Girafarig', 'Meditite', 'Misdreavus', 'Murkrow', 'Rufflet', 'Scyther', 'Sneasel', 'Moody', 'Baton Pass'],
 	},
@@ -136,6 +146,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['Standard', 'Evasion Abilities Clause', 'Same Type Clause', 'Terastal Clause'],
 		banlist: ['Annihilape', 'Chi-Yu', 'Houndstone', 'Iron Bundle', 'Koraidon', 'Miraidon', 'Palafin', 'Moody', 'Shadow Tag', 'Booster Energy', 'Damp Rock', 'Focus Band', 'King\'s Rock', 'Quick Claw', 'Acupressure', 'Baton Pass'],
 	},
@@ -148,6 +159,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: [
 			'Picked Team Size = 1', 'Max Team Size = 3',
 			'Standard', 'Terastal Clause', 'Sleep Moves Clause', 'Accuracy Moves Clause', '!Sleep Clause Mod',
@@ -165,6 +177,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
 	},
 	{
@@ -174,6 +187,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['[Gen 9] PU'],
 		banlist: ['PU', 'Beartic', 'Fraxure', 'Girafarig', 'Vigoroth'],
 	},
@@ -196,6 +210,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] CAP",
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['[Gen 9] OU', '+CAP'],
 		banlist: ['Walking Wake', 'Crucibellite'],
 	},
@@ -206,6 +221,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		gameType: 'freeforall',
 		rated: false,
 		tournamentShow: false,
@@ -228,6 +244,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] Battle Stadium Singles Regulation C",
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Paldea Pokedex', 'Min Source Gen = 9', 'VGC Timer'],
 	},
 	{
@@ -254,6 +271,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		gameType: 'doubles',
 		ruleset: ['Standard Doubles'],
 		banlist: ['DUber', 'Shadow Tag'],
@@ -265,6 +283,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		gameType: 'doubles',
 		ruleset: ['Standard Doubles', '!Gravity Sleep Clause'],
 	},
@@ -275,6 +294,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		gameType: 'doubles',
 		ruleset: ['[Gen 9] Doubles OU'],
 		banlist: ['DOU', 'DBL'],
@@ -286,6 +306,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		gameType: 'doubles',
 		ruleset: ['Standard Doubles', 'Little Cup', 'Sleep Clause Mod'],
 		banlist: ['Dunsparce', 'Murkrow', 'Scyther', 'Sneasel'],
@@ -298,6 +319,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		gameType: 'doubles',
 		ruleset: [
 			'Picked Team Size = 2', 'Max Team Size = 4',
@@ -318,6 +340,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] VGC 2023 Regulation C",
 
 		mod: 'gen9',
+		searchShow: false,
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Paldea Pokedex', 'Min Source Gen = 9', 'VGC Timer', 'Open Team Sheets'],
 	},
@@ -325,6 +348,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] Doubles Custom Game",
 
 		mod: 'gen9',
+		searchShow: false,
 		gameType: 'doubles',
 		searchShow: false,
 		battle: {trunc: Math.trunc},
@@ -340,7 +364,7 @@ export const Formats: FormatList = [
 		section: "National Dex",
 	},
 	{
-		name: "[Gen 9] National Dex",
+		name: "[Sanctified] OU",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3710848/">National Dex Metagame Discussion</a>`,
 		],
@@ -350,7 +374,7 @@ export const Formats: FormatList = [
 		banlist: ['ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Shed Tail'],
 	},
 	{
-		name: "[Gen 9] National Dex Ubers",
+		name: "[Sanctified] Ubers",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3712168/">National Dex Ubers Metagame Discussion</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3712170/">National Dex Ubers Sample Teams</a>`,
@@ -362,7 +386,7 @@ export const Formats: FormatList = [
 		banlist: ['ND AG', 'Assist', 'Baton Pass'],
 	},
 	{
-		name: "[Gen 9] National Dex UU",
+		name: "[Sanctified] UU",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3711752/">National Dex UU Metagame Discussion</a>`,
 		],
@@ -372,7 +396,27 @@ export const Formats: FormatList = [
 		banlist: ['ND OU', 'ND UUBL', 'Battle Bond'],
 	},
 	{
-		name: "[Gen 9] National Dex RU",
+		name: "[Sanctified] RU",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3713801/">National Dex RU Metagame Discussion</a>`,
+		],
+
+		mod: 'gen9',
+		ruleset: ['[Gen 9] National Dex UU'],
+		banlist: ['ND UU', 'ND RUBL', 'Drizzle', 'Heat Rock', 'Light Clay'],
+	},
+	{
+		name: "[Sanctified] NU",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3713801/">National Dex RU Metagame Discussion</a>`,
+		],
+
+		mod: 'gen9',
+		ruleset: ['[Gen 9] National Dex UU'],
+		banlist: ['ND RU', 'ND UU', 'ND NUBL', 'ND RUBL', 'Drizzle', 'Heat Rock', 'Light Clay'],
+	},
+	{
+		name: "[Sanctified] PU",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3713801/">National Dex RU Metagame Discussion</a>`,
 		],
@@ -380,10 +424,21 @@ export const Formats: FormatList = [
 		mod: 'gen9',
 		searchShow: false,
 		ruleset: ['[Gen 9] National Dex UU'],
-		banlist: ['ND UU', 'ND RUBL', 'Drizzle', 'Heat Rock', 'Light Clay'],
+		banlist: ['NU PUBL', 'ND NU', 'ND RU', 'ND UU', 'ND NUBL', 'ND RUBL', 'Drizzle', 'Heat Rock', 'Light Clay'],
 	},
 	{
-		name: "[Gen 9] National Dex Monotype",
+		name: "[Sanctified] ZU",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3713801/">National Dex RU Metagame Discussion</a>`,
+		],
+
+		mod: 'gen9',
+		searchShow: false,
+		ruleset: ['[Gen 9] National Dex UU'],
+		banlist: ['ND ZUBL', 'ND PU', 'ND PUBL', 'ND NU', 'ND RU', 'ND UU', 'ND NUBL', 'ND RUBL', 'Drizzle', 'Heat Rock', 'Light Clay'],
+	},
+	{
+		name: "[Sanctified] Monotype",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3710738/">National Dex Monotype Metagame Discussion</a>`,
 		],
@@ -403,7 +458,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] National Dex AG",
+		name: "[Sanctified] Anything Goes",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3672423/">National Dex AG</a>`,
 		],
@@ -413,7 +468,7 @@ export const Formats: FormatList = [
 		ruleset: ['Standard NatDex'],
 	},
 	{
-		name: "[Gen 9] National Dex BH",
+		name: "[Sanctified] Balanced Hackmons",
 		desc: `Balanced Hackmons with National Dex elements mixed in.`,
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3711099/">National Dex BH</a>`,
