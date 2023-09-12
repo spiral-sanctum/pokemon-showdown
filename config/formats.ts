@@ -350,7 +350,6 @@ export const Formats: FormatList = [
 		mod: 'gen9',
 		searchShow: false,
 		gameType: 'doubles',
-		searchShow: false,
 		battle: {trunc: Math.trunc},
 		debug: true,
 		// no restrictions, for serious (other than team preview)
