@@ -7783,4 +7783,36 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Mischief Magic",
 		shortDesc: "Raises the user's Sp. Atk and Spe by 1."
 	},
+	landslide: {
+		name: "Landslide",
+		shortDesc: "Forces the target to switch to a random ally."
+	},
+	tsunami: {
+		name: "Tsunami",
+		shortDesc: "Lowers the user's Sp. Atk by 2."
+	},
+	clearlight: {
+		name: "Clear Light",
+		shortDesc: "Clears user's status. Raises Acc by 1 stage."
+	},
+	diamonddust: {
+		name: "Diamond Dust",
+		shortDesc: "100% chance to lower the foe(s) Speed by 1."
+	},
+	contract: {
+		name: "Contract",
+		shortDesc: "Raises the user's Defense and Speed by 1",
+	},
+	stretchout: {
+		name: "Stretch-Out",
+		shortDesc: "Raises the user's Defense and Sp. Attack by 1.",
+	},
+	rubberknuckle: {
+		name: "Rubber Knuckle",
+		shortDesc: "10% chance to confuse.",
+	},
+	frictionbomb: {
+		name: "Friction Bomb",
+		shortDesc: "20% chance to flinch.",
+	},
 };

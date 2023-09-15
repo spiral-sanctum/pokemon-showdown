@@ -2331,4 +2331,16 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Initial Fury",
 		shortDesc: "This Pokemon's offensive stat is multiplied by 1.5 on it's first turn out.",
 	},
+	fishyrecollection: {
+		name: "Fishy Recollection",
+		shortDesc: "This Pokemon's stat changes reset at the end of the turn.",
+	},
+	darkarts: {
+		name: "Dark Arts",
+		shortDesc: "This Pokemon's Ghost and Dark type moves have their power multiplied by 1.25.",
+	},
+	tempestwinds: {
+		name: "Tempest Winds",
+		shortDesc: "This Pokemon's wind moves have their power multiplied by 1.2.",
+	},
 };
