@@ -6743,9 +6743,27 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	ratscal: {
-		tier: "Illegal",
+		tier: "LC",
 	},
 	ratscallion: {
-		tier: "Illegal",
+		tier: "OU",
+	},
+	wailordsanctified: {
+		tier: "OU",
+	},
+	bigbogglr: {
+		tier: "OU",
+	},
+	cucarecho: {
+		tier: "OU",
+	},
+	teracotoad: {
+		tier: "OU",
+	},
+	tadpot: {
+		tier: "OU",
+	},
+	hyladary: {
+		tier: "OU",
 	},
 };

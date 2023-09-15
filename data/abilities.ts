@@ -1434,7 +1434,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 	},
 	galewings: {
 		onModifyPriority(priority, pokemon, target, move) {
-			if (move?.type === 'Flying' && pokemon.hp === pokemon.maxhp) return priority + 1;
+			if (move?.type === 'Flying' && pokemon.hp === pokemon.maxhp / 2) return priority + 1;
 		},
 		name: "Gale Wings",
 		rating: 2.5,
@@ -5801,7 +5801,49 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 				}
 			},
 			name: "Initial Fury",
-			rating: 3.5,
+			rating: 4,
 			num: -35,
 		},
+		fishyrecollection: {
+		onResidualOrder: 26,
+		onResidualSubOrder: 1,
+		onResidual(target) {
+			target.clearBoosts();
+			this.add('-clearboost', target);
+		},
+		name: "Fish Memory",
+		rating: 3,
+		num: -36,
+		},
+		darkarts: {
+			onAllyBasePowerPriority: 22,
+			onAllyBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Ghost') {
+					this.debug('Dark Arts boost');
+					return this.chainModify(1.25);
+				}
+			},
+			onAllyBasePowerPriority: 22,
+			onAllyBasePower(basePower, attacker, defender, move) {
+				if (move.type === 'Dark') {
+					this.debug('Dark Arts boost');
+					return this.chainModify(1.25);
+				}
+			},
+			name: "Dark Arts",
+			rating: 3.5,
+			num: -37,
+		},
+		tempestwinds: {
+		onBasePowerPriority: 23,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['wind']) {
+				this.debug('Strong Winds boost');
+				return this.chainModify(1.2);
+			}
+		},
+		name: "Tempest Winds",
+		rating: 3,
+		num: -38,
+	},
 };
