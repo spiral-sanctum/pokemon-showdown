@@ -4735,6 +4735,16 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 		natDexTier: "RU",
 	},
+	silvallyintrinsic: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "Illegal",
+	},
+	silvallyextrinsic: {
+		isNonstandard: "Past",
+		tier: "Illegal",
+		natDexTier: "Illegal",
+	},
 	minior: {
 		isNonstandard: "Past",
 		tier: "Illegal",
@@ -6761,7 +6771,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 	},
 	tadpot: {
-		tier: "OU",
+		tier: "LC",
 	},
 	hyladary: {
 		tier: "OU",

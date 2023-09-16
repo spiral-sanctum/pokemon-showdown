@@ -5811,7 +5811,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			target.clearBoosts();
 			this.add('-clearboost', target);
 		},
-		name: "Fish Memory",
+		name: "Fishy Recollection",
 		rating: 3,
 		num: -36,
 		},
@@ -5845,5 +5845,15 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Tempest Winds",
 		rating: 3,
 		num: -38,
+	},
+	deepdive: {
+		onDamagingHit(damage, target, source, move) {
+			if (['Water', 'Ice'].includes(move.type)) {
+				this.boost({def: -1, spe: 1});
+			}
+		},
+		name: "Deep Dive",
+		rating: 2,
+		num: -39,
 	},
 };

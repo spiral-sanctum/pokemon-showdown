@@ -40,6 +40,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] Unrated Random Battle",
 
 		mod: 'gen9',
+		searchShow: false,
 		team: 'random',
 		challengeShow: false,
 		rated: false,
@@ -61,6 +62,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['Standard'],
 		banlist: ['Uber', 'AG', 'Arena Trap', 'Moody', 'Sand Veil', 'Shadow Tag', 'Snow Cloak', 'King\'s Rock', 'Baton Pass', 'Shed Tail'],
 	},
@@ -72,6 +74,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['Standard'],
 		banlist: ['AG', 'Moody', 'King\'s Rock', 'Baton Pass'],
 	},
@@ -83,6 +86,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['[Gen 9] OU'],
 		banlist: ['OU', 'UUBL'],
 	},
@@ -94,6 +98,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['[Gen 9] UU'],
 		banlist: ['UU', 'RUBL', 'Light Clay'],
 	},
@@ -105,6 +110,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['[Gen 9] RU'],
 		banlist: ['RU', 'NUBL'],
 	},
@@ -112,6 +118,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] PU",
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['[Gen 9] NU'],
 		banlist: ['NU', 'PUBL'],
 	},
@@ -136,6 +143,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['Standard', 'Evasion Abilities Clause', 'Same Type Clause', 'Terastal Clause'],
 		banlist: ['Annihilape', 'Chi-Yu', 'Houndstone', 'Iron Bundle', 'Koraidon', 'Miraidon', 'Palafin', 'Moody', 'Shadow Tag', 'Booster Energy', 'Damp Rock', 'Focus Band', 'King\'s Rock', 'Quick Claw', 'Acupressure', 'Baton Pass'],
 	},
@@ -148,6 +156,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: [
 			'Picked Team Size = 1', 'Max Team Size = 3',
 			'Standard', 'Terastal Clause', 'Sleep Moves Clause', 'Accuracy Moves Clause', '!Sleep Clause Mod',
@@ -165,6 +174,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['Min Source Gen = 9', 'Obtainable', 'Team Preview', 'HP Percentage Mod', 'Cancel Mod', 'Endless Battle Clause'],
 	},
 	{
@@ -174,6 +184,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['[Gen 9] PU'],
 		banlist: ['PU', 'Beartic', 'Fraxure', 'Girafarig', 'Vigoroth'],
 	},
@@ -196,6 +207,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] CAP",
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['[Gen 9] OU', '+CAP'],
 		banlist: ['Walking Wake', 'Crucibellite'],
 	},
@@ -206,6 +218,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		gameType: 'freeforall',
 		rated: false,
 		tournamentShow: false,
@@ -254,6 +267,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		gameType: 'doubles',
 		ruleset: ['Standard Doubles'],
 		banlist: ['DUber', 'Shadow Tag'],
@@ -265,6 +279,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		gameType: 'doubles',
 		ruleset: ['Standard Doubles', '!Gravity Sleep Clause'],
 	},
@@ -275,6 +290,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		gameType: 'doubles',
 		ruleset: ['[Gen 9] Doubles OU'],
 		banlist: ['DOU', 'DBL'],
@@ -286,6 +302,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		gameType: 'doubles',
 		ruleset: ['Standard Doubles', 'Little Cup', 'Sleep Clause Mod'],
 		banlist: ['Dunsparce', 'Murkrow', 'Scyther', 'Sneasel'],
@@ -298,6 +315,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		gameType: 'doubles',
 		ruleset: [
 			'Picked Team Size = 2', 'Max Team Size = 4',
@@ -318,6 +336,7 @@ export const Formats: FormatList = [
 		name: "[Gen 9] VGC 2023 Regulation C",
 
 		mod: 'gen9',
+		searchShow: false,
 		gameType: 'doubles',
 		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Paldea Pokedex', 'Min Source Gen = 9', 'VGC Timer', 'Open Team Sheets'],
 	},
@@ -346,7 +365,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod'],
+		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 'Terastal Clause'],
 		banlist: ['ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Shed Tail'],
 	},
 	{
@@ -358,7 +377,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
-		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Moves Clause', 'Evasion Items Clause', 'Species Clause', 'Sleep Clause Mod', 'Mega Rayquaza Clause'],
+		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Moves Clause', 'Evasion Items Clause', 'Species Clause', 'Sleep Clause Mod', 'Mega Rayquaza Clause', 'Terastal Clause'],
 		banlist: ['ND AG', 'Assist', 'Baton Pass'],
 	},
 	{
@@ -834,11 +853,11 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] Crazy 8",
+		name: "[Gen 9] Crazy 8s",
 		desc: `8 Pok&eacute;mons can be used with 8 moves each.`,
 
 		mod: 'gen9',
-		ruleset: ['Max Team Size = 8', 'Max Move Count = 8', 'Standard', 'Sleep Moves Clause', 'Terastal Clause'],
+		ruleset: ['Standard NatDex', 'Max Team Size = 8', 'Max Move Count = 8', 'Sleep Moves Clause', 'Terastal Clause'],
 	},
 	{
 		name: "[Gen 9] Cross Evolution",
