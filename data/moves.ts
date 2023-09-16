@@ -23097,4 +23097,120 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {spa: 2}},
 		contestType: "Cool",
 	},
+	eraserswipe: {
+		num: -80,
+		accuracy: 90,
+		basePower: 75,
+		category: "Special",
+		name: "Eraser Swipe",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: {
+			chance: 50,
+			volatileStatus: 'disable',
+		},
+		target: "normal",
+		type: "Rubber",
+		contestType: "Cool",
+	},
+	bellyflop: {
+		num: -81,
+		accuracy: 100,
+		basePower: 0,
+		basePowerCallback(pokemon, target) {
+			const targetWeight = target.getWeight();
+			const pokemonWeight = pokemon.getWeight();
+			let bp;
+			if (pokemonWeight >= targetWeight * 5) {
+				bp = 120;
+			} else if (pokemonWeight >= targetWeight * 4) {
+				bp = 100;
+			} else if (pokemonWeight >= targetWeight * 3) {
+				bp = 80;
+			} else if (pokemonWeight >= targetWeight * 2) {
+				bp = 60;
+			} else {
+				bp = 40;
+			}
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		category: "Physical",
+		name: "Belly Flop",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1, nonsky: 1},
+		onTryHit(target, pokemon, move) {
+			if (target.volatiles['dynamax']) {
+				this.add('-fail', pokemon, 'Dynamax');
+				this.attrLastMove('[still]');
+				return null;
+			}
+		},
+		secondary: null,
+		target: "normal",
+		type: "Rubber",
+		zMove: {basePower: 200},
+		maxMove: {basePower: 130},
+		contestType: "Cool",
+	},
+	doubledribble: {
+		num: -82,
+		accuracy: 100,
+		basePower: 0,
+		basePowerCallback(pokemon, target) {
+			let ratio = Math.floor(pokemon.getStat('spe') / target.getStat('spe'));
+			if (!isFinite(ratio)) ratio = 0;
+			const bp = [40, 60, 80, 120, 150][Math.min(ratio, 4)];
+			this.debug('BP: ' + bp);
+			return bp;
+		},
+		category: "Special",
+		name: "Double Dribble",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, mirror: 1},
+		secondary: null,
+		target: "normal",
+		type: "Rubber",
+		zMove: {basePower: 160},
+		maxMove: {basePower: 130},
+		contestType: "Cool",
+	},
+	gumspray: {
+		num: 753,
+		accuracy: 100,
+		basePower: 0,
+		category: "Status",
+		name: "Octolock",
+		pp: 15,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		onTryImmunity(target) {
+			return this.dex.getImmunity('trapped', target);
+		},
+		volatileStatus: 'gumspray',
+		condition: {
+			onStart(pokemon, source) {
+				this.add('-start', pokemon, 'move: Gum Spray', '[of] ' + source);
+			},
+			onResidualOrder: 14,
+			onResidual(pokemon) {
+				const source = this.effectState.source;
+				if (source && (!source.isActive || source.hp <= 0 || !source.activeTurns)) {
+					delete pokemon.volatiles['octolock'];
+					this.add('-end', pokemon, 'Octolock', '[partiallytrapped]', '[silent]');
+					return;
+				}
+				this.boost({spe: -1}, pokemon, source, this.dex.getActiveMove('gumspray'));
+			},
+			onTrapPokemon(pokemon) {
+				if (this.effectState.source && this.effectState.source.isActive) pokemon.tryTrap();
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Rubber",
+	},
 };
