@@ -352,7 +352,7 @@ export const Formats: FormatList = [
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
 
-	//
+	// National Dex
 	///////////////////////////////////////////////////////////////////
 
 	{
@@ -397,6 +397,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9',
+		searchShow: false,
 		ruleset: ['[Gen 9] National Dex UU'],
 		banlist: ['ND UU', 'ND RUBL', 'Drizzle', 'Heat Rock', 'Light Clay'],
 	},
@@ -404,22 +405,25 @@ export const Formats: FormatList = [
 		name: "[Gen 9] National Dex NU",
 
 		mod: 'gen9',
-		ruleset: ['[Gen 9] National Dex'],
-		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NUBL'],
+		searchShow: false,
+		ruleset: ['[Gen 9] National Dex RU'],
+		banlist: ['ND RU', 'ND NUBL'],
 	},
 	{
 		name: "[Gen 9] National Dex PU",
 
-		mod: 'gen8',
-		ruleset: ['[Gen 8] National Dex'],
-		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NUBL', 'ND NU'],
+		mod: 'gen9',
+		searchShow: false,
+		ruleset: ['[Gen 9] National Dex NU'],
+		banlist: ['ND NU'],
 	},
 	{
 		name: "[Gen 9] National Dex ZU",
 
 		mod: 'gen8',
-		ruleset: ['[Gen 8] National Dex'],
-		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NUBL', 'ND NU', 'ND PU'],
+		searchShow: false,
+		ruleset: ['[Gen 9] National Dex PU'],
+		banlist: ['ND PU'],
 	},
 	{
 		name: "[Gen 9] National Dex Monotype",
@@ -2920,14 +2924,6 @@ export const Formats: FormatList = [
 		searchShow: false,
 		ruleset: ['[Gen 8] National Dex'],
 		banlist: ['ND OU', 'ND UUBL', 'Drizzle', 'Drought', 'Light Clay', 'Slowbronite'],
-	},
-	{
-		name: "[Gen 8] National Dex RU",
-
-		mod: 'gen8',
-		searchShow: false,
-		ruleset: ['[Gen 8] National Dex'],
-		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL'],
 	},
 	{
 		name: "[Gen 8 BDSP] OU",
