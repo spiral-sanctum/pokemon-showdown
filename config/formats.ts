@@ -2906,7 +2906,7 @@ export const Formats: FormatList = [
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['[Gen 8] National Dex RU'],
+		ruleset: ['[Gen 8] National Dex'],
 		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL'],
 	},
 	{
@@ -2914,7 +2914,7 @@ export const Formats: FormatList = [
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['[Gen 8] National Dex NU'],
+		ruleset: ['[Gen 8] National Dex'],
 		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NUBL'],
 	},
 	{
@@ -2922,7 +2922,7 @@ export const Formats: FormatList = [
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['[Gen 8] National Dex PU'],
+		ruleset: ['[Gen 8] National Dex'],
 		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NUBL', 'ND NU'],
 	},
 	{
@@ -2930,7 +2930,7 @@ export const Formats: FormatList = [
 
 		mod: 'gen8',
 		searchShow: false,
-		ruleset: ['[Gen 8] National Dex ZU'],
+		ruleset: ['[Gen 8] National Dex'],
 		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NUBL', 'ND NU', 'ND PU'],
 	},
 	{
