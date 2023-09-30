@@ -7523,11 +7523,6 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "They refer to me as 'the sandwich'.",
 		shortDesc: "In rain; +1 priority",
 	},
-	clearlight: {
-		name: "Clear Light",
-		desc: "I'mma be real, this being a clean type move is a total stretch in my opinion.",
-		shortDesc: "Cures user's status; raises acc by 1 stage.",
-	},
 	bouncyshield: {
 		name: "Bouncy Shield",
 		desc: "All these years they've tried to break you to your knees.",

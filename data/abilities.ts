@@ -5822,10 +5822,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 					this.debug('Dark Arts boost');
 					return this.chainModify(1.25);
 				}
-			},
-			onAllyBasePowerPriority: 22,
-			onAllyBasePower(basePower, attacker, defender, move) {
-				if (move.type === 'Dark') {
+				else if (move.type === 'Dark') {
 					this.debug('Dark Arts boost');
 					return this.chainModify(1.25);
 				}

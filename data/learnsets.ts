@@ -99139,7 +99139,6 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			anchorshot: ["9M", "8M", "7M"],
 			flashcannon: ["9M", "8M", "7M"],
 			irontail: ["9M", "8M", "7M"],
-			icywind: ["9M", "8M", "7M"],
 			thunderwave: ["9M", "8M", "7M"],
 			spark: ["9M", "8M", "7M"],
 			stealthrock: ["9M", "8M", "7M"],
