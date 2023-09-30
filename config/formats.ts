@@ -352,14 +352,14 @@ export const Formats: FormatList = [
 		ruleset: ['Team Preview', 'Cancel Mod', 'Max Team Size = 24', 'Max Move Count = 24', 'Max Level = 9999', 'Default Level = 100'],
 	},
 
-	// National Dex
+	//
 	///////////////////////////////////////////////////////////////////
 
 	{
 		section: "Sanctified Singles",
 	},
 	{
-		name: "[Gen 9] National Dex",
+		name: "[Sanctified] National Dex",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3710848/">National Dex Metagame Discussion</a>`,
 		],
@@ -369,7 +369,7 @@ export const Formats: FormatList = [
 		banlist: ['ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Shed Tail'],
 	},
 	{
-		name: "[Gen 9] National Dex Ubers",
+		name: "[Sanctified] National Dex Ubers",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3712168/">National Dex Ubers Metagame Discussion</a>`,
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3712170/">National Dex Ubers Sample Teams</a>`,
@@ -381,28 +381,48 @@ export const Formats: FormatList = [
 		banlist: ['ND AG', 'Assist', 'Baton Pass'],
 	},
 	{
-		name: "[Gen 9] National Dex UU",
+		name: "[Sanctified] National Dex UU",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3711752/">National Dex UU Metagame Discussion</a>`,
 		],
 
 		mod: 'gen9',
-		ruleset: ['[Gen 9] National Dex'],
+		ruleset: ['[Sanctified] National Dex'],
 		banlist: ['ND OU', 'ND UUBL', 'Battle Bond'],
 	},
 	{
-		name: "[Gen 9] National Dex RU",
+		name: "[Santified] National Dex RU",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3713801/">National Dex RU Metagame Discussion</a>`,
 		],
 
 		mod: 'gen9',
-		searchShow: false,
-		ruleset: ['[Gen 9] National Dex UU'],
+		ruleset: ['[Sanctified] National Dex UU'],
 		banlist: ['ND UU', 'ND RUBL', 'Drizzle', 'Heat Rock', 'Light Clay'],
 	},
 	{
-		name: "[Gen 9] National Dex Monotype",
+		name: "[Sanctified] National Dex NU",
+
+		mod: 'gen9',
+		ruleset: ['[Sanctified] National Dex'],
+		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NUBL'],
+	},
+	{
+		name: "[Sanctified] National Dex PU",
+
+		mod: 'gen9',
+		ruleset: ['[Sanctified] National Dex'],
+		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NUBL', 'ND NU'],
+	},
+	{
+		name: "[Sanctified] National Dex ZU",
+
+		mod: 'gen9',
+		ruleset: ['[Sanctified] National Dex'],
+		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NUBL', 'ND NU', 'ND PU'],
+	},
+	{
+		name: "[Sanctified] National Dex Monotype",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3710738/">National Dex Monotype Metagame Discussion</a>`,
 		],
@@ -422,7 +442,7 @@ export const Formats: FormatList = [
 		],
 	},
 	{
-		name: "[Gen 9] National Dex AG",
+		name: "[Sanctified] National Dex AG",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3672423/">National Dex AG</a>`,
 		],
@@ -2908,30 +2928,6 @@ export const Formats: FormatList = [
 		searchShow: false,
 		ruleset: ['[Gen 8] National Dex'],
 		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL'],
-	},
-	{
-		name: "[Gen 8] National Dex NU",
-
-		mod: 'gen8',
-		searchShow: false,
-		ruleset: ['[Gen 8] National Dex'],
-		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NUBL'],
-	},
-	{
-		name: "[Gen 8] National Dex PU",
-
-		mod: 'gen8',
-		searchShow: false,
-		ruleset: ['[Gen 8] National Dex'],
-		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NUBL', 'ND NU'],
-	},
-	{
-		name: "[Gen 8] National Dex ZU",
-
-		mod: 'gen8',
-		searchShow: false,
-		ruleset: ['[Gen 8] National Dex'],
-		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NUBL', 'ND NU', 'ND PU'],
 	},
 	{
 		name: "[Gen 8 BDSP] OU",
