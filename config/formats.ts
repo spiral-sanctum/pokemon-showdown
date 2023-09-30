@@ -2902,6 +2902,38 @@ export const Formats: FormatList = [
 		banlist: ['ND OU', 'ND UUBL', 'Drizzle', 'Drought', 'Light Clay', 'Slowbronite'],
 	},
 	{
+		name: "[Gen 8] National Dex RU",
+
+		mod: 'gen8',
+		searchShow: false,
+		ruleset: ['[Gen 8] National Dex RU'],
+		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL'],
+	},
+	{
+		name: "[Gen 8] National Dex NU",
+
+		mod: 'gen8',
+		searchShow: false,
+		ruleset: ['[Gen 8] National Dex NU'],
+		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NUBL'],
+	},
+	{
+		name: "[Gen 8] National Dex PU",
+
+		mod: 'gen8',
+		searchShow: false,
+		ruleset: ['[Gen 8] National Dex PU'],
+		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NUBL', 'ND NU'],
+	},
+	{
+		name: "[Gen 8] National Dex ZU",
+
+		mod: 'gen8',
+		searchShow: false,
+		ruleset: ['[Gen 8] National Dex ZU'],
+		banlist: ['ND OU', 'ND UUBL', 'ND UU', 'ND RUBL', 'ND RU', 'ND NUBL', 'ND NU', 'ND PU'],
+	},
+	{
 		name: "[Gen 8 BDSP] OU",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3693629/">BDSP OU Metagame Discussion</a>`,
