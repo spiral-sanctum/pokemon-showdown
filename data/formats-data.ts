@@ -487,7 +487,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	arcaninehisui: {
 		isNonstandard: "Unobtainable",
-		tier: "OU",
+		tier: "UU",
 	},
 	poliwag: {
 		isNonstandard: "Past",
@@ -803,7 +803,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	electrodehisui: {
 		isNonstandard: "Unobtainable",
-		tier: "OU",
+		tier: "PU",
 	},
 	exeggcute: {
 		isNonstandard: "Past",
@@ -1306,7 +1306,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	typhlosionhisui: {
 		isNonstandard: "Unobtainable",
-		tier: "OU",
+		tier: "UU",
 	},
 	totodile: {
 		isNonstandard: "Past",
@@ -3361,7 +3361,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	lilliganthisui: {
 		isNonstandard: "Unobtainable",
-		tier: "OU",
+		tier: "UU",
 	},
 	basculin: {
 		tier: "PU",
@@ -3795,7 +3795,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	braviaryhisui: {
 		isNonstandard: "Unobtainable",
-		tier: "OU",
+		tier: "RU",
 	},
 	vullaby: {
 		isNonstandard: "Past",
@@ -4289,7 +4289,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	avalugghisui: {
 		isNonstandard: "Unobtainable",
-		tier: "OU",
+		tier: "NU",
 	},
 	noibat: {
 		tier: "LC",
@@ -4368,7 +4368,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	decidueyehisui: {
 		isNonstandard: "Unobtainable",
-		tier: "OU",
+		tier: "UU",
 	},
 	litten: {
 		isNonstandard: "Past",
@@ -6453,10 +6453,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	scarcane: {
-		tier: "RU",
+		tier: "OU",
 	},
 	scarmata: {
-		tier: "RU",
+		tier: "OU",
 	},
 	marball: {
 		tier: "Illegal",
@@ -6678,7 +6678,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	telefauxn: {
-		tier: "UU",
+		tier: "OU",
 	},
 	sawcodil: {
 		tier: "RU",
@@ -6714,7 +6714,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	cabiapod: {
-		tier: "OU",
+		tier: "UU",
 	},
 	gazaves: {
 		tier: "OU",
@@ -6765,7 +6765,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "OU",
 	},
 	cucarecho: {
-		tier: "OU",
+		tier: "UU",
 	},
 	teracotoad: {
 		tier: "OU",
@@ -6774,6 +6774,18 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	hyladary: {
+		tier: "OU",
+	},
+	pyrocerus: {
+		tier: "OU",
+	},
+	macrophydra: {
+		tier: "OU",
+	},
+	shrimpact: {
+		tier: "OU",
+	},
+	shrimpactbludgeon: {
 		tier: "OU",
 	},
 };

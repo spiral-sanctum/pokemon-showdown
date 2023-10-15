@@ -3202,23 +3202,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 239,
 	},
 	protean: {
-		onPrepareHit(source, target, move) {
-			if (this.effectState.protean) return;
-			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
-			const type = move.type;
-			if (type && type !== '???' && source.getTypes().join() !== type) {
-				if (!source.setType(type)) return;
-				this.effectState.protean = true;
-				this.add('-start', source, 'typechange', type, '[from] ability: Protean');
-			}
+			onPrepareHit(source, target, move) {
+				if (move.hasBounced || move.isFutureMove || move.sourceEffect === 'snatch') return;
+				const type = move.type;
+				if (type && type !== '???' && source.getTypes().join() !== type) {
+					if (!source.setType(type)) return;
+					this.add('-start', source, 'typechange', type, '[from] ability: Protean');
+				}
+			},
+			name: "Protean",
+			rating: 4.5,
+			num: 168,
 		},
-		onSwitchIn(pokemon) {
-			delete this.effectState.protean;
-		},
-		name: "Protean",
-		rating: 4,
-		num: 168,
-	},
 	protosynthesis: {
 		onStart(pokemon) {
 			this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
@@ -5667,7 +5662,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		stonegaze: {
 	onDamagingHit(damage, target, source, move) {
 			if (this.randomChance(2, 10)) {
-				source.trySetStatus('frz', target);
+				source.trySetStatus('par', target);
 			}
 	},
 		name: "Stone Gaze",
