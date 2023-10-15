@@ -61615,7 +61615,7 @@ export const Learnsets: { [speciesid: string]: LearnsetData; } = {
 			waterpulse: ["9M", "7T", "6T"],
 			xscissor: ["9M"],
 			iceshard: ["9M"],
-			glacier: ["9M", "8M", "7M"],w
+			glacier: ["9M", "8M", "7M"],
 		},
 		encounters: [
 			{ generation: 6, level: 30 },
