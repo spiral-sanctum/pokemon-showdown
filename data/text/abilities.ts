@@ -2343,4 +2343,9 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Tempest Winds",
 		shortDesc: "This Pokemon's wind moves have their power multiplied by 1.2.",
 	},
+	monolith: {
+		name: "Monolith",
+		desc: "If the field isn't under any weather, terrain or room, this Pokemon's Defense and Special Defense are boosted by x1.1, Utility Umbrella doesn't trigger this ability.",
+		shortDesc: "If no weather/terrain/room, this Pokemon's Defenses are boosted by x1.1",
+	}
 };

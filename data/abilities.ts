@@ -3202,18 +3202,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 239,
 	},
 	protean: {
-			onPrepareHit(source, target, move) {
-				if (move.hasBounced || move.isFutureMove || move.sourceEffect === 'snatch') return;
-				const type = move.type;
-				if (type && type !== '???' && source.getTypes().join() !== type) {
-					if (!source.setType(type)) return;
-					this.add('-start', source, 'typechange', type, '[from] ability: Protean');
-				}
-			},
-			name: "Protean",
-			rating: 4.5,
-			num: 168,
+		onPrepareHit(source, target, move) {
+			if (move.hasBounced || move.flags['futuremove'] || move.sourceEffect === 'snatch') return;
+			const type = move.type;
+			if (type && type !== '???' && source.getTypes().join() !== type) {
+				if (!source.setType(type)) return;
+				this.add('-start', source, 'typechange', type, '[from] ability: Protean');
+			}
 		},
+		name: "Protean",
+		rating: 4.5,
+		num: 168,
+	},
 	protosynthesis: {
 		onStart(pokemon) {
 			this.singleEvent('WeatherChange', this.effect, this.effectState, pokemon);
@@ -5649,157 +5649,157 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			rating: 2,
 			num: -27,
 		},
-		gritandgrind: {
-			onAfterMove(this, source, target, move) {
-				if (this.checkMoveMakesContact(move, source, target)) {
-					source.addVolatile('rage', this.effectState.target);
-				}
-			},
-			name: "Grit and Grind",
-			rating: 2,
-			num: -28,
+	gritandgrind: {
+		onAfterMove(this, source, target, move) {
+			if (this.checkMoveMakesContact(move, source, target)) {
+				source.addVolatile('rage', this.effectState.target);
+			}
 		},
-		stonegaze: {
-	onDamagingHit(damage, target, source, move) {
+		name: "Grit and Grind",
+		rating: 2,
+		num: -28,
+	},
+	stonegaze: {
+		onDamagingHit(damage, target, source, move) {
 			if (this.randomChance(2, 10)) {
 				source.trySetStatus('par', target);
 			}
-	},
+		},
 		name: "Stone Gaze",
 		rating: 2,
 		num: -28,
 	},
 	snowpacking: {
-        onModifyAtkPriority: 5,
-        onModifyAtk(atk, pokemon) {
-            if (['hail'].includes(pokemon.effectiveWeather())) {
-                return this.chainModify(1.5);
-            }
-        },
-        onWeather(target, source, effect) {
-            if (target.hasItem('utilityumbrella')) return;
-            if (effect.id === 'hail') {
-                this.damage(target.baseMaxhp / 8, target, target);
-            }
-        },
-        name: "Snow Packing",
-        rating: 2,
-        num: -29,
-    },
-		thunderblade: {
-			onBasePowerPriority: 19,
-			onBasePower(basePower, attacker, defender, move) {
-				if (move.flags['slicing']) {
-					this.debug('Shapness boost');
-					return this.chainModify(1.25);
-				}
-			},
-			onModifyMove(move) {
-	        if(!(move.flags['slicing'])) return;
-	        if(!move.secondaries){
-	            move.secondaries = [];
-	        }
-	        move.secondaries.push({
-	                chance: 10,
-	                status: 'par',
-	                ability: this.dex.abilities.get('thunderblade'),
-	            });
-	        },
-			name: "Thunderblade",
-			rating: 3.5,
-			num: -30,
-		},
-		dualinjection: {
-			// upokecenter says this is implemented as an added secondary effect
-			onModifyMove(move, user, target) {
-				if (!move?.flags['contact'] || move.target === 'self') return;
-				if (!move.secondaries) {
-					move.secondaries = [];
-				}
-				if(this.randomChance(1, 2)){
-					if(target)target.clearStatus();
-				}
-				else{
-					move.secondaries.push({
-						status: 'tox',
-						ability: this.dex.abilities.get('dualinjection'),
-					});
-				}
-			},
-			name: "Dual Injection",
-			rating: 2,
-			num: -31,
-		},
-		pureintellect: {
-			onModifyAtkPriority: 5,
-			onModifyAtk(atk) {
-				return this.chainModify(2);
-			},
-			name: "Pure Intellect",
-			rating: 5,
-			num: -32,
-		},
-		vicarious: {
-			onModifyMove(move) {
-				delete move.recoil; // does 1 recoil damage always
-				delete move.flags['contact'];
-			},
-			name: "Vicarious",
-			rating: 2.5,
-			num: -32,
-		},
-		akimbo: {
-			onModifyMove(move) {
-				move.multihit = 2;
-				delete move.flags['contact'];
-			},
-			onBasePowerPriority: 23,
-			onBasePower(basePower, pokemon, target, move){
-				return this.chainModify(0.5)
-			},
-			name: "Akimbo",
-			rating: 2.5,
-			num: -33,
-		},
-		germaphobe: {
-			onModifyAtkPriority: 5,
-			onModifyAtk(atk, attacker, defender, move) {
-				if (move.type === 'Clean') {
-					this.debug('Cleans\'s Germaphobe boost');
-					return this.chainModify(1.5);
-				}
-			},
-			onModifySpAPriority: 5,
-			onModifySpA(atk, attacker, defender, move) {
-				if (move.type === 'Clean') {
-					this.debug('Clean\'s Germaphobe boost');
-					return this.chainModify(1.5);
-				}
-			},
-			name: "Germaphobe",
-			rating: 3.5,
-			num: -34,
-		},
-		initialfury: {
-			onModifyAtkPriority: 5,
-			onModifyAtk(atk, attacker, defender, move) {
-				if (attacker.activeMoveActions <= 1) {
-					this.debug('InitialFury boost');
-					return this.chainModify(1.5);
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, pokemon) {
+			if (['hail'].includes(pokemon.effectiveWeather())) {
+				return this.chainModify(1.5);
 			}
 		},
-			onModifySpAPriority: 5,
-			onModifySpA(atk, attacker, defender, move) {
-				if (attacker.activeMoveActions <= 1) {
-					this.debug('InitialFury boost');
-					return this.chainModify(1.5);
-				}
-			},
-			name: "Initial Fury",
-			rating: 4,
-			num: -35,
+		onWeather(target, source, effect) {
+			if (target.hasItem('utilityumbrella')) return;
+			if (effect.id === 'hail') {
+				this.damage(target.baseMaxhp / 8, target, target);
+			}
 		},
-		fishyrecollection: {
+		name: "Snow Packing",
+		rating: 2,
+		num: -29,
+	},
+	thunderblade: {
+		onBasePowerPriority: 19,
+		onBasePower(basePower, attacker, defender, move) {
+			if (move.flags['slicing']) {
+				this.debug('Shapness boost');
+				return this.chainModify(1.25);
+			}
+		},
+		onModifyMove(move) {
+			if (!(move.flags['slicing'])) return;
+			if (!move.secondaries) {
+				move.secondaries = [];
+			}
+			move.secondaries.push({
+				chance: 10,
+				status: 'par',
+				ability: this.dex.abilities.get('thunderblade'),
+			});
+		},
+		name: "Thunderblade",
+		rating: 3.5,
+		num: -30,
+	},
+	dualinjection: {
+		// upokecenter says this is implemented as an added secondary effect
+		onModifyMove(move, user, target) {
+			if (!move?.flags['contact'] || move.target === 'self') return;
+			if (!move.secondaries) {
+				move.secondaries = [];
+			}
+			if (this.randomChance(1, 2)) {
+				if (target) target.clearStatus();
+			}
+			else {
+				move.secondaries.push({
+					status: 'tox',
+					ability: this.dex.abilities.get('dualinjection'),
+				});
+			}
+		},
+		name: "Dual Injection",
+		rating: 2,
+		num: -31,
+	},
+	pureintellect: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk) {
+			return this.chainModify(2);
+		},
+		name: "Pure Intellect",
+		rating: 5,
+		num: -32,
+	},
+	vicarious: {
+		onModifyMove(move) {
+			delete move.recoil; // does 1 recoil damage always
+			delete move.flags['contact'];
+		},
+		name: "Vicarious",
+		rating: 2.5,
+		num: -32,
+	},
+	akimbo: {
+		onModifyMove(move) {
+			move.multihit = 2;
+			delete move.flags['contact'];
+		},
+		onBasePowerPriority: 23,
+		onBasePower(basePower, pokemon, target, move) {
+			return this.chainModify(0.5);
+		},
+		name: "Akimbo",
+		rating: 2.5,
+		num: -33,
+	},
+	germaphobe: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (move.type === 'Clean') {
+				this.debug('Cleans\'s Germaphobe boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (move.type === 'Clean') {
+				this.debug('Clean\'s Germaphobe boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Germaphobe",
+		rating: 3.5,
+		num: -34,
+	},
+	initialfury: {
+		onModifyAtkPriority: 5,
+		onModifyAtk(atk, attacker, defender, move) {
+			if (attacker.activeMoveActions <= 1) {
+				this.debug('InitialFury boost');
+				return this.chainModify(1.5);
+			}
+		},
+		onModifySpAPriority: 5,
+		onModifySpA(atk, attacker, defender, move) {
+			if (attacker.activeMoveActions <= 1) {
+				this.debug('InitialFury boost');
+				return this.chainModify(1.5);
+			}
+		},
+		name: "Initial Fury",
+		rating: 4,
+		num: -35,
+	},
+	fishyrecollection: {
 		onResidualOrder: 26,
 		onResidualSubOrder: 1,
 		onResidual(target) {
@@ -5809,20 +5809,20 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Fishy Recollection",
 		rating: 3,
 		num: -36,
+	},
+	darkarts: {
+		onAllyBasePowerPriority: 22,
+		onAllyBasePower(basePower, attacker, defender, move) {
+			if (move.type === 'Ghost' || move.type === 'Dark') {
+				this.debug('Dark Arts boost');
+				return this.chainModify(1.25);
+			}
 		},
-		darkarts: {
-			onAllyBasePowerPriority: 22,
-			onAllyBasePower(basePower, attacker, defender, move) {
-				if (move.type === 'Ghost' || move.type === 'Dark') {
-					this.debug('Dark Arts boost');
-					return this.chainModify(1.25);
-				}
-			},
-			name: "Dark Arts",
-			rating: 3.5,
-			num: -37,
-		},
-		tempestwinds: {
+		name: "Dark Arts",
+		rating: 3.5,
+		num: -37,
+	},
+	tempestwinds: {
 		onBasePowerPriority: 23,
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['wind']) {
@@ -5844,4 +5844,33 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		num: -39,
 	},
+	monolith: {
+		onModifyDefPriority: 6,
+		onModifyDef() {
+			if (this.field.effectiveWeather() === '' && this.field.effectiveTerrain() === '') {
+				let canBoost = true;
+				for (const psdW in this.field.pseudoWeather) {
+					if (psdW.includes("room")) {
+						canBoost = false;
+					}
+				}
+				if (canBoost) return this.chainModify(1.1);
+			}
+		},
+		onModifySpDPriority: 6,
+		onModifySpD() {
+			if (this.field.effectiveWeather() === '' && this.field.effectiveTerrain() === '') {
+				let canBoost = true;
+				for (const psdW in this.field.pseudoWeather) {
+					if (psdW.includes("room")) {
+						canBoost = false;
+					}
+				}
+				if (canBoost) return this.chainModify(1.1);
+			}
+		},
+		name: "Monolith",
+		rating: 2,
+		num: -40,
+	}
 };
