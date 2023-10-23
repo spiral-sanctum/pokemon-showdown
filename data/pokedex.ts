@@ -21171,7 +21171,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		num: -10041,
 		name: "Pyrocerus",
 		types: ["Fire", "Fighting"],
-		baseStats: {hp: 70, atk: 95, def: 115, spa: 50, spd: 71, spe: 104},
+		baseStats: {hp: 80, atk: 95, def: 115, spa: 45, spd: 74, spe: 106},
 		abilities: {0: "Mold Breaker", 1: "Flame Body", H: "Relentless"},
 		heightm: 3.4,
 		weightkg: 102.3,
