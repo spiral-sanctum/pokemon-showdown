@@ -4377,7 +4377,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	noretreat: {
 		name: "No Retreat",
 		desc: "Raises the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage, but it becomes prevented from switching out. The user can still switch out if it uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. If the user leaves the field using Baton Pass, the replacement will remain trapped. Fails if the user has already been prevented from switching by this effect.",
-		shortDesc: "Raises all stats by 1 (not acc/eva). Traps user.",
+		shortDesc: "Riases all stats by 1 (not acc/eva). Traps user.",
 
 		start: "  [POKEMON] can no longer escape because it used No Retreat!",
 	},
@@ -7809,5 +7809,22 @@ export const MovesText: {[k: string]: MoveText} = {
 	frictionbomb: {
 		name: "Friction Bomb",
 		shortDesc: "20% chance to flinch.",
+	},
+	fortify: {
+		name: "Fortify",
+		desc: "Raises the user's Defense by 4 stages, but it becomes prevented from switching out. The user can still switch out if it uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. If the user leaves the field using Baton Pass, the replacement will remain trapped. Fails if the user has already been prevented from switching by this effect.",
+		shortDesc: "Riases defense by 4. Traps user.",
+
+		start: "  [POKEMON] can no longer escape because it used Fortify!",
+	},
+	buffup: {
+		name: "Buff Up",
+		desc: "Raises the user's Attack by 3 stages.",
+		shortDesc: "Raises the user's Attack by 3.",
+	},
+	sandyclaw: {
+		name: "Sandy Claw",
+		desc: "Has a chance to lower attacked foe's accuracy by one stage.",
+		shortDesc: "30% chance to lower accuracy by 1.",
 	},
 };

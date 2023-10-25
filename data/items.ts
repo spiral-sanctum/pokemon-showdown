@@ -7693,4 +7693,35 @@ export const Items: {[itemid: string]: ItemData} = {
 		gen: 9,
 		isNonstandard: "Past",
 	},
+	amuletcoin: {
+		name: "Amulet Coin",
+		spritenum: 0,
+		onModifyAtkPriority: 1,
+		onModifyAtk(atk, pokemon) {
+			if (pokemon.baseSpecies.name === 'Persian') {
+				return this.chainModify(1.5);
+			}
+		},
+		itemUser: ["Meowth","MeowthAlola","Persian","PersianAlola"],
+		num: -12,
+		gen: 8,
+		isNonstandard: "Past",
+	},
+	puritypearl: {
+		name: "Purity Pearl",
+		spritenum: 0,
+		fling: {
+			basePower: 50,
+		},
+		onTryHit(target, source, move) {
+			if (target.baseSpecies.num === 325 || target.baseSpecies.num === 326) {
+				if (target !== source && move.type === 'Dark') {
+						this.add('-immune', target, '[from] Item: Purity Pearl');
+					return null;
+				}
+			}
+		},
+		num: 541,
+		gen: 5,
+	},
 };

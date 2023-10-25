@@ -1630,7 +1630,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifySpA(atk, attacker, defender, move) {
 			if (this.field.isTerrain('electricterrain')) {
 				this.debug('Hadron Engine boost');
-				return this.chainModify([5461, 4096]);
+				return this.chainModify([4915, 4096]);
 			}
 		},
 		isPermanent: true,
@@ -2047,7 +2047,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePower(basePower, attacker, defender, move) {
 			if (move.flags['punch']) {
 				this.debug('Iron Fist boost');
-				return this.chainModify([4915, 4096]);
+				return this.chainModify([5324, 4096]);
 			}
 		},
 		name: "Iron Fist",
@@ -2825,7 +2825,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onModifyAtk(atk, pokemon) {
 			if (['sunnyday', 'desolateland'].includes(pokemon.effectiveWeather())) {
 				this.debug('Orichalcum boost');
-				return this.chainModify([5461, 4096]);
+				return this.chainModify([4915, 4096]);
 			}
 		},
 		isPermanent: true,

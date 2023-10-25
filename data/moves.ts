@@ -3936,7 +3936,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	doubleironbash: {
 		num: 742,
 		accuracy: 100,
-		basePower: 60,
+		basePower: 50,
 		category: "Physical",
 		isNonstandard: "Past",
 		name: "Double Iron Bash",
@@ -8995,7 +8995,10 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
-		secondary: null,
+		secondary: {
+			chance: 10,
+			volatileStatus: 'flinch',
+		},
 		target: "normal",
 		type: "Ground",
 		contestType: "Tough",
@@ -16394,6 +16397,8 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		secondary: null,
+		ignorePositiveDefensive: true,
+		ignoreNegativeOffensive: true,
 		target: "normal",
 		type: "Ghost",
 		contestType: "Clever",
@@ -23237,5 +23242,72 @@ export const Moves: {[moveid: string]: MoveData} = {
 		secondary: null,
 		target: "normal",
 		type: "Rubber",
+	},
+	buffup: {
+		num: -83,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Buff Up",
+		pp: 10,
+		priority: 0,
+		flags: {snatch: 1, dance: 1},
+		boosts: {
+			atk: 3,
+		},
+		secondary: null,
+		target: "self",
+		type: "Normal",
+		zMove: {effect: 'clearnegativeboost'},
+		contestType: "Beautiful",
+	},
+	fortify: {
+		num: -84,
+		accuracy: true,
+		basePower: 0,
+		category: "Status",
+		name: "Fortify",
+		pp: 5,
+		priority: 0,
+		flags: {snatch: 1},
+		volatileStatus: 'noretreat',
+		onTry(source, target, move) {
+			if (source.volatiles['noretreat']) return false;
+			if (source.volatiles['trapped']) {
+				delete move.volatileStatus;
+			}
+		},
+		condition: {
+			onStart(pokemon) {
+				this.add('-start', pokemon, 'move: Fortify');
+			},
+			onTrapPokemon(pokemon) {
+				pokemon.tryTrap();
+			},
+		},
+		boosts: {
+			def: 4,
+		},
+		secondary: null,
+		target: "self",
+		type: "Rock",
+	},
+	sandyclaw: {
+		num: -85,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Sandy Claw",
+		pp: 10,
+		priority: 0,
+		flags: {protect: 1, reflectable: 1, mirror: 1},
+		secondary: {
+			chance: 30,
+			boosts:{accuracy: -1},
+		},
+		target: "normal",
+		type: "Ground",
+		zMove: {boost: {evasion: 1}},
+		contestType: "Cute",
 	},
 };
