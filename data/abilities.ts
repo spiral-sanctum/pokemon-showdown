@@ -5872,5 +5872,18 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		name: "Monolith",
 		rating: 2,
 		num: -40,
-	}
+	},
+	insulation: {
+		onSourceModifyDamagePriority: 6,
+		onSourceModifyDamage(damage, source, target, move) {
+			if (move.type === 'Ice' || move.type === 'Fire'|| move.type ==="Electric") {
+				this.debug('Thick Fat weaken');
+				return this.chainModify(0.75);
+			}
+		},
+		name: "Insulation",
+		isBreakable: true,
+		rating: 3,
+		num: -41,
+	},
 };

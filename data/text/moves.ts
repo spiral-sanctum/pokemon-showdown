@@ -7827,4 +7827,19 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a chance to lower attacked foe's accuracy by one stage.",
 		shortDesc: "30% chance to lower accuracy by 1.",
 	},
+	abominationburst: {
+		name: "Abomination Burst",
+		desc: "The user faints after using this move, even if this move fails for having no target. This move is prevented from executing if any active Pokemon has the Damp Ability.",
+		shortDesc: "Hits adjacent Pokemon. The user faints.",
+	},
+	emperorvine: {
+		name: "Emperor Vine",
+		desc: "Lowers the user's Attack by 1 stage, and raises user's Special Attack by 1 stage.",
+		shortDesc: "Raises the user's Sp. Atk by 1, and lowers the user's Atk by 1.",
+	},
+	wavepierce: {
+		name: "Wave Pierce",
+		desc:  "bypasses protect, destroys screens unless the target is immune, and damages target based on Defense",
+		shortDesc: "bypasses protect, destroys screens unless the target is immune, and damages target based on Defense",
+	},
 };

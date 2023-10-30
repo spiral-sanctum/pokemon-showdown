@@ -9921,7 +9921,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 1,
 		flags: {contact: 1, protect: 1, mirror: 1, punch: 1},
 		secondary: null,
-		hasSheerForce: true,
+		hasSheerForce: false,
 		target: "normal",
 		type: "Water",
 		contestType: "Cool",
@@ -10429,7 +10429,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		pp: 10,
 		priority: 0,
 		flags: {snatch: 1, heal: 1, bypasssub: 1},
-		heal: [1, 4],
+		heal: [1, 3],
 		secondary: null,
 		target: "allies",
 		type: "Water",
@@ -18887,7 +18887,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 	superpower: {
 		num: 276,
 		accuracy: 100,
-		basePower: 120,
+		basePower: 130,
 		category: "Physical",
 		name: "Superpower",
 		pp: 5,
@@ -23310,4 +23310,65 @@ export const Moves: {[moveid: string]: MoveData} = {
 		zMove: {boost: {evasion: 1}},
 		contestType: "Cute",
 	},
+	wavepierce: {
+		num: -86,
+		accuracy: 100,
+		basePower: 80,
+		category: "Physical",
+		name: "Wave Pierce",
+		pp: 5,
+		priority: 0,
+		flags: {contact: 1, mirror: 1},
+		onTryHit(pokemon) {
+			// will shatter screens through sub, before you hit
+			pokemon.side.removeSideCondition('reflect');
+			pokemon.side.removeSideCondition('lightscreen');
+			pokemon.side.removeSideCondition('auroraveil');
+		},
+		overrideDefensiveStat: 'def',
+		breaksProtect: true,
+		secondary: null,
+		target: "normal",
+		type: "Water",
+		contestType: "Clever",
+	},
+	emperorvine: {
+		num: -87,
+		accuracy: 100,
+		basePower: 90,
+		category: "Physical",
+		name: "Emperor Vine",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1},
+		self: {
+			boosts: {
+				atk: -1,
+				spa: 1,
+			},
+		},
+		secondary: null,
+		target: "normal",
+		type: "Grass",
+		contestType: "Beautiful",
+	},
+	abominationburst: {
+		num: 153,
+		accuracy: 100,
+		basePower: 1500,
+		category: "Physical",
+		name: "Abomination Burst",
+		pp: 5,
+		priority: 0,
+		flags: {protect: 1, mirror: 1, noparentalbond: 1},
+		selfdestruct: "always",
+		secondary: null,
+		target: "allAdjacent",
+		type: "Ghost",
+		contestType: "Beautiful",
+	},
+	/*
+	Moves TODO
+	Psylash - Done?
+	*/
 };
