@@ -23694,9 +23694,9 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Gray",
 		eggGroups: ["Amorphous"],
 	},
-	obsideon: {
+	obsideoni: {
 		num: -2524,
-		name: "Obsideon",
+		name: "Obsideon-I",
 		types: ["Rock"],
 		genderRatio: {M: 0.50, F: 0.50},
 		baseStats: {hp: 75, atk: 120, def: 75, spa: 60, spd: 115, spe: 80},
