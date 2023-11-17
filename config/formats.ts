@@ -33,8 +33,8 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen9universal',
-		ruleset: ['Standard', 'Dynamax Clause'],
-		banlist: ['Uber', 'AG', 'OUBL', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'Baton Pass', 'Last Respects', 'Revival Blessing', 'Velvet Scales', 'Scorched Ashes', 'King\'s Rock', 'Dark Rock'],
+		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 'Terastal Clause'],
+		banlist: ['ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Shed Tail', 'Light Clay'],
 	},
 
 	{
