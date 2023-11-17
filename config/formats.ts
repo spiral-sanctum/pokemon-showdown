@@ -81,6 +81,17 @@ export const Formats: FormatList = [
 		banlist: ['ND NU', 'ND RU', 'ND UU', 'ND OU', 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Shed Tail', 'Light Clay'],
 	},
 
+	{
+		name: "[Gen 9] Universal ZU",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3710848/">National Dex Metagame Discussion</a>`,
+		],
+
+		mod: 'gen9universal',
+		ruleset: ['Standard NatDex', 'OHKO Clause', 'Evasion Clause', 'Species Clause', 'Sleep Clause Mod', 'Terastal Clause'],
+		banlist: ['ND PU', 'ND NU', 'ND RU', 'ND UU', 'ND OU', 'ND Uber', 'ND AG', 'Arena Trap', 'Moody', 'Power Construct', 'Shadow Tag', 'King\'s Rock', 'Quick Claw', 'Razor Fang', 'Assist', 'Baton Pass', 'Shed Tail', 'Light Clay'],
+	},
+
 		// National Dex
 	///////////////////////////////////////////////////////////////////
 
