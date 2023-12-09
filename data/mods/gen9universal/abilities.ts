@@ -6443,16 +6443,6 @@ striker: {
 		rating: 4,
 		num: 206,
 	},
-	sunbathe: {
-		onWeather(target, source, effect) {
-			if (effect.id === 'sunnyday') {
-				this.heal(target.baseMaxhp / 16);
-			}
-		},
-		name: "Sunbathe",
-		rating: 1,
-		num: 115,
-	},
 	trickster: {
 		//Implemented on moves
 		name: "Trickster",
