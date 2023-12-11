@@ -8709,7 +8709,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
-	melumyst: {
+	melumourn: {
 		isNonstandard: "Custom",
 		tier: "Illegal",
 	},
