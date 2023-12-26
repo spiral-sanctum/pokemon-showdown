@@ -6424,25 +6424,6 @@ striker: {
 		rating: 1,
 		num: 279,
 	},
-	coleoptero: {
-		onModifyTypePriority: -1,
-		onModifyType(move, pokemon) {
-			const noModifyType = [
-				'judgment', 'multiattack', 'naturalgift', 'revelationdance', 'technoblast', 'terrainpulse', 'weatherball',
-			];
-			if (move.type === 'Normal' && !noModifyType.includes(move.id) && !(move.isZ && move.category !== 'Status')) {
-				move.type = 'Bug';
-				move.coleopteroBoosted = true;
-			}
-		},
-		onBasePowerPriority: 23,
-		onBasePower(basePower, pokemon, target, move) {
-			if (move.coleopteroBoosted) return this.chainModify([4915, 4096]);
-		},
-		name: "Coleoptero",
-		rating: 4,
-		num: 206,
-	},
 	trickster: {
 		//Implemented on moves
 		name: "Trickster",
